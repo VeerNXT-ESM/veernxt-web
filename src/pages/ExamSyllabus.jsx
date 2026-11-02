@@ -5,7 +5,7 @@ import {
   BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, ArrowLeft, ChevronRight,
   Target, Rocket, Play, PlayCircle, FileText, Headphones, Crown, Clock,
 } from 'lucide-react';
-import { getEffectiveTier, TIERS, isResourceLockedForUser } from '../lib/subscriptionAccess';
+import { getEffectiveTier, TIERS, isResourceLockedForUser, isTierAtLeast, isTesterModeActive } from '../lib/subscriptionAccess';
 import { useExamContent, countProgress } from '../hooks/useExamContent';
 import { ResourceTile, IntroManualTile } from '../components/ExamContentPreview';
 import { getCategoryBannerImage } from '../lib/categoryBannerHelper';
@@ -401,16 +401,18 @@ const ExamSyllabus = () => {
             </a>
           </div>
 
-          {/* Card 2: Unlock the full library */}
-          <Link to="/subscribe" className="side-card unlock-card">
-            <span className="unlock-icon"><Crown size={20} /></span>
-            <div className="unlock-content">
-              <p className="unlock-title">Unlock the full library</p>
-              <p className="unlock-sub">Get access to PRÉCIS, PYQs and unlimited mock tests for {cleanShortName} and many more exams.</p>
-            </div>
-            <ChevronRight size={16} className="unlock-chevron" />
-            <div className="unlock-watermark"><Crown size={64} /></div>
-          </Link>
+          {/* Card 2: Unlock the full library (hidden for paid/tester tiers) */}
+          {!isTierAtLeast(effectiveTier, 'MONTHLY') && (
+            <Link to="/subscribe" className="side-card unlock-card">
+              <span className="unlock-icon"><Crown size={20} /></span>
+              <div className="unlock-content">
+                <p className="unlock-title">Unlock the full library</p>
+                <p className="unlock-sub">Get access to PRÉCIS, PYQs and unlimited mock tests for {cleanShortName} and many more exams.</p>
+              </div>
+              <ChevronRight size={16} className="unlock-chevron" />
+              <div className="unlock-watermark"><Crown size={64} /></div>
+            </Link>
+          )}
 
           {/* Card 3: Quote Card */}
           <div className="side-card quote-card">

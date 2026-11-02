@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, BookOpen, ScrollText, ListChecks, PlayCircle, Lock, Unlock, RefreshCw, ArrowRight, CheckCircle2, Check, X, Crown, ChevronRight, Shield } from 'lucide-react';
-import { isResourceLockedForUser, canTakeQuiz } from '../lib/subscriptionAccess';
+import { isResourceLockedForUser, canTakeQuiz, isTierAtLeast } from '../lib/subscriptionAccess';
 import { useExamContent } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { resolveSubjectForTitle, getFamilyHex } from '../lib/thumbnailTaxonomy';
@@ -518,60 +518,62 @@ const ExamContentPreview = ({ examId, examName, careerTrack, tier, freeQuizUsed,
           </div>
         )}
 
-        <Link
-          to="/subscribe"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.85rem',
-            padding: '0.9rem 1.15rem',
-            borderRadius: '12px',
-            border: '1px solid #86efac',
-            textDecoration: 'none',
-            color: 'inherit',
-            background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
-            position: 'relative',
-            overflow: 'hidden',
-            marginTop: '0.75rem',
-            boxShadow: '0 2px 8px rgba(22, 101, 52, 0.08)',
-          }}
-        >
-          <div
+        {!isTierAtLeast(tier, 'MONTHLY') && (
+          <Link
+            to="/subscribe"
             style={{
-              width: '38px',
-              height: '38px',
-              borderRadius: '10px',
-              background: '#bbf7d0',
-              color: 'var(--c-green, #15803d)',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
+              gap: '0.85rem',
+              padding: '0.9rem 1.15rem',
+              borderRadius: '12px',
+              border: '1px solid #86efac',
+              textDecoration: 'none',
+              color: 'inherit',
+              background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
+              position: 'relative',
+              overflow: 'hidden',
+              marginTop: '0.75rem',
+              boxShadow: '0 2px 8px rgba(22, 101, 52, 0.08)',
             }}
           >
-            <Crown size={20} />
-          </div>
-          <div style={{ flex: 1, zIndex: 1 }}>
-            <div style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-green, #14532d)', marginBottom: '0.15rem' }}>
-              Unlock the full library
+            <div
+              style={{
+                width: '38px',
+                height: '38px',
+                borderRadius: '10px',
+                background: '#bbf7d0',
+                color: 'var(--c-green, #15803d)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <Crown size={20} />
             </div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--c-green, #166534)', lineHeight: 1.35 }}>
-              Get access to PRÉCIS, PYQs, and unlimited mock tests for every exam.
+            <div style={{ flex: 1, zIndex: 1 }}>
+              <div style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--c-green, #14532d)', marginBottom: '0.15rem' }}>
+                Unlock the full library
+              </div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--c-green, #166534)', lineHeight: 1.35 }}>
+                Get access to PRÉCIS, PYQs, and unlimited mock tests for every exam.
+              </div>
             </div>
-          </div>
-          <ChevronRight size={18} color="#15803d" style={{ flexShrink: 0, zIndex: 1 }} />
-          <Crown
-            size={68}
-            style={{
-              position: 'absolute',
-              right: '-10px',
-              bottom: '-12px',
-              color: 'var(--c-green, #16a34a)',
-              opacity: 0.12,
-              pointerEvents: 'none',
-            }}
-          />
-        </Link>
+            <ChevronRight size={18} color="#15803d" style={{ flexShrink: 0, zIndex: 1 }} />
+            <Crown
+              size={68}
+              style={{
+                position: 'absolute',
+                right: '-10px',
+                bottom: '-12px',
+                color: 'var(--c-green, #16a34a)',
+                opacity: 0.12,
+                pointerEvents: 'none',
+              }}
+            />
+          </Link>
+        )}
       </div>
     );
   }

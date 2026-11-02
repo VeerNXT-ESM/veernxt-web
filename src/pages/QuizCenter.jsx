@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Brain, Search, RefreshCw, Lock, ArrowLeft } from 'lucide-react';
-import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
+import { getEffectiveTier, canTakeQuiz, isTesterModeActive } from '../lib/subscriptionAccess';
 import { resolveCanonicalSubjectLabel, getFamilyHex } from '../lib/thumbnailTaxonomy';
 import { MIN_PLAYABLE_QUESTIONS } from '../lib/quizQuality';
 
@@ -106,8 +106,8 @@ export default function QuizCenter() {
     loadQuizzes();
   }, [activeExamId]);
 
-  const tier = getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at);
-  const freeQuizUsed = !!profile?.free_quiz_used;
+  const tier = isTesterModeActive() ? 'TESTER' : getEffectiveTier(profile?.subscription_tier, profile?.subscription_expires_at);
+  const freeQuizUsed = isTesterModeActive() ? false : !!profile?.free_quiz_used;
   const quizAccess = canTakeQuiz(tier, freeQuizUsed);
 
   // Group quizzes by canonical subject where possible (regardless of which

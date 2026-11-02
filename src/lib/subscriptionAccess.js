@@ -104,6 +104,59 @@ export const PLAN_DETAILS = [
 ];
 
 // ═══════════════════════════════════════════
+// TESTER MODE / GLOBAL ACCESS OVERRIDE
+// ═══════════════════════════════════════════
+
+/**
+ * Returns true if tester mode is enabled via environment variables or tester override.
+ * Unlocks all books, study materials, précis, PYQ papers, mock tests, and features.
+ */
+export function isTesterModeActive() {
+  try {
+    // 1. Check Vite env variables (browser/bundle) or process.env (SSR/Node)
+    const envTester =
+      import.meta.env?.VITE_TESTER_KEY ||
+      import.meta.env?.VITE_TESTER_MODE ||
+      import.meta.env?.TESTER_KEY ||
+      import.meta.env?.TESTER_MODE ||
+      import.meta.env?.VITE_UNLOCK_ALL ||
+      import.meta.env?.UNLOCK_ALL ||
+      (typeof process !== 'undefined' && (
+        process.env?.VITE_TESTER_KEY ||
+        process.env?.VITE_TESTER_MODE ||
+        process.env?.TESTER_KEY ||
+        process.env?.TESTER_MODE ||
+        process.env?.VITE_UNLOCK_ALL ||
+        process.env?.UNLOCK_ALL
+      ));
+
+    if (envTester && envTester !== 'false' && envTester !== '0') {
+      return true;
+    }
+
+    // 2. Allow testers to toggle via URL query or local storage
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlTester = urlParams.get('tester') || urlParams.get('tester_key');
+      if (urlTester === 'false' || urlTester === '0') {
+        localStorage.removeItem('veernxt_tester_override');
+        return false;
+      }
+      if (urlTester) {
+        localStorage.setItem('veernxt_tester_override', 'true');
+        return true;
+      }
+      if (localStorage.getItem('veernxt_tester_override') === 'true') {
+        return true;
+      }
+    }
+  } catch {
+    // ignore in environments without window/localStorage
+  }
+  return false;
+}
+
+// ═══════════════════════════════════════════
 // EXPIRY & EFFECTIVE TIER
 // ═══════════════════════════════════════════
 
@@ -112,6 +165,8 @@ export const PLAN_DETAILS = [
  * One-time purchases (SCORE_UNLOCK, SCORE_CV) never expire.
  */
 export function isSubscriptionActive(tier, expiresAt) {
+  if (isTesterModeActive()) return true;
+
   // Free tier is always "active"
   if (!tier || tier === TIERS.FREE) return true;
 
@@ -129,6 +184,7 @@ export function isSubscriptionActive(tier, expiresAt) {
  * (but retains one-time purchases like SCORE_UNLOCK/SCORE_CV if they had them).
  */
 export function getEffectiveTier(tier, expiresAt) {
+  if (isTesterModeActive()) return TIERS.TESTER;
   if (!tier) return TIERS.FREE;
   if (isSubscriptionActive(tier, expiresAt)) return tier;
   // Expired time-based subscription → revert to FREE
@@ -156,6 +212,7 @@ export function canGenerateCV() {
 
 /** Can user access live mentorship features? */
 export function canAccessMentorship(tier) {
+  if (isTesterModeActive()) return true;
   return tier === TIERS.PREMIUM || tier === TIERS.TESTER;
 }
 
@@ -174,6 +231,10 @@ export function canAccessMentorship(tier) {
  * @returns {{ allowed: boolean, reason?: string }}
  */
 export function canAccessResource(tier, category) {
+  if (isTesterModeActive()) {
+    return { allowed: true };
+  }
+
   // Paid tiers (MONTHLY and above) get full access
   if ((TIER_RANK[tier] || 0) >= TIER_RANK.MONTHLY) {
     return { allowed: true };
@@ -202,6 +263,10 @@ export function canAccessResource(tier, category) {
  * @returns {{ allowed: boolean, isFreeAttempt?: boolean, reason?: string }}
  */
 export function canTakeQuiz(tier, freeQuizUsed = false) {
+  if (isTesterModeActive()) {
+    return { allowed: true, isFreeAttempt: false };
+  }
+
   // Paid tiers (MONTHLY and above) get unlimited
   if ((TIER_RANK[tier] || 0) >= TIER_RANK.MONTHLY) {
     return { allowed: true };
@@ -220,6 +285,7 @@ export function canTakeQuiz(tier, freeQuizUsed = false) {
  * This is a simplified check for card-level display (not chapter-level).
  */
 export function isResourceLockedForUser(tier, category) {
+  if (isTesterModeActive()) return false;
   if ((TIER_RANK[tier] || 0) >= TIER_RANK.MONTHLY) return false;
 
   const cat = (category || '').toLowerCase().trim();
@@ -238,6 +304,7 @@ export function isResourceLockedForUser(tier, category) {
  * Is the user's current tier higher or equal to a target tier?
  */
 export function isTierAtLeast(currentTier, targetTier) {
+  if (isTesterModeActive()) return true;
   return (TIER_RANK[currentTier] || 0) >= (TIER_RANK[targetTier] || 0);
 }
 

@@ -15,6 +15,7 @@ import { matchJobsV2ForExam, matchJobsV2ForRecommendations, getRecommendedCivili
 import { JobDescriptionModal } from '../components/JobDescriptionModal';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import { isTierAtLeast, isTesterModeActive, getEffectiveTier } from '../lib/subscriptionAccess';
 
 // Human-readable labels for the positive factors scoreExam() records in
 // backend/engine/scoring.js's breakdown object — used to explain "why this
@@ -181,6 +182,7 @@ const ProfilingResults = () => {
   const [pointsBalance, setPointsBalance] = useState(null);
   const [preparingExamId, setPreparingExamId] = useState(null);
   const [selectedJobModal, setSelectedJobModal] = useState(null);
+  const [effectiveTier, setEffectiveTier] = useState(() => isTesterModeActive() ? 'TESTER' : 'FREE');
   const [matchedJobs, setMatchedJobs] = useState([]);
 
   // Sets the candidate's active preparation target and navigates to the Exam Journey.
@@ -231,6 +233,7 @@ const ProfilingResults = () => {
           if (profile) {
             setFullName(profile.full_name || '');
             setRawProfile(profile.raw_profile_data || null);
+            setEffectiveTier(isTesterModeActive() ? 'TESTER' : getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at));
 
             // Prefer the payload just returned by /api/profile/recommend
             // (passed via router state) to avoid a duplicate fetch; fall
@@ -698,16 +701,18 @@ const ProfilingResults = () => {
           </Card>
         </div>
 
-        <Card className="results-subscribe-card">
-          <Crown size={24} color="white" />
-          <div>
-            <h3>Ready to act on these opportunities?</h3>
-            <p>Get unlimited mock tests, the full study library, and ongoing exam alerts — everything you need to prepare, not just discover.</p>
-          </div>
-          <Link to="/subscribe?from=profiling&plan=ANNUAL" className="results-btn-link results-btn-light">
-            View Subscription Plans <ArrowRight size={16} />
-          </Link>
-        </Card>
+        {!isTierAtLeast(effectiveTier, 'MONTHLY') && (
+          <Card className="results-subscribe-card">
+            <Crown size={24} color="white" />
+            <div>
+              <h3>Ready to act on these opportunities?</h3>
+              <p>Get unlimited mock tests, the full study library, and ongoing exam alerts — everything you need to prepare, not just discover.</p>
+            </div>
+            <Link to="/subscribe?from=profiling&plan=ANNUAL" className="results-btn-link results-btn-light">
+              View Subscription Plans <ArrowRight size={16} />
+            </Link>
+          </Card>
+        )}
       </motion.div>
 
       {/* Job Description Modal */}

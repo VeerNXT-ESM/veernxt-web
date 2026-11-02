@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { RefreshCw, Lock, Crown, PlayCircle } from 'lucide-react';
-import { getEffectiveTier, canTakeQuiz } from '../lib/subscriptionAccess';
+import { getEffectiveTier, canTakeQuiz, isTesterModeActive } from '../lib/subscriptionAccess';
 import { awardPoints } from '../lib/awardPoints';
 import { QuizSetup } from './quiz/QuizSetup';
 import { QuizView } from './quiz/QuizView';
@@ -17,7 +17,7 @@ const InteractiveQuiz = () => {
   const [quiz, setQuiz] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [effectiveTier, setEffectiveTier] = useState('FREE');
+  const [effectiveTier, setEffectiveTier] = useState(() => isTesterModeActive() ? 'TESTER' : 'FREE');
   const [freeQuizUsed, setFreeQuizUsed] = useState(false);
   const [isFreeAttempt, setIsFreeAttempt] = useState(false);
 
@@ -30,7 +30,7 @@ const InteractiveQuiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        let tier = 'FREE';
+        let tier = isTesterModeActive() ? 'TESTER' : 'FREE';
         let quizUsed = false;
 
         try {
@@ -42,9 +42,9 @@ const InteractiveQuiz = () => {
               .eq('id', session.user.id)
               .maybeSingle();
             if (profile) {
-              tier = getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
+              tier = isTesterModeActive() ? 'TESTER' : getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
               setEffectiveTier(tier);
-              quizUsed = !!profile.free_quiz_used;
+              quizUsed = isTesterModeActive() ? false : !!profile.free_quiz_used;
               setFreeQuizUsed(quizUsed);
             }
           }

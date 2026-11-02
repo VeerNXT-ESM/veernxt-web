@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Pencil, LifeBuoy, ShieldCheck, Scale, LogOut, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { isTesterModeActive } from '../../lib/subscriptionAccess';
 
 /**
  * The "Me" account control — one shared markup tree for both surfaces.
@@ -61,9 +62,12 @@ export default function AccountMenu({
     .join('')
     .toUpperCase();
 
+  const isTester = isTesterModeActive();
   const statusLabel = isEmployer
     ? 'Employer Partner'
-    : (profilingCompleted ? 'Profile Complete' : 'Complete Your Profile');
+    : isTester
+      ? 'Tester · Premium Unlocked'
+      : (profilingCompleted ? 'Profile Complete' : 'Complete Your Profile');
 
   return (
     <>

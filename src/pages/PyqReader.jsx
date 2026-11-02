@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ArrowLeft, RefreshCw, Lock, Crown, CheckCircle2 } from 'lucide-react';
-import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
+import { getEffectiveTier, canAccessResource, isTesterModeActive } from '../lib/subscriptionAccess';
 
 export default function PyqReader() {
   const { id } = useParams();
@@ -10,13 +10,13 @@ export default function PyqReader() {
   const [paper, setPaper] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [effectiveTier, setEffectiveTier] = useState(null);
+  const [effectiveTier, setEffectiveTier] = useState(() => isTesterModeActive() ? 'TESTER' : null);
 
   useEffect(() => {
     const load = async () => {
       setLoading(true);
       try {
-        let tier = null;
+        let tier = isTesterModeActive() ? 'TESTER' : null;
         const { data: { session } } = await supabase.auth.getSession();
         if (session?.user) {
           const { data: profileRow } = await supabase
@@ -27,6 +27,9 @@ export default function PyqReader() {
           if (profileRow) {
             tier = getEffectiveTier(profileRow.subscription_tier, profileRow.subscription_expires_at);
           }
+        }
+        if (isTesterModeActive()) {
+          tier = 'TESTER';
         }
         setEffectiveTier(tier);
 

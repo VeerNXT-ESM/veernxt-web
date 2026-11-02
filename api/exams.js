@@ -26,8 +26,19 @@ async function handleFetchChapter(req, res) {
 
     const cat = (resource.category || '').toLowerCase().trim();
 
-    // 2. Paid category gate: Precis, PYQ require active paid subscription
-    if (cat === 'precis' || cat === 'pyq') {
+    // 2. Paid category gate: Precis, PYQ require active paid subscription (bypassed if tester mode is active)
+    const reqTesterKey = req.headers['x-tester-key'] || req.query.testerKey;
+    const isTesterEnv =
+      process.env.TESTER_MODE === 'true' ||
+      process.env.VITE_TESTER_MODE === 'true' ||
+      process.env.TESTER_KEY === 'true' ||
+      process.env.VITE_TESTER_KEY === 'true' ||
+      process.env.UNLOCK_ALL === 'true' ||
+      process.env.VITE_UNLOCK_ALL === 'true' ||
+      Boolean(process.env.TESTER_KEY && reqTesterKey && String(process.env.TESTER_KEY) === String(reqTesterKey)) ||
+      Boolean(process.env.VITE_TESTER_KEY && reqTesterKey && String(process.env.VITE_TESTER_KEY) === String(reqTesterKey));
+
+    if (!isTesterEnv && (cat === 'precis' || cat === 'pyq')) {
       const authHeader = req.headers.authorization;
       if (!authHeader || !authHeader.startsWith('Bearer ')) {
         return res.status(403).json({ ok: false, error: 'Authentication and paid subscription required to access this resource', locked: true });
@@ -47,7 +58,7 @@ async function handleFetchChapter(req, res) {
 
       const tier = profile?.subscription_tier;
       const expiresAt = profile?.subscription_expires_at;
-      const isPaid = ['MONTHLY', 'ANNUAL', 'BIENNIAL', 'PREMIUM'].includes(tier) && (!expiresAt || new Date(expiresAt) > new Date());
+      const isPaid = (tier === 'TESTER' || ['MONTHLY', 'ANNUAL', 'BIENNIAL', 'PREMIUM'].includes(tier)) && (!expiresAt || new Date(expiresAt) > new Date());
 
       if (!isPaid) {
         return res.status(403).json({ ok: false, error: 'Upgrade to a paid subscription to view this resource', locked: true });

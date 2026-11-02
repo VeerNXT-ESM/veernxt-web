@@ -90,7 +90,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tailwindcss(), vercelApiPlugin()],
-    envPrefix: ['VITE_', 'SUPABASE_'],
+    envPrefix: ['VITE_', 'SUPABASE_', 'TESTER_', 'UNLOCK_'],
     server: {
       port: 8080,
       host: true,

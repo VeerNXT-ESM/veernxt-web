@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { ScrollText, Search, RefreshCw, Lock, ArrowLeft } from 'lucide-react';
-import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
+import { getEffectiveTier, canAccessResource, isTesterModeActive } from '../lib/subscriptionAccess';
 
 export default function PyqCenter() {
   const location = useLocation();
@@ -10,7 +10,7 @@ export default function PyqCenter() {
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('All');
-  const [effectiveTier, setEffectiveTier] = useState(null);
+  const [effectiveTier, setEffectiveTier] = useState(() => isTesterModeActive() ? 'TESTER' : null);
   const [targetExam, setTargetExam] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeExamId = searchParams.get('exam');
@@ -26,7 +26,7 @@ export default function PyqCenter() {
             .eq('id', session.user.id)
             .maybeSingle();
           if (profileRow) {
-            setEffectiveTier(getEffectiveTier(profileRow.subscription_tier, profileRow.subscription_expires_at));
+            setEffectiveTier(isTesterModeActive() ? 'TESTER' : getEffectiveTier(profileRow.subscription_tier, profileRow.subscription_expires_at));
           }
         }
 

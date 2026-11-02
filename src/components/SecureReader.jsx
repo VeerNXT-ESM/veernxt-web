@@ -6,7 +6,7 @@ import {
   Printer, Maximize, Minimize, ScrollText, BookText, FileText, Headphones,
 } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
-import { getEffectiveTier, canAccessResource } from '../lib/subscriptionAccess';
+import { getEffectiveTier, canAccessResource, isTesterModeActive } from '../lib/subscriptionAccess';
 import { awardPoints } from '../lib/awardPoints';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { BlockRenderer } from './book/BlockRenderer';
@@ -77,7 +77,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
     const pos = readPos(resourceId || params?.id);
     return pos && Number.isInteger(pos.chapter) ? pos.chapter : 0;
   });
-  const [effectiveTier, setEffectiveTier] = useState('FREE');
+  const [effectiveTier, setEffectiveTier] = useState(() => isTesterModeActive() ? 'TESTER' : 'FREE');
   const chapterCache = React.useRef({});
 
   // Reader modes are declared below (scroll / normal / traditional).
@@ -134,7 +134,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
   // Fetch resource metadata from resources and user subscription
   useEffect(() => {
     const fetchResource = async () => {
-      let tier = 'FREE';
+      let tier = isTesterModeActive() ? 'TESTER' : 'FREE';
       try {
         const { data: { session } } = await supabase.auth.getSession();
         if (session?.user) {
@@ -267,14 +267,18 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
       try {
         const { data: { session } } = await supabase.auth.getSession();
         const token = session?.access_token;
-        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+        const testerKey = import.meta.env?.VITE_TESTER_KEY || import.meta.env?.VITE_TESTER_MODE || (isTesterModeActive() ? 'true' : '');
+        const headers = {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+          ...(testerKey ? { 'x-tester-key': String(testerKey) } : {}),
+        };
         const apiUrl = `/api/exams?fn=chapter&resourceId=${encodeURIComponent(res.resource_id)}&chapterIndex=${index}`;
         const apiResp = await fetch(apiUrl, { headers });
         if (apiResp.ok) {
           const payload = await apiResp.json();
           chapterData = payload.chapter;
-        } else if (apiResp.status === 403) {
-          // Explicit server-side paywall lock
+        } else if (apiResp.status === 403 && !isTesterModeActive()) {
+          // Explicit server-side paywall lock (skipped for tester mode)
           return;
         }
       } catch (gateErr) {
@@ -282,8 +286,9 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
       }
 
       // 2. Fallback to direct storage fetch if server proxy is unavailable
-      if (!chapterData) {
-        const chapterUrl = `${res.storage_base_url}chapters/chapter-${index + 1}.json?t=${Date.now()}`;
+      if (!chapterData && res.storage_base_url) {
+        const base = res.storage_base_url.endsWith('/') ? res.storage_base_url : `${res.storage_base_url}/`;
+        const chapterUrl = `${base}chapters/chapter-${index + 1}.json?t=${Date.now()}`;
         const response = await fetch(chapterUrl);
         if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
         chapterData = await response.json();

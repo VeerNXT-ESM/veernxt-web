@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { PLAN_DETAILS, TIERS, getEffectiveTier, isTierAtLeast } from '../lib/subscriptionAccess';
+import { PLAN_DETAILS, TIERS, getEffectiveTier, isTierAtLeast, isTesterModeActive } from '../lib/subscriptionAccess';
 import { Crown, Check, Zap, Shield, BookOpen, Users, ArrowRight, Lock, FileText, Award, Sparkles } from 'lucide-react';
 
 const Subscribe = () => {
@@ -10,7 +10,7 @@ const Subscribe = () => {
   const [searchParams] = useSearchParams();
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [currentTier, setCurrentTier] = useState('FREE');
+  const [currentTier, setCurrentTier] = useState(() => isTesterModeActive() ? 'TESTER' : 'FREE');
   const [expiresAt, setExpiresAt] = useState(null);
   const [session, setSession] = useState(null);
 
@@ -42,10 +42,14 @@ const Subscribe = () => {
           .eq('id', currentSession.user.id)
           .maybeSingle();
         if (profile) {
-          const effective = getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
+          const effective = isTesterModeActive() ? 'TESTER' : getEffectiveTier(profile.subscription_tier, profile.subscription_expires_at);
           setCurrentTier(effective);
           setExpiresAt(profile.subscription_expires_at);
+        } else if (isTesterModeActive()) {
+          setCurrentTier('TESTER');
         }
+      } else if (isTesterModeActive()) {
+        setCurrentTier('TESTER');
       }
     };
     checkSubscription();
@@ -234,9 +238,11 @@ const Subscribe = () => {
             }}>
               <Shield size={18} style={{ color: '#8BB85C' }} />
               <span style={{ color: '#8BB85C', fontSize: '0.9rem', fontWeight: 700 }}>
-                Current Plan: {PLAN_DETAILS.find(p => p.id === currentTier)?.name || currentTier}
+                {isTesterModeActive() || currentTier === 'TESTER'
+                  ? 'Tester Mode Active: Full Premium Access (All Books, PYQs & Quizzes Unlocked)'
+                  : `Current Plan: ${PLAN_DETAILS.find(p => p.id === currentTier)?.name || currentTier}`}
               </span>
-              {expiresAt && (
+              {expiresAt && currentTier !== 'TESTER' && (
                 <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>
                   · Expires {new Date(expiresAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                 </span>
