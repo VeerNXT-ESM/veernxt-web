@@ -108,52 +108,35 @@ export const PLAN_DETAILS = [
 // ═══════════════════════════════════════════
 
 /**
- * Returns true if tester mode is enabled via environment variables or tester override.
- * Unlocks all books, study materials, précis, PYQ papers, mock tests, and features.
+ * Returns true by default directly in code so all books, study materials,
+ * précis, PYQ papers, mock tests, and features are fully open to everyone.
+ * (Only locked down if VITE_LOCK_PAYWALL='true' is explicitly set).
  */
 export function isTesterModeActive() {
   try {
-    // 1. Check Vite env variables (browser/bundle) or process.env (SSR/Node)
-    const envTester =
-      import.meta.env?.VITE_TESTER_KEY ||
-      import.meta.env?.VITE_TESTER_MODE ||
-      import.meta.env?.TESTER_KEY ||
-      import.meta.env?.TESTER_MODE ||
-      import.meta.env?.VITE_UNLOCK_ALL ||
-      import.meta.env?.UNLOCK_ALL ||
+    const isExplicitlyLocked =
+      import.meta.env?.VITE_LOCK_PAYWALL === 'true' ||
+      import.meta.env?.LOCK_PAYWALL === 'true' ||
       (typeof process !== 'undefined' && (
-        process.env?.VITE_TESTER_KEY ||
-        process.env?.VITE_TESTER_MODE ||
-        process.env?.TESTER_KEY ||
-        process.env?.TESTER_MODE ||
-        process.env?.VITE_UNLOCK_ALL ||
-        process.env?.UNLOCK_ALL
+        process.env?.VITE_LOCK_PAYWALL === 'true' ||
+        process.env?.LOCK_PAYWALL === 'true'
       ));
 
-    if (envTester && envTester !== 'false' && envTester !== '0') {
-      return true;
-    }
-
-    // 2. Allow testers to toggle via URL query or local storage
-    if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search);
-      const urlTester = urlParams.get('tester') || urlParams.get('tester_key');
-      if (urlTester === 'false' || urlTester === '0') {
-        localStorage.removeItem('veernxt_tester_override');
-        return false;
+    if (isExplicitlyLocked) {
+      if (typeof window !== 'undefined') {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('tester') === 'true' || localStorage.getItem('veernxt_tester_override') === 'true') {
+          return true;
+        }
       }
-      if (urlTester) {
-        localStorage.setItem('veernxt_tester_override', 'true');
-        return true;
-      }
-      if (localStorage.getItem('veernxt_tester_override') === 'true') {
-        return true;
-      }
+      return false;
     }
   } catch {
-    // ignore in environments without window/localStorage
+    // ignore
   }
-  return false;
+
+  // Open to everyone by default in code
+  return true;
 }
 
 // ═══════════════════════════════════════════

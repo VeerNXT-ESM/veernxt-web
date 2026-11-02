@@ -26,19 +26,13 @@ async function handleFetchChapter(req, res) {
 
     const cat = (resource.category || '').toLowerCase().trim();
 
-    // 2. Paid category gate: Precis, PYQ require active paid subscription (bypassed if tester mode is active)
-    const reqTesterKey = req.headers['x-tester-key'] || req.query.testerKey;
-    const isTesterEnv =
-      process.env.TESTER_MODE === 'true' ||
-      process.env.VITE_TESTER_MODE === 'true' ||
-      process.env.TESTER_KEY === 'true' ||
-      process.env.VITE_TESTER_KEY === 'true' ||
-      process.env.UNLOCK_ALL === 'true' ||
-      process.env.VITE_UNLOCK_ALL === 'true' ||
-      Boolean(process.env.TESTER_KEY && reqTesterKey && String(process.env.TESTER_KEY) === String(reqTesterKey)) ||
-      Boolean(process.env.VITE_TESTER_KEY && reqTesterKey && String(process.env.VITE_TESTER_KEY) === String(reqTesterKey));
+    // 2. Paid category gate: Open to everyone by default directly in code
+    // (Only enforced if VITE_LOCK_PAYWALL='true' or LOCK_PAYWALL='true' is explicitly set).
+    const isExplicitlyLocked =
+      process.env.VITE_LOCK_PAYWALL === 'true' ||
+      process.env.LOCK_PAYWALL === 'true';
 
-    if (!isTesterEnv && (cat === 'precis' || cat === 'pyq')) {
+    if (isExplicitlyLocked && (cat === 'precis' || cat === 'pyq')) {
       const authHeader = req.headers.authorization;
       if (!authHeader || !authHeader.startsWith('Bearer ')) {
         return res.status(403).json({ ok: false, error: 'Authentication and paid subscription required to access this resource', locked: true });
