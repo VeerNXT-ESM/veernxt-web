@@ -16,20 +16,76 @@ const cache = {
 function extractCompany(job) {
   const cb = job.conducting_body;
   if (cb && !['Adda247', 'Sarkari Job Portal', 'FreeJobAlert'].includes(cb)) {
-    return cb;
+    return sanitizeBody(cb, job.title || '');
   }
-  const title = job.title || '';
-  const match = title.match(/^(.*?)(?=\s+(?:Recruitment|Notification|Apprentice|Online Form|Admit Card|Result|Vacancy|Various|Officer|Clerk|PO|SO|Manager|Engineer|Trainee|Intake|Staff|Assistant))/i);
-  if (match && match[1].trim().length > 1) {
-    return match[1].trim();
+  return extractBodyFromTitle(job.title || '');
+}
+
+function sanitizeBody(body, title = '') {
+  if (typeof body === 'string' && body.trim().length > 0 && body.trim().length < 80 && !body.includes('\n') && !body.toLowerCase().includes('name of post')) {
+    return body.trim();
   }
-  return title.split(' ')[0] || 'Unknown';
+  return extractBodyFromTitle(title);
 }
 
 function extractBodyFromTitle(title = '') {
+  const known = [
+    ['UPSSSC', 'UPSSSC'],
+    ['UPPSC', 'UPPSC'],
+    ['BPSC', 'BPSC'],
+    ['RPSC', 'RPSC'],
+    ['MPPSC', 'MPPSC'],
+    ['HSSC', 'HSSC'],
+    ['JKSSB', 'JKSSB'],
+    ['UKPSC', 'UKPSC'],
+    ['APSC', 'APSC'],
+    ['OPSC', 'OPSC'],
+    ['JSSC', 'JSSC'],
+    ['WBPSC', 'WBPSC'],
+    ['ISRO', 'ISRO'],
+    ['DRDO', 'DRDO'],
+    ['BARC', 'BARC'],
+    ['CSIR', 'CSIR'],
+    ['RCFL', 'RCFL'],
+    ['NTPC', 'NTPC'],
+    ['IOCL', 'IOCL'],
+    ['ONGC', 'ONGC'],
+    ['BEL', 'BEL'],
+    ['BHEL', 'BHEL'],
+    ['GAIL', 'GAIL'],
+    ['SAIL', 'SAIL'],
+    ['HAL', 'HAL'],
+    ['AAI', 'AAI'],
+    ['Railway RRB', 'Railway (RRB)'],
+    ['Railway RRC', 'Railway (RRC)'],
+    ['Railway', 'Railway (RRB)'],
+    ['RRB', 'Railway (RRB)'],
+    ['RRC', 'Railway (RRC)'],
+    ['DSSSB', 'DSSSB'],
+    ['SSC', 'SSC'],
+    ['UPSC', 'UPSC'],
+    ['IBPS', 'IBPS'],
+    ['SBI', 'SBI'],
+    ['RBI', 'RBI'],
+    ['Indian Airforce', 'Indian Air Force'],
+    ['Indian Air Force', 'Indian Air Force'],
+    ['Indian Army', 'Indian Army'],
+    ['Indian Navy', 'Indian Navy'],
+    ['Coast Guard', 'Indian Coast Guard'],
+    ['Assam Rifles', 'Assam Rifles'],
+    ['CISF', 'CISF'],
+    ['CRPF', 'CRPF'],
+    ['BSF', 'BSF'],
+    ['ITBP', 'ITBP'],
+    ['SSB', 'SSB']
+  ];
+  for (const [pattern, clean] of known) {
+    if (new RegExp('^' + pattern + '\\b', 'i').test(title)) return clean;
+  }
   const match = title.match(/^(.*?)(?=\s+(?:Recruitment|Notification|Apprentice|Online Form|Admit Card|Result|Vacancy|Various|Officer|Clerk|PO|SO|Manager|Engineer|Trainee|Intake|Staff|Assistant))/i);
-  if (match && match[1].trim().length > 1) return match[1].trim();
-  return title.split(' ')[0] || 'Unknown';
+  if (match && match[1].trim().length > 1 && match[1].trim().length < 40) return match[1].trim();
+  const firstWord = title.split(/[\s\-_/]/)[0];
+  return (firstWord && firstWord.length > 1) ? firstWord : 'Government Department';
 }
 
 async function queryLegacyJobs() {
@@ -116,7 +172,7 @@ async function queryJobsV2() {
     ...job,
     id: job.job_id || job.id,
     title: job.title,
-    body: job.conducting_body || extractBodyFromTitle(job.title),
+    body: sanitizeBody(job.conducting_body, job.title),
     careerTrack: job.career_track || null,
     publishedOn: job.published_on,
     lastDate: job.last_date,

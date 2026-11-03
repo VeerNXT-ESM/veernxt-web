@@ -94,7 +94,12 @@ async function getJobsV2Cached() {
         jobsV2Cache = dbJobs.map(job => ({
           ...job,
           id: job.id || job.job_id,
-          body: (typeof job.conducting_body === 'string' ? job.conducting_body : job.conducting_body?.name) || job.raw_json?.conducting_body || 'Government Department',
+          body: (() => {
+            const cb = (typeof job.conducting_body === 'string' ? job.conducting_body : job.conducting_body?.name) || job.raw_json?.conducting_body;
+            if (typeof cb === 'string' && cb.length > 0 && cb.length < 80 && !cb.includes('\n')) return cb.trim();
+            const firstWord = (job.title || '').split(/[\s\-_/]/)[0];
+            return (firstWord && firstWord.length > 1) ? firstWord : 'Government Department';
+          })(),
           careerTrack: job.career_track,
           publishedOn: job.published_on,
           lastDate: job.last_date,

@@ -61,15 +61,26 @@ const FilterSection = ({ title, children, defaultOpen = false, disabled = false 
   );
 };
 
+function getCleanBody(job) {
+  const b = job?.body;
+  if (typeof b === 'string' && b.trim().length > 0 && b.trim().length < 80 && !b.includes('\n') && !b.toLowerCase().includes('name of post')) {
+    return b.trim();
+  }
+  const title = job?.title || '';
+  const firstWord = title.split(/[\s\-_/]/)[0];
+  return (firstWord && firstWord.length > 1) ? firstWord : 'Government Department';
+}
+
 const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calculateDaysAgo }) => {
   const deadlineLabel = job.publishedOn ? calculateDaysAgo(job.publishedOn) : 'Recent';
   const isV2 = job._source === 'jobs_v2';
   const displayTags = isV2 && Array.isArray(job.tags) ? job.tags.slice(0, 4) : [];
   const extraTagCount = isV2 && Array.isArray(job.tags) ? Math.max(0, job.tags.length - 4) : 0;
+  const cleanBody = getCleanBody(job);
   return (
     <div className={`job-card ${isActive ? 'active' : ''}`} onClick={onSelect}>
-      <div className="job-card-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
-        {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
+      <div className="job-card-logo" style={{ backgroundColor: getAvatarColor(cleanBody) }}>
+        {cleanBody ? cleanBody.substring(0, 2).toUpperCase() : 'JO'}
       </div>
       <div className="job-card-body">
         <div className="job-card-top-row">
@@ -78,7 +89,7 @@ const JobCard = ({ job, idx, isActive, onSelect, onDismiss, getAvatarColor, calc
             <X size={14} />
           </button>
         </div>
-        <p className="job-card-company">{job.body}</p>
+        <p className="job-card-company">{cleanBody}</p>
 
         <div className="job-card-tags">
           {job.careerTrack && <CategoryTag track={job.careerTrack} />}
@@ -168,6 +179,8 @@ const JobDetailPanel = ({
   const isV2 = job._source === 'jobs_v2';
   const v2Tags = isV2 && Array.isArray(job.tags) ? job.tags : [];
 
+  const cleanBody = getCleanBody(job);
+
   return (
     <aside className="job-detail-panel">
       {onBack && (
@@ -176,13 +189,13 @@ const JobDetailPanel = ({
         </button>
       )}
       <div className="job-detail-header">
-        <div className="job-detail-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
-          {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
+        <div className="job-detail-logo" style={{ backgroundColor: getAvatarColor(cleanBody) }}>
+          {cleanBody ? cleanBody.substring(0, 2).toUpperCase() : 'JO'}
         </div>
         <div className="job-detail-heading">
           <h2>{job.title}</h2>
           <p className="job-detail-subline">
-            {job.body}{job.publishedOn ? ` • ${calculateDaysAgo(job.publishedOn)}` : ''}
+            {cleanBody}{job.publishedOn ? ` • ${calculateDaysAgo(job.publishedOn)}` : ''}
           </p>
           <div className="job-detail-tags">
             {job.careerTrack && <CategoryTag track={job.careerTrack} />}
@@ -350,16 +363,16 @@ const JobDetailPanel = ({
       <div className="job-detail-company">
         <h3>About the organization</h3>
         <div className="job-detail-company-header">
-          <div className="job-detail-company-logo" style={{ backgroundColor: getAvatarColor(job.body) }}>
-            {job.body ? job.body.substring(0, 2).toUpperCase() : 'JO'}
+          <div className="job-detail-company-logo" style={{ backgroundColor: getAvatarColor(cleanBody) }}>
+            {cleanBody ? cleanBody.substring(0, 2).toUpperCase() : 'JO'}
           </div>
           <div>
-            <h4>{job.body}</h4>
+            <h4>{cleanBody}</h4>
             {job.careerTrack && <p>{CAREER_TRACK_META[job.careerTrack]?.label}</p>}
           </div>
         </div>
         <p className="job-detail-company-notes">
-          {job.notes || `Recruitment listing sourced and tracked by VeerNXT for ${job.body || 'this organization'}.`}
+          {job.notes || `Recruitment listing sourced and tracked by VeerNXT for ${cleanBody}.`}
         </p>
       </div>
     </aside>
