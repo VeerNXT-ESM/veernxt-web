@@ -242,7 +242,7 @@ export default function StudyMaterialsPage() {
   const examNameParam = searchParams.get('examName') || '';
 
   const isGuide = typeParam !== 'precis';
-  const pageTypeTitle = isGuide ? 'Guidebooks' : 'Préci Notes';
+  const pageTypeTitle = isGuide ? 'Guidebooks' : 'Précis Notes';
   const pageCategoryName = categoryParam.toUpperCase();
 
   // Modal states
@@ -488,7 +488,7 @@ export default function StudyMaterialsPage() {
           subjectKey: 'general_studies',
           subjectLabel: `${stName} General Studies`,
           titleSuffix: `${stName} GS`,
-          displayTitle: `${stName} General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+          displayTitle: `${stName} General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
           shortCoverTitle: `${stName} GS`,
           spineTitle: `${stName.toUpperCase()} GS`,
           thumbnail: stCover || '/thumbnails/General Knowledge.webp',
@@ -510,7 +510,7 @@ export default function StudyMaterialsPage() {
           subjectKey: 'gk_general_awareness',
           subjectLabel: 'GK & General Studies',
           titleSuffix: 'General Studies & GK',
-          displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+          displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
           shortCoverTitle: `General Studies & GK`,
           spineTitle: 'GENERAL STUDIES & GK',
           thumbnail: genCover,
@@ -580,8 +580,8 @@ export default function StudyMaterialsPage() {
           subjectKey: subKey,
           subjectLabel: titleSuffix,
           titleSuffix,
-          displayTitle: `${currentExamShortName} ${titleSuffix} ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
-          shortCoverTitle: `${titleSuffix} ${isGuide ? 'Guide' : 'Préci'}`,
+          displayTitle: `${currentExamShortName} ${titleSuffix} ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
+          shortCoverTitle: `${titleSuffix} ${isGuide ? 'Guide' : 'Précis'}`,
           spineTitle,
           thumbnail: customCover || `/thumbnails/${subKey.charAt(0).toUpperCase() + subKey.slice(1)}.webp`,
           customCover,
@@ -608,7 +608,7 @@ export default function StudyMaterialsPage() {
             subjectKey: core.key,
             subjectLabel: core.label,
             titleSuffix: core.label,
-            displayTitle: `${currentExamShortName} ${core.label} ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+            displayTitle: `${currentExamShortName} ${core.label} ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
             shortCoverTitle: `${core.label}`,
             spineTitle: core.spine,
             thumbnail: customCover || `/thumbnails/${core.slug.charAt(0).toUpperCase() + core.slug.slice(1)}.webp`,
@@ -638,7 +638,7 @@ export default function StudyMaterialsPage() {
         subjectKey: 'general_studies',
         subjectLabel: `${detectedState} General Studies`,
         titleSuffix: `${detectedState} GS`,
-        displayTitle: `${detectedState} General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        displayTitle: `${detectedState} General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
         shortCoverTitle: `${detectedState} GS`,
         spineTitle: `${detectedState.toUpperCase()} GS`,
         thumbnail: stCover || '/thumbnails/General Knowledge.webp',
@@ -656,7 +656,7 @@ export default function StudyMaterialsPage() {
         subjectKey: 'gk_general_awareness',
         subjectLabel: 'GK & General Studies',
         titleSuffix: 'General Studies & GK',
-        displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
         shortCoverTitle: 'General Studies & GK',
         spineTitle: 'GENERAL STUDIES & GK',
         thumbnail: '/thumbnails/books/gs-gk-complete-guide.webp',
@@ -671,7 +671,7 @@ export default function StudyMaterialsPage() {
         subjectKey: 'english',
         subjectLabel: 'English',
         titleSuffix: 'English',
-        displayTitle: `${currentExamShortName} English Language ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        displayTitle: `${currentExamShortName} English Language ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
         shortCoverTitle: 'English Language',
         spineTitle: 'ENGLISH LANGUAGE',
         thumbnail: '/thumbnails/English.webp',
@@ -686,7 +686,7 @@ export default function StudyMaterialsPage() {
         subjectKey: 'mathematics',
         subjectLabel: 'Quantitative Aptitude',
         titleSuffix: 'Mathematics & Quant',
-        displayTitle: `${currentExamShortName} Mathematics & Quant ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        displayTitle: `${currentExamShortName} Mathematics & Quant ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
         shortCoverTitle: 'Mathematics & Quant',
         spineTitle: 'MATHEMATICS & QUANT',
         thumbnail: '/thumbnails/Mathematics.webp',
@@ -701,7 +701,7 @@ export default function StudyMaterialsPage() {
         subjectKey: 'reasoning',
         subjectLabel: 'Reasoning Ability',
         titleSuffix: 'Reasoning',
-        displayTitle: `${currentExamShortName} Reasoning Ability ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        displayTitle: `${currentExamShortName} Reasoning Ability ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
         shortCoverTitle: 'Reasoning Ability',
         spineTitle: 'REASONING',
         thumbnail: '/thumbnails/Reasoning.webp',
@@ -725,7 +725,7 @@ export default function StudyMaterialsPage() {
     return () => window.removeEventListener('resize', checkScroll);
   }, [booksWithCombinations]);
 
-  // Exam selector + Guidebooks/Préci switch: inside the hero on larger screens, as separate cards on phones
+  // Exam selector + Guidebooks/Précis switch: inside the hero on larger screens, as separate cards on phones
   const renderControls = (variant) => (
     <div className={`smp-hero-controls-bar smp-controls-${variant}`}>
       <div className="smp-exam-selector-card">
@@ -757,7 +757,7 @@ export default function StudyMaterialsPage() {
         </div>
       </div>
 
-      {/* Guidebooks / Préci Switcher Pills */}
+      {/* Guidebooks / Précis Switcher Pills */}
       <div className="smp-type-switcher">
         <button
           type="button"
@@ -773,7 +773,7 @@ export default function StudyMaterialsPage() {
           onClick={() => handleTypeChange('precis')}
         >
           <Target size={15} />
-          <span>Préci Notes</span>
+          <span>Précis Notes</span>
         </button>
       </div>
     </div>
@@ -1263,7 +1263,7 @@ export default function StudyMaterialsPage() {
           </div>
 
           <div className="smp-resources-row">
-            {/* 1. Alternate: Préci Notes OR Guidebooks */}
+            {/* 1. Alternate: Précis Notes OR Guidebooks */}
             <Link
               to={`/study-materials?category=${encodeURIComponent(categoryParam)}&type=${isGuide ? 'precis' : 'guide'}`}
               className="smp-resource-card res-card-pink"
@@ -1273,7 +1273,7 @@ export default function StudyMaterialsPage() {
                   <Layers size={19} />
                 </div>
                 <div>
-                  <h4 className="smp-res-title">{isGuide ? 'Préci Notes' : 'Guidebooks'}</h4>
+                  <h4 className="smp-res-title">{isGuide ? 'Précis Notes' : 'Guidebooks'}</h4>
                   <p className="smp-res-desc">
                     {isGuide ? 'Topic-wise concise notes for quick revision' : 'Complete in-depth study books'}
                   </p>

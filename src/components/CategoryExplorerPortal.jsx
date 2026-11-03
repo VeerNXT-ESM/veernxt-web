@@ -1331,7 +1331,7 @@ export default function CategoryExplorerPortal({
       color: 'green',
     },
     {
-      title: 'Preci for Quick Revision',
+      title: 'Précis for Quick Revision',
       desc: 'Short and precise notes',
       icon: FileText,
       color: 'blue',
@@ -1415,7 +1415,7 @@ export default function CategoryExplorerPortal({
               <h3 style="color: var(--c-green, #065f46); font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Selection Process & Pattern</h3>
               <p>The recruitment process comprises multi-stage evaluations including Computer-Based Written Tests (CBT), skill assessments, and document verification. Structured module notes and previous year papers are compiled below.</p>
               <h3 style="color: var(--c-green, #065f46); font-size: 19px; margin-top: 24px; margin-bottom: 8px;">Recommended Preparation Strategy</h3>
-              <p>1. Complete the core topic chapters in the Guidebooks.<br/>2. Revise key formulae and summary points via Préci.<br/>3. Benchmark timing using full-length Mock Tests.</p>
+              <p>1. Complete the core topic chapters in the Guidebooks.<br/>2. Revise key formulae and summary points via Précis.<br/>3. Benchmark timing using full-length Mock Tests.</p>
             </div>
           `,
           category: 'Intro',
@@ -1678,7 +1678,7 @@ export default function CategoryExplorerPortal({
               </div>
             </div>
 
-            {/* 3. Preci -> Opens Dedicated Study Materials Préci Page */}
+            {/* 3. Précis -> Opens Dedicated Study Materials Précis Page */}
             <div
               className={`cep-action-card cep-card-rose cep-action-card-clickable ${activeResourceTab === 'precis' ? 'cep-action-card-active' : ''}`}
               onClick={() => {
@@ -1693,7 +1693,7 @@ export default function CategoryExplorerPortal({
               <div className="cep-action-icon-wrap icon-rose">
                 <Target size={26} strokeWidth={2.2} />
               </div>
-              <h3 className="cep-action-title">Preci</h3>
+              <h3 className="cep-action-title">Précis</h3>
               <p className="cep-action-desc">
                 Topic-wise concise notes for quick revision
               </p>
@@ -1888,7 +1888,7 @@ export default function CategoryExplorerPortal({
                           <h5>Recommended Strategy</h5>
                           <ul>
                             <li>Master fundamentals with the dedicated <strong>Guidebooks</strong>.</li>
-                            <li>Review high-yield formulas with concise <strong>Préci Notes</strong>.</li>
+                            <li>Review high-yield formulas with concise <strong>Précis Notes</strong>.</li>
                             <li>Solve authentic <strong>Previous Year Questions (PYQs)</strong> to identify trends.</li>
                           </ul>
                         </div>
