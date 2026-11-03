@@ -775,6 +775,13 @@
   font-size: 0.9rem;
 }
 
+.bk-plain-stmt {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--reader-text, #281d14);
+  margin-bottom: 3px;
+}
+
 .bk-roman-stmt {
   display: flex;
   align-items: baseline;

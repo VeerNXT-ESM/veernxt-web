@@ -616,6 +616,7 @@ export default function CategoryExplorerPortal({
   onSetSidebarCollapsed,
   onSelectExam,
   onExploreContent,
+  onBackToCategories,
   globalSearch = '',
   onClearGlobalSearch,
 }) {
@@ -2078,16 +2079,29 @@ export default function CategoryExplorerPortal({
     <div className="cep-container" aria-label={`${profile.category_name} Exam Preparation Portal`}>
       {/* ── Breadcrumb Bar ── */}
       <nav className="cep-breadcrumbs" aria-label="Breadcrumb">
-        <span className="cep-bc-link">Home</span>
+        <span className="cep-bc-link" style={{ cursor: 'pointer' }} onClick={() => navigate('/learning-center')}>Home</span>
         <ChevronRight size={13} className="cep-bc-sep" />
-        <span className="cep-bc-link">Exams</span>
+        <span
+          className="cep-bc-link"
+          style={{ cursor: 'pointer' }}
+          onClick={() => {
+            if (onBackToCategories) {
+              onBackToCategories();
+            } else {
+              setSearchParams((prev) => {
+                const next = new URLSearchParams(prev);
+                next.delete('category');
+                next.delete('exam');
+                next.delete('resource');
+                next.delete('manual');
+                return next;
+              });
+            }
+          }}
+        >
+          {stateName ? `${stateName} Categories` : 'All Categories'}
+        </span>
         <ChevronRight size={13} className="cep-bc-sep" />
-        {stateName && (
-          <>
-            <span className="cep-bc-link">{stateName}</span>
-            <ChevronRight size={13} className="cep-bc-sep" />
-          </>
-        )}
         <span className="cep-bc-current">{profile.category_name}</span>
       </nav>
 

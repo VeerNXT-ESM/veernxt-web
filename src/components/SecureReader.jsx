@@ -158,40 +158,69 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         .eq('resource_id', id)
         .maybeSingle();
 
-      // Fallback for slug-based or subject-based routes (e.g. /reader/english, /reader/gk-gs)
+      // Fallback for slug-based or subject-based routes (e.g. /reader/english, /reader/gk-gs, /reader/assam-gs)
       if (!data && id) {
-        const SLUG_TO_TITLE = {
-          'english': 'ENGLISH',
-          'gk-gs': 'GS & GK',
-          'gk': 'GS & GK',
-          'general-knowledge': 'GS & GK',
-          'mathematics': 'MATHEMATICS',
-          'maths': 'MATHEMATICS',
-          'math': 'MATHEMATICS',
-          'reasoning': 'REASONING',
-        };
-        const titleQuery = SLUG_TO_TITLE[id.toLowerCase()] || id.toLowerCase().replace(/[-_]/g, ' ');
+        const queryParams = new URLSearchParams(window.location.search);
+        const stateContext = queryParams.get('state') || location.state?.stateName || location.state?.state || '';
+        const idLower = id.toLowerCase().trim();
 
-        // Try canonical blocks format first
-        const { data: blocksMatch } = await supabase
-          .from('resources')
-          .select('*')
-          .ilike('title', `%${titleQuery}%`)
-          .eq('format', 'blocks')
-          .limit(1)
-          .maybeSingle();
+        // 1. If slug is explicitly state-focused (e.g. 'assam-gs', 'bihar-gs', 'state-gs') or stateContext exists for a GS slug
+        const isStateSlug = idLower.endsWith('-gs') || idLower.includes('state') || (stateContext && ['gk-gs', 'gk', 'general-knowledge', 'general-studies'].includes(idLower));
+        if (isStateSlug) {
+          const stateQuery = idLower.endsWith('-gs')
+            ? idLower.replace(/-gs$/i, '').replace(/[-_]/g, ' ')
+            : (stateContext || '').toLowerCase();
 
-        if (blocksMatch) {
-          data = blocksMatch;
-        } else {
-          const { data: fallbackRows } = await supabase
+          if (stateQuery) {
+            const { data: stateMatch } = await supabase
+              .from('resources')
+              .select('*')
+              .ilike('title', `%${stateQuery}%GS%`)
+              .eq('format', 'blocks')
+              .limit(1)
+              .maybeSingle();
+
+            if (stateMatch) {
+              data = stateMatch;
+            }
+          }
+        }
+
+        // 2. Standard canonical title mapping fallback
+        if (!data) {
+          const SLUG_TO_TITLE = {
+            'english': 'ENGLISH',
+            'gk-gs': 'GS & GK',
+            'gk': 'GS & GK',
+            'general-knowledge': 'GS & GK',
+            'mathematics': 'MATHEMATICS',
+            'maths': 'MATHEMATICS',
+            'math': 'MATHEMATICS',
+            'reasoning': 'REASONING',
+          };
+          const titleQuery = SLUG_TO_TITLE[idLower] || idLower.replace(/[-_]/g, ' ');
+
+          // Try canonical blocks format first
+          const { data: blocksMatch } = await supabase
             .from('resources')
             .select('*')
             .ilike('title', `%${titleQuery}%`)
-            .limit(1);
+            .eq('format', 'blocks')
+            .limit(1)
+            .maybeSingle();
 
-          if (fallbackRows && fallbackRows.length > 0) {
-            data = fallbackRows[0];
+          if (blocksMatch) {
+            data = blocksMatch;
+          } else {
+            const { data: fallbackRows } = await supabase
+              .from('resources')
+              .select('*')
+              .ilike('title', `%${titleQuery}%`)
+              .limit(1);
+
+            if (fallbackRows && fallbackRows.length > 0) {
+              data = fallbackRows[0];
+            }
           }
         }
       }
@@ -216,17 +245,47 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         }
       }
 
+      // Authoritative chapter metadata resolution from R2 metadata.json
+      let stubs = null;
+      if (data.storage_base_url) {
+        try {
+          const base = data.storage_base_url.endsWith('/') ? data.storage_base_url : `${data.storage_base_url}/`;
+          const metaResp = await fetch(`${base}metadata.json?t=${Date.now()}`);
+          if (metaResp.ok) {
+            const meta = await metaResp.json();
+            if (Array.isArray(meta.chapters) && meta.chapters.length > 0) {
+              data.chapter_count = meta.chapters.length;
+              if (meta.title && !data.title) {
+                data.title = meta.title;
+              }
+              stubs = meta.chapters.map((ch, idx) => ({
+                index: idx,
+                title: ch.title || `Chapter ${idx + 1}`,
+                part: ch.part || '',
+                body_html: null,
+                loaded: false,
+                blocks: null,
+              }));
+            }
+          }
+        } catch (mErr) {
+          console.warn('Could not fetch book metadata.json:', mErr);
+        }
+      }
+
+      // Fallback stubs from chapter_count if metadata.json was unreachable
+      if (!stubs) {
+        const count = data.chapter_count || 1;
+        stubs = Array.from({ length: count }, (_, i) => ({
+          index: i,
+          title: `Chapter ${i + 1}`,
+          body_html: null,
+          loaded: false
+        }));
+      }
+
       setResource(data);
       awardPoints('RESOURCE_OPENED', { refId: data.resource_id });
-
-      // Create chapter stubs from chapter_count
-      const count = data.chapter_count || 1;
-      const stubs = Array.from({ length: count }, (_, i) => ({
-        index: i,
-        title: `Chapter ${i + 1}`,
-        body_html: null, // Will be loaded lazily
-        loaded: false
-      }));
       setChapters(stubs);
       setLoading(false);
 

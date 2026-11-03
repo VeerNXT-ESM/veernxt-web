@@ -1405,18 +1405,9 @@ const LearningCenter = () => {
 
   const activeCategoryForExplorer = useMemo(() => {
     if (categoryFilter && categoryOptions.includes(categoryFilter)) return categoryFilter;
-    if (regionMode === 'central') {
-      return categoryOptions.includes('SSC') ? 'SSC' : categoryOptions[0] || '';
-    }
-    return categoryOptions[0] || '';
-  }, [categoryFilter, categoryOptions, regionMode]);
-
-  // Normalize initial default category in URL without adding extra history step
-  useEffect(() => {
-    if (!paramCategory && activeCategoryForExplorer && rightTab === 'explorer') {
-      updateSearchParams({ category: activeCategoryForExplorer }, { replace: true });
-    }
-  }, [paramCategory, activeCategoryForExplorer, rightTab, updateSearchParams]);
+    if (paramCategory && categoryOptions.includes(paramCategory)) return paramCategory;
+    return '';
+  }, [categoryFilter, paramCategory, categoryOptions]);
 
   const explorerCategoryList = useMemo(() => {
     return categoryOptions.map((cat) => {
@@ -2434,6 +2425,32 @@ const LearningCenter = () => {
                       )}
 
                       <nav className="lc-explorer-nav" aria-label="Exam categories">
+                        {/* Option 0: All Categories Overview */}
+                        <button
+                          type="button"
+                          className={`lc-explorer-nav-item ${!(categoryFilter || activeCategoryForExplorer) ? 'lc-explorer-nav-active' : ''}`}
+                          onClick={() => handleCategoryFilterChange('')}
+                          title="All Categories Overview"
+                          aria-current={!(categoryFilter || activeCategoryForExplorer) ? 'page' : undefined}
+                        >
+                          <span
+                            className="lc-explorer-nav-icon-wrap"
+                            style={{
+                              backgroundColor: !(categoryFilter || activeCategoryForExplorer) ? 'var(--c-tint-amber, #fef3c7)' : 'var(--c-bg-2, #f1f5f9)',
+                              color: !(categoryFilter || activeCategoryForExplorer) ? 'var(--c-amber, #b45309)' : 'var(--c-ink-3, #475569)',
+                            }}
+                          >
+                            <Layers size={17} strokeWidth={2.2} />
+                          </span>
+                          {!isSidebarCollapsed && (
+                            <>
+                              <span className="lc-explorer-nav-label">All Categories</span>
+                              <span className="lc-explorer-nav-count">({levelExams.length})</span>
+                              <ChevronRight size={14} className="lc-explorer-nav-chevron" />
+                            </>
+                          )}
+                        </button>
+
                         {filteredExplorerCategoryList.length > 0 ? (
                           filteredExplorerCategoryList.map((item) => {
                           const currentCategory = categoryFilter || activeCategoryForExplorer;
@@ -3132,6 +3149,140 @@ const LearningCenter = () => {
                       })}
                     </div>
                   </div>
+                ) : !(categoryFilter || activeCategoryForExplorer) ? (
+                  /* Category Directory Hub: Central Examination Categories or State-specific Category Directory */
+                  <div className="lc-state-directory-container">
+                    <div
+                      className="lc-state-directory-hero"
+                      style={bannerImageStyle(
+                        regionMode === 'central'
+                          ? heroBanner
+                          : (activeState?.name ? (getStateBannerImage(activeState.name) || stateDirBanner) : stateDirBanner),
+                        '--lc-state-hero-img'
+                      )}
+                    >
+                      <div className="lc-state-hero-overlay" />
+                      <div className="lc-state-hero-content">
+                        <div className="lc-state-hero-badge">
+                          {regionMode === 'central' ? <Landmark size={14} /> : <MapPin size={14} />}
+                          <span>
+                            {regionMode === 'central'
+                              ? `Central Government Examinations · ${categoryOptions.length} Categories & ${levelExams.length} Exams`
+                              : `${activeState?.name || 'State'} Examinations · ${categoryOptions.length} Categories & ${levelExams.length} Exams`}
+                          </span>
+                        </div>
+                        <h1 className="lc-state-directory-title">
+                          {regionMode === 'central'
+                            ? 'Explore Central Examination Categories'
+                            : `${activeState?.name || 'State'} Examination Categories`}
+                        </h1>
+                        <p className="lc-state-directory-subtitle">
+                          {regionMode === 'central'
+                            ? 'Official recruitment portals, verified syllabus breakdowns, mock tests, and curated study materials across all Central Ministries, Staff Selection, Armed Forces, and Public Sectors.'
+                            : `Official state recruitment portals, localized syllabus breakdowns, and curated study materials for ${activeState?.name || 'this state'}.`}
+                        </p>
+
+                        {(regionMode === 'state' || regionMode === 'ut') && activeState && (
+                          <div style={{ marginTop: '0.85rem' }}>
+                            <button
+                              type="button"
+                              className="lc-state-zone-chip active"
+                              onClick={() => {
+                                handleSelectState(null);
+                                updateSearchParams({ state: undefined });
+                              }}
+                              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', padding: '0.45rem 1rem' }}
+                            >
+                              <ArrowLeft size={14} />
+                              <span>Back to all {regionMode === 'ut' ? 'Union Territories' : 'States'}</span>
+                            </button>
+                          </div>
+                        )}
+
+                        <div className="lc-state-search-box">
+                          <Search size={18} className="lc-state-search-icon" />
+                          <input
+                            type="text"
+                            className="lc-state-search-input"
+                            placeholder={`Search ${regionMode === 'central' ? 'central' : (activeState?.name || 'state')} categories (e.g. SSC, Banking, Railways, Defence, Civil Services)...`}
+                            value={categorySearch}
+                            onChange={(e) => setCategorySearch(e.target.value)}
+                          />
+                          {categorySearch && (
+                            <button
+                              type="button"
+                              className="lc-state-search-clear"
+                              onClick={() => setCategorySearch('')}
+                            >
+                              <X size={16} />
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="lc-state-directory-grid">
+                      {filteredExplorerCategoryList.map((item) => {
+                        const IconComponent = item.icon || ClipboardList;
+                        return (
+                          <button
+                            key={item.key}
+                            type="button"
+                            className="lc-state-card"
+                            onClick={() => handleCategoryFilterChange(item.key)}
+                            style={{ textAlign: 'left', cursor: 'pointer' }}
+                          >
+                            <div
+                              className="lc-state-card-image-wrap"
+                              style={{
+                                height: '110px',
+                                background: `linear-gradient(135deg, ${item.bg || 'var(--c-tint-blue, #e0f2fe)'} 0%, #ffffff 100%)`,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                position: 'relative',
+                              }}
+                            >
+                              <div
+                                style={{
+                                  width: '56px',
+                                  height: '56px',
+                                  borderRadius: '16px',
+                                  backgroundColor: item.bg || 'var(--c-tint-blue, #e0f2fe)',
+                                  color: item.color || 'var(--c-blue, #0284c7)',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
+                                }}
+                              >
+                                <IconComponent size={28} strokeWidth={2.2} />
+                              </div>
+
+                              <div className="lc-state-card-floating-bar">
+                                <span className="lc-state-card-count-badge">
+                                  {item.count} Exams
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="lc-state-card-body">
+                              <div className="lc-state-card-header-row">
+                                <h3 className="lc-state-card-name">{item.label}</h3>
+                              </div>
+                              <p style={{ fontSize: '12.5px', color: 'var(--c-ink-3, #64748b)', margin: '4px 0 12px 0', lineHeight: 1.4 }}>
+                                Syllabus breakdowns, study notes, mock tests and previous papers.
+                              </p>
+                              <div className="lc-state-card-footer">
+                                <span className="lc-state-card-cta">Explore Category</span>
+                                <ArrowRight size={14} className="lc-state-card-arrow" />
+                              </div>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
                 ) : (
                   <CategoryExplorerPortal
                     key={`${regionMode}-${categoryFilter || activeCategoryForExplorer || 'portal'}`}
@@ -3142,6 +3293,7 @@ const LearningCenter = () => {
                     allCatalog={catalog}
                     isSidebarCollapsed={isSidebarCollapsed}
                     onSetSidebarCollapsed={setIsSidebarCollapsed}
+                    onBackToCategories={() => handleCategoryFilterChange('')}
                     globalSearch={topSearchText}
                     onClearGlobalSearch={() => setTopSearchText('')}
                     onSelectExam={(exam) => {

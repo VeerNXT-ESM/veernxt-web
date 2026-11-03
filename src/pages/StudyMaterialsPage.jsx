@@ -299,7 +299,7 @@ export default function StudyMaterialsPage() {
       try {
         const { data, error } = await supabase
           .from('lc_exams')
-          .select('id, name, category')
+          .select('id, name, category, region:lc_regions(name, level)')
           .ilike('category', categoryParam)
           .order('name');
 
@@ -377,7 +377,7 @@ export default function StudyMaterialsPage() {
   };
 
   // Mapped resources for the currently selected exam
-  const [examResources, setExamResources] = useState({});
+  const [examLinkedRows, setExamLinkedRows] = useState([]);
 
   useEffect(() => {
     let cancelled = false;
@@ -392,26 +392,41 @@ export default function StudyMaterialsPage() {
           .eq('category', catFilter);
 
         if (cancelled) return;
+        let resRows = [];
         if (mappings && mappings.length > 0) {
           const resIds = mappings.map((m) => m.resource_id).filter(Boolean);
-          const { data: resRows } = await supabase
+          const { data: fetchedRows } = await supabase
             .from('resources')
-            .select('resource_id, title, category, format')
+            .select('resource_id, title, category, format, chapter_count, status')
             .in('resource_id', resIds);
+          if (fetchedRows) resRows = [...fetchedRows];
+        }
 
-          if (!cancelled && resRows) {
-            const mapBySubject = {};
-            for (const r of resRows) {
-              const t = (r.title || '').toLowerCase();
-              if (t.includes('english')) mapBySubject['english'] = r.resource_id;
-              else if (t.includes('gk') || t.includes('gs') || t.includes('general awareness') || t.includes('general knowledge')) mapBySubject['gk-gs'] = r.resource_id;
-              else if (t.includes('math') || t.includes('quant')) mapBySubject['mathematics'] = r.resource_id;
-              else if (t.includes('reasoning')) mapBySubject['reasoning'] = r.resource_id;
+        // Guarantee state-specific GS book is present for State / UT exams
+        const stateRegex = /(Rajasthan|Madhya Pradesh|Maharashtra|Gujarat|Haryana|Himachal Pradesh|Himachal|Punjab|Odisha|West Bengal|Uttar Pradesh|Bihar|Jharkhand|Chhattisgarh|Assam|Karnataka|Kerala|Tamil Nadu|TamilNadu|Andhra Pradesh|Andhra|Telangana|Arunachal Pradesh|Arunachal|Delhi|Jammu & Kashmir|Jammu|Ladakh|Uttarakhand|Goa|Chandigarh|Puducherry|Lakshadweep|Manipur|Meghalaya|Mizoram|Tripura)/i;
+        const detState = selectedExam?.region?.name || (selectedExam?.name ? selectedExam.name.match(stateRegex)?.[1] : '') || '';
+        const isStExam = (selectedExam?.region?.level === 'state' || selectedExam?.region?.level === 'ut') || Boolean(detState);
+
+        if (isStExam && detState) {
+          const hasStateGS = resRows.some((r) => {
+            const t = (r.title || '').toLowerCase();
+            return t.includes(detState.toLowerCase()) && (t.includes('gs') || t.includes('gk'));
+          });
+          if (!hasStateGS) {
+            const { data: stGsRows } = await supabase
+              .from('resources')
+              .select('resource_id, title, category, format, chapter_count, status')
+              .ilike('title', `%${detState}%GS%`)
+              .eq('format', 'blocks')
+              .limit(1);
+            if (stGsRows && stGsRows.length > 0) {
+              resRows.unshift(stGsRows[0]);
             }
-            setExamResources(mapBySubject);
           }
-        } else {
-          setExamResources({});
+        }
+
+        if (!cancelled) {
+          setExamLinkedRows(resRows);
         }
       } catch (err) {
         console.warn('Error loading exam resources:', err);
@@ -421,23 +436,288 @@ export default function StudyMaterialsPage() {
     return () => {
       cancelled = true;
     };
-  }, [selectedExam?.id, isGuide]);
+  }, [selectedExam?.id, selectedExam?.region, selectedExam?.name, isGuide]);
 
-  // Randomly assign one of the 5 combinations to each book card on mount
+  // Dynamically build book cards for the exam
   const booksWithCombinations = useMemo(() => {
-    return CATALOG_BOOKS.map((book, idx) => {
-      const combo = getRandomCombination(idx); // ensures 5 distinct combinations across cards
-      const formattedTitle = `${currentExamShortName} ${book.titleSuffix} ${isGuide ? 'Guidebook' : 'Préci'} 2026`;
-      const matchedResId = examResources[book.slug];
-      return {
+    const stateRegex = /(Rajasthan|Madhya Pradesh|Maharashtra|Gujarat|Haryana|Himachal Pradesh|Himachal|Punjab|Odisha|West Bengal|Uttar Pradesh|Bihar|Jharkhand|Chhattisgarh|Assam|Karnataka|Kerala|Tamil Nadu|TamilNadu|Andhra Pradesh|Andhra|Telangana|Arunachal Pradesh|Arunachal|Delhi|Jammu & Kashmir|Jammu|Ladakh|Uttarakhand|Goa|Chandigarh|Puducherry|Lakshadweep|Manipur|Meghalaya|Mizoram|Tripura)/i;
+    const detectedState =
+      selectedExam?.region?.name ||
+      (selectedExam?.name ? selectedExam.name.match(stateRegex)?.[1] : '') ||
+      '';
+    const isStateOrUt =
+      selectedExam?.region?.level === 'state' ||
+      selectedExam?.region?.level === 'ut' ||
+      !!detectedState;
+
+    // If we have linked rows from the database, build distinct books
+    if (examLinkedRows && examLinkedRows.length > 0) {
+      const items = [];
+      const seenSubjects = new Set();
+
+      // Separate state GS, general GS, and other subjects
+      let stateGSRow = null;
+      let generalGSRow = null;
+      const otherRows = [];
+
+      for (const r of examLinkedRows) {
+        const t = (r.title || '').toLowerCase();
+        const isGeneralGS = /^(gs & gk|general knowledge|2026 gk-gs|ssc complete gk|general awareness|rrb complete gk|general science)/i.test(t);
+        const isStateGS =
+          !isGeneralGS &&
+          (stateRegex.test(t) || /(si|constable|police)/i.test(t)) &&
+          /(gs|gk|book|si|constable|guide)/i.test(t);
+
+        if (isStateGS && !stateGSRow) {
+          stateGSRow = r;
+        } else if (isGeneralGS && !generalGSRow) {
+          generalGSRow = r;
+        } else {
+          otherRows.push(r);
+        }
+      }
+
+      // 1. State-specific GS Book (if State/UT exam or state book mapped)
+      if (stateGSRow || (isStateOrUt && detectedState)) {
+        const stName = detectedState || (stateGSRow?.title ? stateGSRow.title.replace(/gs|book|si|constable|guide/gi, '').trim() : 'State');
+        const stSlug = stName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const stCover = getBookCoverUrl(stateGSRow?.title || `${stSlug}-gs`, stName);
+        items.push({
+          id: `book-state-gs-${stSlug}`,
+          slug: `${stSlug}-gs`,
+          subjectKey: 'general_studies',
+          subjectLabel: `${stName} General Studies`,
+          titleSuffix: `${stName} GS`,
+          displayTitle: `${stName} General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+          shortCoverTitle: `${stName} GS`,
+          spineTitle: `${stName.toUpperCase()} GS`,
+          thumbnail: stCover || '/thumbnails/General Knowledge.webp',
+          customCover: stCover,
+          hasCustomCover: !!stCover,
+          resourceId: stateGSRow?.resource_id || null,
+          isBestSeller: true,
+          spineColor: '#064e3b',
+        });
+        seenSubjects.add('state-gs');
+      }
+
+      // 2. All-India General GS & GK Book
+      if (generalGSRow || isStateOrUt || otherRows.some((r) => /(gk|gs)/i.test(r.title))) {
+        const genCover = '/thumbnails/books/gs-gk-complete-guide.webp';
+        items.push({
+          id: 'book-general-gs-gk',
+          slug: 'gs-gk',
+          subjectKey: 'gk_general_awareness',
+          subjectLabel: 'GK & General Studies',
+          titleSuffix: 'General Studies & GK',
+          displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+          shortCoverTitle: `General Studies & GK`,
+          spineTitle: 'GENERAL STUDIES & GK',
+          thumbnail: genCover,
+          customCover: genCover,
+          hasCustomCover: true,
+          resourceId: generalGSRow?.resource_id || null,
+          isBestSeller: true,
+          spineColor: '#78350f',
+        });
+        seenSubjects.add('general-gs');
+      }
+
+      // 3. Process remaining mapped rows (Math, Reasoning, English, Hindi, Computer, etc.)
+      for (const r of otherRows) {
+        const t = (r.title || '').toLowerCase();
+        let subKey = '';
+        let slug = '';
+        let titleSuffix = '';
+        let spineTitle = '';
+        let spineColor = '#1e3a8a';
+
+        if (t.includes('english')) {
+          subKey = 'english';
+          slug = 'english';
+          titleSuffix = 'English';
+          spineTitle = 'ENGLISH LANGUAGE';
+          spineColor = '#1e3a8a';
+        } else if (t.includes('math') || t.includes('quant')) {
+          subKey = 'mathematics';
+          slug = 'mathematics';
+          titleSuffix = 'Mathematics & Quant';
+          spineTitle = 'MATHEMATICS & QUANT';
+          spineColor = '#b45309';
+        } else if (t.includes('reasoning')) {
+          subKey = 'reasoning';
+          slug = 'reasoning';
+          titleSuffix = 'Reasoning';
+          spineTitle = 'REASONING';
+          spineColor = '#991b1b';
+        } else if (t.includes('hindi')) {
+          subKey = 'hindi';
+          slug = 'hindi';
+          titleSuffix = 'Hindi Language';
+          spineTitle = 'HINDI';
+          spineColor = '#7c3aed';
+        } else if (t.includes('computer')) {
+          subKey = 'computer';
+          slug = 'computer-science';
+          titleSuffix = 'Computer Science';
+          spineTitle = 'COMPUTER SCIENCE';
+          spineColor = '#0891b2';
+        } else {
+          subKey = r.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          slug = subKey;
+          titleSuffix = r.title;
+          spineTitle = r.title.slice(0, 20).toUpperCase();
+          spineColor = '#065f46';
+        }
+
+        if (seenSubjects.has(subKey)) continue;
+        seenSubjects.add(subKey);
+
+        const customCover = getBookCoverUrl(slug);
+        items.push({
+          id: `book-${slug}-${r.resource_id}`,
+          slug,
+          subjectKey: subKey,
+          subjectLabel: titleSuffix,
+          titleSuffix,
+          displayTitle: `${currentExamShortName} ${titleSuffix} ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+          shortCoverTitle: `${titleSuffix} ${isGuide ? 'Guide' : 'Préci'}`,
+          spineTitle,
+          thumbnail: customCover || `/thumbnails/${subKey.charAt(0).toUpperCase() + subKey.slice(1)}.webp`,
+          customCover,
+          hasCustomCover: !!customCover,
+          resourceId: r.resource_id,
+          isBestSeller: false,
+          spineColor,
+        });
+      }
+
+      // If any of standard core subjects (Math, Reasoning, English) weren't in linked rows, keep core available
+      const standardCore = [
+        { slug: 'mathematics', label: 'Mathematics & Quant', spine: 'MATHEMATICS & QUANT', key: 'mathematics', color: '#b45309' },
+        { slug: 'reasoning', label: 'Reasoning Ability', spine: 'REASONING', key: 'reasoning', color: '#991b1b' },
+        { slug: 'english', label: 'English Language', spine: 'ENGLISH LANGUAGE', key: 'english', color: '#1e3a8a' },
+      ];
+      for (const core of standardCore) {
+        if (!seenSubjects.has(core.key)) {
+          seenSubjects.add(core.key);
+          const customCover = getBookCoverUrl(core.slug);
+          items.push({
+            id: `book-${core.slug}`,
+            slug: core.slug,
+            subjectKey: core.key,
+            subjectLabel: core.label,
+            titleSuffix: core.label,
+            displayTitle: `${currentExamShortName} ${core.label} ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+            shortCoverTitle: `${core.label}`,
+            spineTitle: core.spine,
+            thumbnail: customCover || `/thumbnails/${core.slug.charAt(0).toUpperCase() + core.slug.slice(1)}.webp`,
+            customCover,
+            hasCustomCover: !!customCover,
+            resourceId: null,
+            isBestSeller: false,
+            spineColor: core.color,
+          });
+        }
+      }
+
+      return items.map((book, idx) => ({
         ...book,
-        resourceId: matchedResId,
-        displayTitle: formattedTitle,
-        shortCoverTitle: `${book.titleSuffix} ${isGuide ? 'Guide' : 'Préci'}`,
-        combo,
-      };
-    });
-  }, [currentExamShortName, isGuide, examResources]);
+        combo: getRandomCombination(idx),
+      }));
+    }
+
+    // Fallback: If no linked rows yet, generate base catalog with State GS if State exam
+    const baseList = [];
+    if (isStateOrUt && detectedState) {
+      const stSlug = detectedState.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const stCover = getBookCoverUrl(stSlug, detectedState);
+      baseList.push({
+        id: `b-state-gs-${stSlug}`,
+        slug: `${stSlug}-gs`,
+        subjectKey: 'general_studies',
+        subjectLabel: `${detectedState} General Studies`,
+        titleSuffix: `${detectedState} GS`,
+        displayTitle: `${detectedState} General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        shortCoverTitle: `${detectedState} GS`,
+        spineTitle: `${detectedState.toUpperCase()} GS`,
+        thumbnail: stCover || '/thumbnails/General Knowledge.webp',
+        customCover: stCover,
+        hasCustomCover: !!stCover,
+        isBestSeller: true,
+        spineColor: '#064e3b',
+      });
+    }
+
+    baseList.push(
+      {
+        id: 'b-gk-gs',
+        slug: 'gs-gk',
+        subjectKey: 'gk_general_awareness',
+        subjectLabel: 'GK & General Studies',
+        titleSuffix: 'General Studies & GK',
+        displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        shortCoverTitle: 'General Studies & GK',
+        spineTitle: 'GENERAL STUDIES & GK',
+        thumbnail: '/thumbnails/books/gs-gk-complete-guide.webp',
+        customCover: '/thumbnails/books/gs-gk-complete-guide.webp',
+        hasCustomCover: true,
+        isBestSeller: true,
+        spineColor: '#78350f',
+      },
+      {
+        id: 'b-english',
+        slug: 'english',
+        subjectKey: 'english',
+        subjectLabel: 'English',
+        titleSuffix: 'English',
+        displayTitle: `${currentExamShortName} English Language ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        shortCoverTitle: 'English Language',
+        spineTitle: 'ENGLISH LANGUAGE',
+        thumbnail: '/thumbnails/English.webp',
+        customCover: '/thumbnails/books/english.webp',
+        hasCustomCover: true,
+        isBestSeller: false,
+        spineColor: '#1e3a8a',
+      },
+      {
+        id: 'b-maths',
+        slug: 'mathematics',
+        subjectKey: 'mathematics',
+        subjectLabel: 'Quantitative Aptitude',
+        titleSuffix: 'Mathematics & Quant',
+        displayTitle: `${currentExamShortName} Mathematics & Quant ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        shortCoverTitle: 'Mathematics & Quant',
+        spineTitle: 'MATHEMATICS & QUANT',
+        thumbnail: '/thumbnails/Mathematics.webp',
+        customCover: '/thumbnails/books/mathematics.webp',
+        hasCustomCover: true,
+        isBestSeller: false,
+        spineColor: '#b45309',
+      },
+      {
+        id: 'b-reasoning',
+        slug: 'reasoning',
+        subjectKey: 'reasoning',
+        subjectLabel: 'Reasoning Ability',
+        titleSuffix: 'Reasoning',
+        displayTitle: `${currentExamShortName} Reasoning Ability ${isGuide ? 'Guidebook' : 'Préci'} 2026`,
+        shortCoverTitle: 'Reasoning Ability',
+        spineTitle: 'REASONING',
+        thumbnail: '/thumbnails/Reasoning.webp',
+        customCover: '/thumbnails/books/reasoning.webp',
+        hasCustomCover: true,
+        isBestSeller: false,
+        spineColor: '#991b1b',
+      }
+    );
+
+    return baseList.map((book, idx) => ({
+      ...book,
+      combo: getRandomCombination(idx),
+      resourceId: null,
+    }));
+  }, [currentExamShortName, isGuide, examLinkedRows, selectedExam]);
 
   useEffect(() => {
     checkScroll();
@@ -702,36 +982,14 @@ export default function StudyMaterialsPage() {
                 const { combo } = book;
                 const subject = resolveSubjectForTitle(book.displayTitle, isGuide ? 'Guide' : 'Precis');
                 const bg = getFamilyHex(subject.family);
-                const examStateName = selectedExam?.name || examNameParam || categoryParam || '';
-                const examStateCover =
-                  (book.slug === 'gk-gs' || book.slug === 'gs-gk') && examStateName
-                    ? getBookCoverUrl(examStateName)
-                    : null;
+                const examStateName = selectedExam?.region?.name || selectedExam?.name || examNameParam || categoryParam || '';
                 const customCover =
-                  examStateCover ||
-                  getBookCoverUrl(book.slug) ||
-                  getBookCoverUrl(book.displayTitle) ||
-                  (selectedExam?.name ? getBookCoverUrl(selectedExam.name) : null);
+                  book.customCover ||
+                  getBookCoverUrl(book.slug, examStateName) ||
+                  getBookCoverUrl(book.displayTitle, examStateName);
                 const image = customCover || subjectUrl(subject.key) || book.thumbnail;
                 const hasCustomCover = !!customCover;
-
-                const stateMatch = examStateName.match(
-                  /(Rajasthan|Madhya Pradesh|Maharashtra|Gujarat|Haryana|Himachal|Punjab|Odisha|West Bengal|Uttar Pradesh|Bihar|Jharkhand|Chhattisgarh|Assam|Karnataka|Kerala|Tamil Nadu|Andhra|Telangana|Arunachal|Delhi|Jammu|Ladakh|Uttarakhand|Goa)/i
-                );
-                let spineTitle = 'GUIDEBOOK';
-                if (book.slug === 'gk-gs' || book.slug === 'gs-gk') {
-                  spineTitle = stateMatch ? `${stateMatch[1].toUpperCase()} GS` : 'GENERAL STUDIES & GK';
-                } else if (book.slug === 'english') {
-                  spineTitle = 'ENGLISH LANGUAGE';
-                } else if (book.slug === 'mathematics' || book.slug === 'quant') {
-                  spineTitle = 'MATHEMATICS & QUANT';
-                } else if (book.slug === 'reasoning') {
-                  spineTitle = 'REASONING';
-                } else if (book.titleSuffix) {
-                  spineTitle = book.titleSuffix.toUpperCase();
-                } else if (subject.label) {
-                  spineTitle = subject.label.toUpperCase();
-                }
+                const spineTitle = book.spineTitle || book.titleSuffix?.toUpperCase() || subject.label?.toUpperCase() || (isGuide ? 'GUIDEBOOK' : 'PRECIS');
 
                 return (
                   <div
@@ -740,7 +998,9 @@ export default function StudyMaterialsPage() {
                     onClick={() => {
                       // Phones: tapping the book opens its notes directly (the buttons are hidden there)
                       if (typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches) {
-                        navigate(`/reader/${book.resourceId || book.slug || 'sample'}`);
+                        navigate(`/reader/${book.resourceId || book.slug || 'sample'}`, {
+                          state: { from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }
+                        });
                       }
                     }}
                   >
@@ -885,6 +1145,7 @@ export default function StudyMaterialsPage() {
 
                           <Link
                             to={`/reader/${book.resourceId || book.slug || 'sample'}`}
+                            state={{ from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }}
                             className="smp-btn-explore"
                             style={{
                               background: combo.accentColor || '#064e3b',
@@ -1163,6 +1424,7 @@ export default function StudyMaterialsPage() {
                   </button>
                   <Link
                     to={`/reader/${activeDetailsBook.resourceId || activeDetailsBook.slug || 'sample'}`}
+                    state={{ from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }}
                     className="smp-btn-explore"
                     style={{
                       background: activeDetailsBook.combo.accentColor,
@@ -1223,7 +1485,7 @@ export default function StudyMaterialsPage() {
 
                   {booksWithCombinations.map((b) => {
                     const subj = resolveSubjectForTitle(b.displayTitle, isGuide ? 'Guide' : 'Precis');
-                    const cover = getBookCoverUrl(b.slug) || getBookCoverUrl(b.displayTitle) || subjectUrl(subj.key) || b.thumbnail;
+                    const cover = b.customCover || getBookCoverUrl(b.slug, selectedExam?.region?.name) || getBookCoverUrl(b.displayTitle, selectedExam?.region?.name) || subjectUrl(subj.key) || b.thumbnail;
                     const accent = b.combo.accentColor || '#064e3b';
                     return (
                       <article key={b.id} className={`smp-cmp-card ${b.isBestSeller ? 'best' : ''}`}>
@@ -1241,7 +1503,12 @@ export default function StudyMaterialsPage() {
                         </div>
                         <div className="smp-cmp-actions">
                           <button type="button" className="smp-cmp-btn-outline" onClick={() => { setIsCompareOpen(false); setActiveDetailsBook(b); }}>View Details</button>
-                          <Link to={`/reader/${b.resourceId || b.slug || 'sample'}`} className="smp-cmp-btn-fill" style={{ background: accent, borderColor: accent }}>
+                          <Link
+                            to={`/reader/${b.resourceId || b.slug || 'sample'}`}
+                            state={{ from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }}
+                            className="smp-cmp-btn-fill"
+                            style={{ background: accent, borderColor: accent }}
+                          >
                             <BookOpen size={13} /><span>Read Sample</span><ArrowRight size={13} />
                           </Link>
                         </div>
@@ -1286,6 +1553,7 @@ export default function StudyMaterialsPage() {
                           <td>
                             <Link
                               to={`/reader/${b.resourceId || b.slug || 'sample'}`}
+                              state={{ from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }}
                               className="smp-btn-explore"
                               style={{
                                 background: b.combo.accentColor || '#064e3b',

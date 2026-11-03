@@ -94,8 +94,16 @@ export function cleanParagraphContent(content) {
       continue;
     }
 
-    // Bullet-like statement
-    out.push(`<div class="bk-bullet-stmt">${line}</div>`);
+    // Bullet-like statement: strip leading bullet characters so .bk-bullet-stmt::before does not create a double bullet
+    const isBulletLine = /^\s*(?:<p[^>]*>)?\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i.test(line);
+    if (isBulletLine) {
+      const stripped = line
+        .replace(/^(\s*<p[^>]*>)?\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i, '$1')
+        .replace(/^\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i, '');
+      out.push(`<div class="bk-bullet-stmt">${stripped}</div>`);
+    } else {
+      out.push(`<div class="bk-plain-stmt">${line}</div>`);
+    }
   }
 
   return out.join('');
@@ -204,11 +212,18 @@ export const GenericCalloutBlock = ({ content }) => {
   );
 };
 
+export function cleanListItemContent(content) {
+  if (!content || typeof content !== 'string') return content;
+  return content
+    .replace(/^(\s*<p[^>]*>)?\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i, (_, p1) => p1 || '')
+    .replace(/^\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i, '');
+}
+
 export const ListBlock = ({ items }) => {
   return (
     <ul className="bk-list">
       {items.map((item, i) => (
-        <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+        <li key={i} dangerouslySetInnerHTML={{ __html: cleanListItemContent(item) }} />
       ))}
     </ul>
   );
@@ -220,7 +235,7 @@ export const NumberedListBlock = ({ items, start, format }) => {
   return (
     <ol className="bk-numbered-list" start={start || undefined} type={OL_TYPE[format] || undefined}>
       {items.map((item, i) => (
-        <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+        <li key={i} dangerouslySetInnerHTML={{ __html: cleanListItemContent(item) }} />
       ))}
     </ol>
   );
