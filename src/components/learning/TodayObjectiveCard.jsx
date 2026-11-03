@@ -28,7 +28,7 @@ const TodayObjectiveCard = ({ examId, examName, objective, compact = false }) =>
         </p>
         {examId && (
           <Link
-            to={`/exam/${examId}`}
+            to={`/learning-center?exam=${examId}`}
             style={{
               display: 'inline-flex',
               alignItems: 'center',

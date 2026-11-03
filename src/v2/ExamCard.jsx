@@ -40,7 +40,7 @@ export function ExamCard({ exam, from }) {
   const { categoryUrl } = useThumbnails();
   const image = categoryUrl(exam.category);
   return (
-    <Link to={`/exam/${exam.id}`} state={{ from }} className="v2-exam-card">
+    <Link to={`/learning-center?exam=${exam.id}`} state={{ from }} className="v2-exam-card">
       <Thumb image={image} label={exam.name} color={exam.accent_color || colorFor(exam.category || exam.name)} />
       <div className="v2-exam-card-body">
         <h3>{exam.name}</h3>

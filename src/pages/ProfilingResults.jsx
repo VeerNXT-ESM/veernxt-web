@@ -209,7 +209,7 @@ const ProfilingResults = () => {
     } finally {
       setPreparingExamId(null);
       if (rec.lc_exam_id) {
-        navigate(`/exam/${rec.lc_exam_id}`);
+        navigate(`/learning-center?exam=${rec.lc_exam_id}`);
       } else {
         // No LC exam linked yet — go to learning center as fallback
         navigate('/learning-center');

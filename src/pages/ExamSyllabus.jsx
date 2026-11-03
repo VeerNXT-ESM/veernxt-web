@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useParams, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import {
   BookOpen, Landmark, MapPin, RefreshCw, ArrowRight, ArrowLeft, ChevronRight,
@@ -14,8 +14,15 @@ import './ExamSyllabus.css';
 
 const ExamSyllabus = () => {
   const { examId } = useParams();
-  const navigate = useNavigate();
   const location = useLocation();
+
+  // Redirect legacy /exam/:examId to modern Learning Center exam hub
+  if (examId) {
+    return <Navigate to={`/learning-center?exam=${encodeURIComponent(examId)}`} replace state={location.state} />;
+  }
+  return <Navigate to="/learning-center" replace />;
+
+  const navigate = useNavigate();
   const [exam, setExam] = useState(null);
   const [examLoading, setExamLoading] = useState(true);
   const [examError, setExamError] = useState(null);

@@ -754,14 +754,11 @@ export default function CategoryExplorerPortal({
   const handleBackToOverview = () => {
     setViewTransitioning(true);
     setTimeout(() => {
-      if (internalPortalDepthRef.current > 0) {
-        internalPortalDepthRef.current -= 1;
-        navigate(-1);
-      } else {
-        setShowAllExams(false);
-        updatePortalParams({ view: undefined }, { replace: true });
-        onSetSidebarCollapsed?.(laptopRailDefault());
-      }
+      setSelectedExam(null);
+      setShowAllExams(false);
+      updatePortalParams({ exam: undefined, view: undefined, resource: undefined, manual: undefined }, { replace: true });
+      if (onBackToCategories) onBackToCategories();
+      onSetSidebarCollapsed?.(laptopRailDefault());
       window.scrollTo({ top: 0, behavior: 'smooth' });
       const rail = document.querySelector('.lc-content-rail');
       if (rail) rail.scrollTo({ top: 0, behavior: 'smooth' });
@@ -876,14 +873,15 @@ export default function CategoryExplorerPortal({
   useEffect(() => {
     let isMounted = true;
     async function fetchProfile() {
-      if (!categoryName) return;
+      const targetCategory = categoryName || selectedExam?.category;
+      if (!targetCategory) return;
       const startTime = Date.now();
       setLoading(true);
       try {
         const { data, error } = await supabase
           .from('lc_category_profiles')
           .select('*')
-          .eq('category_name', categoryName)
+          .eq('category_name', targetCategory)
           .eq('division', division)
           .maybeSingle();
 
@@ -898,7 +896,7 @@ export default function CategoryExplorerPortal({
             const { data: anyDivData } = await supabase
               .from('lc_category_profiles')
               .select('*')
-              .eq('category_name', categoryName)
+              .eq('category_name', targetCategory)
               .maybeSingle();
 
             if (anyDivData && isMounted) {
@@ -908,21 +906,21 @@ export default function CategoryExplorerPortal({
               });
             } else if (isMounted) {
               setProfile({
-                category_name: categoryName,
+                category_name: targetCategory,
                 division,
-                abbreviation: categoryName.slice(0, 4).toUpperCase(),
-                tagline: `Your Gateway to a Stable and Rewarding Government Career in ${stateName || categoryName}`,
+                abbreviation: targetCategory.slice(0, 4).toUpperCase(),
+                tagline: `Your Gateway to a Stable and Rewarding Government Career in ${stateName || targetCategory}`,
                 badges: [
                   'Multiple Job Opportunities',
                   stateName ? `${stateName} Recruitment` : 'All India Recruitment',
                   'Graduate & 10+2 Level Exams',
                   'Stable Career & Growth',
                 ],
-                about_text: `The ${stateName ? `${stateName} ` : ''}${categoryName} recruitment portal provides comprehensive study materials, official notifications, previous year question papers, and full-length timed mock tests for competitive examination aspirants with Veer Next.`,
+                about_text: `The ${stateName ? `${stateName} ` : ''}${targetCategory} recruitment portal provides comprehensive study materials, official notifications, previous year question papers, and full-length timed mock tests for competitive examination aspirants with Veer Next.`,
                 exam_mode: 'Online (CBT) / Offline',
                 post_level: stateName ? 'State Group A, B & C' : 'Group B & C',
                 eligibility: '10+2 / Graduate',
-                major_exams: categoryName,
+                major_exams: targetCategory,
                 top_exams: [],
                 related_exams: [],
                 why_choose: [],
@@ -945,7 +943,7 @@ export default function CategoryExplorerPortal({
     return () => {
       isMounted = false;
     };
-  }, [categoryName, division, stateName]);
+  }, [categoryName, selectedExam?.category, division, stateName]);
 
   // Compute all exams belonging to this category
   const allCategoryExams = useMemo(() => {
@@ -1543,7 +1541,7 @@ export default function CategoryExplorerPortal({
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
           <span className="cep-bc-link" onClick={handleBackFromExam}>
-            {profile.category_name}
+            {profile?.category_name || selectedExam?.category || 'Category'}
           </span>
           <ChevronRight size={13} className="cep-bc-sep" />
           <span className="cep-bc-current">{selectedExam.name || selectedExam.title || 'Examination'}</span>
@@ -1559,10 +1557,10 @@ export default function CategoryExplorerPortal({
                 onClick={handleBackFromExam}
               >
                 <ArrowLeft size={14} />
-                <span>Back to {showAllExams ? `All ${profile.category_name} Exams` : `${profile.category_name} Overview`}</span>
+                <span>Back to {showAllExams ? `All ${profile?.category_name || selectedExam?.category || 'Category'} Exams` : `${profile?.category_name || selectedExam?.category || 'Category'} Overview`}</span>
               </button>
               <span className="cep-crumb-pipe">|</span>
-              <span className="cep-crumb-trail">{profile.category_name}</span>
+              <span className="cep-crumb-trail">{profile?.category_name || selectedExam?.category || ''}</span>
               <ChevronRight size={13} className="cep-bc-sep" />
               <span className="cep-crumb-active">{selectedExam.name || selectedExam.title || 'Examination'}</span>
             </div>
@@ -1594,7 +1592,7 @@ export default function CategoryExplorerPortal({
                   )}
                   <span className="cep-meta-pill-item">
                     <GraduationCap size={14} />
-                    <span>{selectedExam.category || profile.category_name}</span>
+                    <span>{selectedExam.category || profile?.category_name || 'General'}</span>
                   </span>
                 </div>
 
@@ -1856,7 +1854,7 @@ export default function CategoryExplorerPortal({
                       </div>
                       <div className="cep-intro-highlight-card">
                         <span className="cep-highlight-label">Cadre & Category</span>
-                        <span className="cep-highlight-value">{selectedExam.category || profile.category_name}</span>
+                        <span className="cep-highlight-value">{selectedExam.category || profile?.category_name || 'General'}</span>
                       </div>
                       <div className="cep-intro-highlight-card">
                         <span className="cep-highlight-label">Level & Region</span>

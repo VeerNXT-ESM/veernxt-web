@@ -670,7 +670,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                 className="lc-related-exam-card"
                 onClick={() => {
                   if (exam?.examId) {
-                    navigate(`/exam/${exam.examId}`, { state: { from: location.pathname + location.search } });
+                    updateSearchParams({ tab: 'explorer', exam: exam.examId });
                   }
                 }}
               >
@@ -690,7 +690,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
               <div
                 key={e.id}
                 className="lc-related-exam-card"
-                onClick={() => navigate(`/exam/${e.id}`, { state: { from: location.pathname + location.search } })}
+                onClick={() => updateSearchParams({ tab: 'explorer', exam: e.id })}
               >
                 {categoryUrl(e.category) ? (
                   <img src={categoryUrl(e.category)} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
@@ -815,6 +815,7 @@ const LearningCenter = () => {
   const paramMode = searchParams.get('mode') || 'central';
   const paramState = searchParams.get('state') || '';
   const paramCategory = searchParams.get('category') || '';
+  const paramExam = searchParams.get('exam') || '';
 
   // Catalog + filters. The whole lc_exams catalog (~1.5k rows) is fetched
   // paginated; every filter/level/derived list comes from it client-side.
@@ -1010,11 +1011,11 @@ const LearningCenter = () => {
       lastAccessedAt: Date.now(),
     });
     if (course.examId) {
-      navigate(`/exam/${course.examId}`, { state: { from: location.pathname + location.search } });
+      updateSearchParams({ tab: 'explorer', exam: course.examId });
     } else if (course.searchTerm) {
       const match = findCatalogMatch(course.searchTerm);
       if (match) {
-        navigate(`/exam/${match.id}`, { state: { from: location.pathname + location.search } });
+        updateSearchParams({ tab: 'explorer', exam: match.id });
       } else {
         setSearchText(course.searchTerm);
         const resultsEl = document.getElementById('lc-search-results-section');
@@ -1104,7 +1105,7 @@ const LearningCenter = () => {
 
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
-      navigate(`/exam/${examId}`, { state: { from: location.pathname + location.search } });
+      updateSearchParams({ tab: 'explorer', exam: examId });
       return;
     }
     setPreparingExamId(examId);
@@ -1116,9 +1117,9 @@ const LearningCenter = () => {
       console.warn('Could not save exam target:', err);
     } finally {
       setPreparingExamId(null);
-      navigate(`/exam/${examId}`, { state: { from: location.pathname + location.search } });
+      updateSearchParams({ tab: 'explorer', exam: examId });
     }
-  }, [navigate, catalog, recordActiveLearning, categoryUrl, location.pathname, location.search]);
+  }, [updateSearchParams, catalog, recordActiveLearning, categoryUrl, location.pathname, location.search]);
 
   const handleTabChange = (tab) => {
     setIsPageTransitioning(true);
@@ -1403,11 +1404,38 @@ const LearningCenter = () => {
     return counts;
   }, [levelExams]);
 
+  // Auto-resolve exam from URL param if present
+  const targetExamFromUrl = useMemo(() => {
+    if (!paramExam || !catalog || catalog.length === 0) return null;
+    return catalog.find(
+      (e) =>
+        String(e.id || e.exam_id) === String(paramExam) ||
+        String(e.name || e.title || '').toLowerCase() === String(paramExam).toLowerCase()
+    ) || null;
+  }, [paramExam, catalog]);
+
+  useEffect(() => {
+    if (targetExamFromUrl) {
+      if (targetExamFromUrl.category && !categoryFilter) {
+        setCategoryFilter(targetExamFromUrl.category);
+      }
+      const matchLevel = targetExamFromUrl.region?.level || 'central';
+      if (matchLevel && matchLevel !== regionMode && !searchParams.get('mode')) {
+        setRegionMode(matchLevel);
+      }
+      if (targetExamFromUrl.region?.id && (matchLevel === 'state' || matchLevel === 'ut') && !searchParams.get('state')) {
+        setRegionFilterId(targetExamFromUrl.region.id);
+      }
+    }
+  }, [targetExamFromUrl, categoryFilter, regionMode, searchParams]);
+
   const activeCategoryForExplorer = useMemo(() => {
     if (categoryFilter && categoryOptions.includes(categoryFilter)) return categoryFilter;
     if (paramCategory && categoryOptions.includes(paramCategory)) return paramCategory;
+    if (targetExamFromUrl?.category && categoryOptions.includes(targetExamFromUrl.category)) return targetExamFromUrl.category;
+    if (targetExamFromUrl?.category) return targetExamFromUrl.category;
     return '';
-  }, [categoryFilter, paramCategory, categoryOptions]);
+  }, [categoryFilter, paramCategory, categoryOptions, targetExamFromUrl]);
 
   const explorerCategoryList = useMemo(() => {
     return categoryOptions.map((cat) => {
@@ -3149,7 +3177,7 @@ const LearningCenter = () => {
                       })}
                     </div>
                   </div>
-                ) : !(categoryFilter || activeCategoryForExplorer) ? (
+                ) : !(categoryFilter || activeCategoryForExplorer || paramExam) ? (
                   /* Category Directory Hub: Central Examination Categories or State-specific Category Directory */
                   <div className="lc-state-directory-container">
                     <div
@@ -3285,21 +3313,24 @@ const LearningCenter = () => {
                   </div>
                 ) : (
                   <CategoryExplorerPortal
-                    key={`${regionMode}-${categoryFilter || activeCategoryForExplorer || 'portal'}`}
-                    categoryName={categoryFilter || activeCategoryForExplorer}
+                    key={`${regionMode}-${categoryFilter || activeCategoryForExplorer || targetExamFromUrl?.category || 'portal'}`}
+                    categoryName={categoryFilter || activeCategoryForExplorer || targetExamFromUrl?.category || ''}
                     stateName={activeState?.name || ''}
                     division={regionMode}
                     levelExams={levelExams}
                     allCatalog={catalog}
                     isSidebarCollapsed={isSidebarCollapsed}
                     onSetSidebarCollapsed={setIsSidebarCollapsed}
-                    onBackToCategories={() => handleCategoryFilterChange('')}
+                    onBackToCategories={() => {
+                      updateSearchParams({ exam: undefined });
+                      handleCategoryFilterChange('');
+                    }}
                     globalSearch={topSearchText}
                     onClearGlobalSearch={() => setTopSearchText('')}
                     onSelectExam={(exam) => {
                       const id = exam.examId || exam.id;
                       if (id) {
-                        navigate(`/exam/${id}`, { state: { from: location.pathname + location.search } });
+                        updateSearchParams({ exam: id });
                       } else {
                         setSearchText(exam.title || exam.name || '');
                         handleTabChange('recommended');
@@ -3313,7 +3344,7 @@ const LearningCenter = () => {
                       } else {
                         const firstId = profileData?.top_exams?.[0]?.examId;
                         if (firstId) {
-                          navigate(`/exam/${firstId}`, { state: { from: location.pathname + location.search } });
+                          updateSearchParams({ exam: firstId });
                         } else {
                           setSearchText(profileData?.category_name || '');
                           handleTabChange('recommended');
@@ -3846,7 +3877,7 @@ const LearningCenter = () => {
                             <button
                               type="button"
                               className="lc-exam-details-secondary-btn"
-                              onClick={() => navigate(`/exam/${selectedPopularExam.examId}`, { state: { from: location.pathname + location.search } })}
+                              onClick={() => updateSearchParams({ tab: 'explorer', exam: selectedPopularExam.examId })}
                             >
                               View Syllabus
                             </button>

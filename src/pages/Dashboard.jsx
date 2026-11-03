@@ -675,7 +675,7 @@ const Dashboard = () => {
                 type: 'read',
                 title: `Continue Preparing for ${objectiveExamName}`,
                 subtitle: 'Complete today\'s study materials, guidebooks, and mock tests for your target exam.',
-                targetUrl: `/exam/${objectiveExamId}`,
+                targetUrl: `/learning-center?exam=${objectiveExamId}`,
                 completedCount,
                 totalCount,
               };
@@ -759,7 +759,7 @@ const Dashboard = () => {
                 )}
 
                 {topExam.exam_id && (
-                  <Link to={`/exam/${topExam.exam_id}`} state={{ from: '/dashboard' }} className="btn-primary ios-pill next-step-cta">
+                  <Link to={`/learning-center?exam=${topExam.exam_id}`} state={{ from: '/dashboard' }} className="btn-primary ios-pill next-step-cta">
                     Continue Preparation <ArrowRight size={16} />
                   </Link>
                 )}
@@ -842,7 +842,7 @@ const Dashboard = () => {
                   {recommendations.slice(0, 10).map((rec, idx) => (
                     <Link
                       key={rec.exam_id || idx}
-                      to={rec.exam_id ? `/exam/${rec.exam_id}` : '/learning-center'}
+                      to={rec.exam_id ? `/learning-center?exam=${rec.exam_id}` : '/learning-center'}
                       state={rec.exam_id ? { from: '/dashboard' } : undefined}
                       className="recommendation-item"
                     >
