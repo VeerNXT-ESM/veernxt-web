@@ -83,27 +83,72 @@ async function fetchResourcesFallback(examName, careerTrack) {
 // title + category) when one exists, so a migrated title actually shows
 // the new format regardless of which duplicate row got selected upstream.
 async function upgradeToCanonicalFormat(resources) {
-  const needsUpgrade = resources.filter((r) => r.format !== 'blocks' && r.title);
+  const needsUpgrade = resources.filter(
+    (r) => r.title && (r.format !== 'blocks' || r.category === 'Guide' || r.category === 'Precis')
+  );
   if (needsUpgrade.length === 0) return resources;
 
   const titles = [...new Set(needsUpgrade.map((r) => r.title.trim()))];
   const { data: canonicalRows } = await supabase
     .from('resources')
-    .select('resource_id,title,category,format,storage_base_url')
+    .select('resource_id,title,category,format,storage_base_url,chapter_count,status')
     .eq('format', 'blocks')
     .in('title', titles);
   if (!canonicalRows || canonicalRows.length === 0) return resources;
 
-  const canonicalByKey = new Map();
+  const groupsByKey = new Map();
   for (const c of canonicalRows) {
+    if (!c.title || !c.storage_base_url) continue;
     const key = `${c.title.trim().toLowerCase()}::${c.category}`;
-    if (!canonicalByKey.has(key)) canonicalByKey.set(key, c);
+    if (!groupsByKey.has(key)) groupsByKey.set(key, []);
+    groupsByKey.get(key).push(c);
+  }
+
+  const canonicalByKey = new Map();
+  for (const [key, rows] of groupsByKey) {
+    const urlWeights = new Map();
+    const urlMaxCh = new Map();
+    const rowByUrl = new Map();
+    for (const r of rows) {
+      const w = r.status === 'Published' ? 10 : 1;
+      urlWeights.set(r.storage_base_url, (urlWeights.get(r.storage_base_url) || 0) + w);
+      const ch = Number(r.chapter_count) || 0;
+      if (ch > (urlMaxCh.get(r.storage_base_url) || 0)) urlMaxCh.set(r.storage_base_url, ch);
+      if (!rowByUrl.has(r.storage_base_url) || r.status === 'Published') {
+        rowByUrl.set(r.storage_base_url, r);
+      }
+    }
+    let bestUrl = null;
+    let bestW = -1;
+    let bestCh = -1;
+    for (const [u, w] of urlWeights) {
+      const ch = urlMaxCh.get(u) || 0;
+      if (w > bestW || (w === bestW && ch > bestCh)) {
+        bestUrl = u;
+        bestW = w;
+        bestCh = ch;
+      }
+    }
+    if (bestUrl) {
+      canonicalByKey.set(key, {
+        ...rowByUrl.get(bestUrl),
+        storage_base_url: bestUrl,
+        chapter_count: bestCh,
+      });
+    }
   }
 
   return resources.map((r) => {
-    if (r.format === 'blocks' || !r.title) return r;
+    if (!r.title) return r;
     const canonical = canonicalByKey.get(`${r.title.trim().toLowerCase()}::${r.category}`);
-    return canonical ? { ...r, resource_id: canonical.resource_id, format: canonical.format, storage_base_url: canonical.storage_base_url } : r;
+    if (!canonical) return r;
+    return {
+      ...r,
+      resource_id: r.format === 'blocks' ? r.resource_id : canonical.resource_id,
+      format: 'blocks',
+      storage_base_url: canonical.storage_base_url,
+      chapter_count: Math.max(Number(r.chapter_count) || 0, Number(canonical.chapter_count) || 0),
+    };
   });
 }
 

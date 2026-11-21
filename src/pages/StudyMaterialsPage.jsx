@@ -31,6 +31,8 @@ import {
   FileQuestion,
   Lock,
   Unlock,
+  LayoutGrid,
+  GalleryHorizontal,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import '../components/book/Book3D.css';
@@ -249,33 +251,12 @@ export default function StudyMaterialsPage() {
   const [activeDetailsBook, setActiveDetailsBook] = useState(null);
   const [isCompareOpen, setIsCompareOpen] = useState(false);
 
-  // Horizontal Scroll for Books Section
+  // Horizontal Scroll & View Mode for Books Section
   const booksScrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [activeBookIdx, setActiveBookIdx] = useState(0);
-
-  const checkScroll = () => {
-    if (booksScrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = booksScrollRef.current;
-      setCanScrollLeft(scrollLeft > 10);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-      const first = booksScrollRef.current.firstElementChild;
-      if (first) setActiveBookIdx(Math.round(scrollLeft / (first.offsetWidth + 14)));
-    }
-  };
-
-  const scrollBooks = (direction) => {
-    if (booksScrollRef.current) {
-      const card = booksScrollRef.current.firstElementChild;
-      const scrollAmount = card ? card.offsetWidth + 22 : 540;
-      booksScrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-      setTimeout(checkScroll, 350);
-    }
-  };
+  const [viewMode, setViewMode] = useState('carousel'); // 'carousel' | 'grid'
 
   // Category Exams & Selection
   const [categoryExams, setCategoryExams] = useState([]);
@@ -562,18 +543,24 @@ export default function StudyMaterialsPage() {
           titleSuffix = 'Computer Science';
           spineTitle = 'COMPUTER SCIENCE';
           spineColor = '#0891b2';
+        } else if (t.includes('descriptive') || t.includes('essay')) {
+          subKey = 'descriptive_writing';
+          slug = 'descriptive-writing';
+          titleSuffix = 'Descriptive Writing';
+          spineTitle = 'DESCRIPTIVE WRITING';
+          spineColor = '#065f46';
         } else {
           subKey = r.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
           slug = subKey;
           titleSuffix = r.title;
-          spineTitle = r.title.slice(0, 20).toUpperCase();
+          spineTitle = r.title.length > 24 ? r.title.slice(0, 24).trim().toUpperCase() : r.title.toUpperCase();
           spineColor = '#065f46';
         }
 
         if (seenSubjects.has(subKey)) continue;
         seenSubjects.add(subKey);
 
-        const customCover = getBookCoverUrl(slug);
+        const customCover = getBookCoverUrl(slug) || getBookCoverUrl(r.title);
         items.push({
           id: `book-${slug}-${r.resource_id}`,
           slug,
@@ -719,11 +706,283 @@ export default function StudyMaterialsPage() {
     }));
   }, [currentExamShortName, isGuide, examLinkedRows, selectedExam]);
 
+  const checkScroll = () => {
+    if (booksScrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = booksScrollRef.current;
+      setCanScrollLeft(scrollLeft > 15);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 15);
+      const card = booksScrollRef.current.querySelector('.smp-book-card');
+      if (card && booksWithCombinations.length > 0) {
+        const step = card.offsetWidth + 22;
+        const computedIdx = Math.round(scrollLeft / step);
+        const clampedIdx = Math.max(0, Math.min(computedIdx, booksWithCombinations.length - 1));
+        setActiveBookIdx(clampedIdx);
+      }
+    }
+  };
+
+  const scrollBooks = (direction) => {
+    if (booksScrollRef.current) {
+      const card = booksScrollRef.current.querySelector('.smp-book-card');
+      const scrollAmount = card ? card.offsetWidth + 22 : 690;
+      booksScrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+      setTimeout(checkScroll, 350);
+    }
+  };
+
+  const scrollToBook = (index) => {
+    if (booksScrollRef.current) {
+      const cards = booksScrollRef.current.querySelectorAll('.smp-book-card');
+      const targetCard = cards[index];
+      if (targetCard) {
+        const track = booksScrollRef.current;
+        const targetScrollLeft = targetCard.offsetLeft - track.offsetLeft - 4;
+        track.scrollTo({
+          left: Math.max(0, targetScrollLeft),
+          behavior: 'smooth',
+        });
+        setActiveBookIdx(index);
+        setTimeout(checkScroll, 350);
+      }
+    }
+  };
+
+  // Enable smooth horizontal gliding when desktop users use vertical mouse wheel over carousel
+  useEffect(() => {
+    const track = booksScrollRef.current;
+    if (!track || viewMode !== 'carousel') return;
+
+    const handleWheel = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && Math.abs(e.deltaY) > 8) {
+        const { scrollLeft, scrollWidth, clientWidth } = track;
+        const canLeft = scrollLeft > 10;
+        const canRight = scrollLeft < scrollWidth - clientWidth - 10;
+
+        if ((e.deltaY > 0 && canRight) || (e.deltaY < 0 && canLeft)) {
+          e.preventDefault();
+          track.scrollBy({
+            left: e.deltaY * 1.5,
+            behavior: 'auto',
+          });
+          checkScroll();
+        }
+      }
+    };
+
+    track.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      track.removeEventListener('wheel', handleWheel);
+    };
+  }, [booksWithCombinations.length, viewMode]);
+
   useEffect(() => {
     checkScroll();
     window.addEventListener('resize', checkScroll);
     return () => window.removeEventListener('resize', checkScroll);
   }, [booksWithCombinations]);
+
+  const renderBookCard = (book) => {
+    const { combo } = book;
+    const subject = resolveSubjectForTitle(book.displayTitle, isGuide ? 'Guide' : 'Precis');
+    const bg = getFamilyHex(subject.family);
+    const examStateName = selectedExam?.region?.name || selectedExam?.name || examNameParam || categoryParam || '';
+    const customCover =
+      book.customCover ||
+      getBookCoverUrl(book.slug, examStateName) ||
+      getBookCoverUrl(book.displayTitle, examStateName);
+    const image = customCover || subjectUrl(subject.key) || book.thumbnail;
+    const hasCustomCover = !!customCover;
+    const spineTitle = book.spineTitle || book.titleSuffix?.toUpperCase() || subject.label?.toUpperCase() || (isGuide ? 'GUIDEBOOK' : 'PRECIS');
+
+    return (
+      <div
+        key={book.id}
+        className="smp-book-card"
+        onClick={() => {
+          // Phones: tapping the book opens its notes directly (the buttons are hidden there)
+          if (typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches) {
+            navigate(`/reader/${book.resourceId || book.slug || 'sample'}`, {
+              state: { from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }
+            });
+          }
+        }}
+      >
+        {book.isBestSeller && (
+          <div className="smp-bestseller-badge">
+            <Star size={11} fill="#92400e" />
+            <span>Best Seller</span>
+          </div>
+        )}
+
+        <div className="smp-book-card-body">
+          {/* Left: Original 3D Book Cover from VeerNext Design System */}
+          <div className="smp-book-cover-wrap">
+            <div className="vn-book-3d-scene" style={{ padding: '0 8px 0 50px', width: '298px' }}>
+              <div className="vn-book-3d-item">
+                {/* Rear hardcover base (Consistent brand dark green) */}
+                <div className="vn-book-3d-back" style={{ background: '#032e23' }} />
+
+                {/* Left extruded spine (Consistent brand green with official logo & authentic typography) */}
+                <div className="vn-book-3d-spine">
+                  <div className="vn-book-spine-crest">
+                    <img src="/logo.png" alt="VeerNXT" className="vn-spine-logo-img" />
+                  </div>
+                  <div className="vn-book-3d-spine-text-wrap">
+                    <span className="vn-book-3d-spine-title">{spineTitle}</span>
+                    <span className="vn-book-3d-spine-sub">{isGuide ? 'COMPLETE GUIDE' : 'PRÉCIS NOTES'}</span>
+                  </div>
+                  <div className="vn-book-spine-brand">
+                    <span className="vn-spine-vn-logo">❖</span>
+                    <span className="vn-spine-vn-text">VeerNXT</span>
+                  </div>
+                  <div className="vn-book-3d-spine-light" />
+                </div>
+
+                {/* Right paper block thickness */}
+                <div className="vn-book-3d-pages-right" />
+
+                {/* Bottom paper block thickness */}
+                <div className="vn-book-3d-pages-bottom" />
+
+                {/* Front cover */}
+                <div
+                  className="vn-book-3d-front"
+                  style={{
+                    backgroundImage: hasCustomCover
+                      ? `url("${image}")`
+                      : image
+                      ? `linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.85) 100%), url("${image}")`
+                      : `linear-gradient(160deg, ${bg || '#065f46'} 0%, #042f28 100%)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center top',
+                    padding: hasCustomCover ? 0 : '10px 10px 10px 18px',
+                  }}
+                >
+                  {/* Hardcover hinge crease line */}
+                  <div className="vn-book-3d-crease" />
+
+                  {/* Glossy light reflection sheen */}
+                  <div className="vn-book-3d-sheen" />
+
+                  {/* Précis Edition Badge overlay for Précis notes */}
+                  {!isGuide && (
+                    <div className="vn-book-precis-cover-badge">
+                      <span className="vn-precis-badge-tag">PRÉCIS NOTES</span>
+                      <span className="vn-precis-badge-sub">HIGH-YIELD REVISION</span>
+                    </div>
+                  )}
+
+                  {!hasCustomCover && (
+                    <>
+                      {/* Top header: VeerNXT emblem + Lock Pill */}
+                      <div className="vn-book-cover-header">
+                        <div className="vn-book-cover-crest-badge">
+                          <Shield size={10} style={{ color: 'var(--c-amber, #b45309)' }} />
+                          <span className="vn-book-cover-crest-text">VEERNXT</span>
+                        </div>
+                        <div className="vn-book-lock-pill unlocked">
+                          <Unlock size={11} color="white" />
+                        </div>
+                      </div>
+
+                      {/* Center Cover Typography Banner */}
+                      <div className="vn-book-cover-center-banner">
+                        <span className="vn-book-cover-exam-tag">{currentExamShortName}</span>
+                        <h4 className="vn-book-cover-main-title">{book.shortCoverTitle || book.displayTitle}</h4>
+                        <span className="vn-book-cover-sub-bar">{subject.label || (isGuide ? 'COMPLETE GUIDE' : 'PRECIS')}</span>
+                      </div>
+
+                      {/* Bottom Category Chip */}
+                      <div className="vn-book-cover-footer">
+                        <span className="vn-book-cover-category-chip">{isGuide ? 'GUIDEBOOK' : 'PRECIS'}</span>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+              {/* Ground cast shadow */}
+              <div className="vn-book-3d-ground-shadow" />
+            </div>
+          </div>
+
+          {/* Right: Info & Bullets (Generated from 1 of the 5 Combinations) */}
+          <div className="smp-book-card-info">
+            <h3 className="smp-book-title">{book.displayTitle}</h3>
+
+            <p className="smp-book-desc">
+              {isGuide
+                ? combo.description
+                : 'High-yield concise notes, essential formula frameworks, quick-revision key points, and summary sheets for rapid exam preparation.'}
+            </p>
+
+            {/* 5 Bullet Points with Colored Checkmarks */}
+            <ul className="smp-book-bullets">
+              {combo.bullets.map((bText, bIdx) => (
+                <li key={bIdx} className="smp-book-bullet-item">
+                  <span
+                    className="smp-check-circle"
+                    style={{
+                      background: combo.badgeBg || '#ecfdf5',
+                      color: combo.checkColor || '#059669',
+                    }}
+                  >
+                    <Check size={11} strokeWidth={3} />
+                  </span>
+                  <span>{bText}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Stat Chips Row */}
+            <div className="smp-book-stats-row">
+              {combo.stats.map((s, sIdx) => (
+                <span key={sIdx} className="smp-book-stat-chip">
+                  <span className="smp-book-stat-icon">
+                    {s.icon === 'book' && <BookOpen size={12} />}
+                    {s.icon === 'laptop' && <Laptop size={12} />}
+                    {s.icon === 'check' && <CheckSquare size={12} />}
+                    {s.icon === 'badge' && <Sparkles size={12} />}
+                  </span>
+                  <span>{s.label}</span>
+                </span>
+              ))}
+            </div>
+
+            {/* Actions Row */}
+            <div className="smp-book-actions-row">
+              <button
+                type="button"
+                className="smp-btn-details"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveDetailsBook(book);
+                }}
+              >
+                View Details
+              </button>
+
+              <Link
+                to={`/reader/${book.resourceId || book.slug || 'sample'}`}
+                state={{ from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }}
+                className="smp-btn-explore"
+                style={{
+                  background: combo.accentColor || '#064e3b',
+                  borderColor: combo.accentColor || '#064e3b',
+                }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <span>Explore Book</span>
+                <ArrowRight size={15} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // Exam selector + Guidebooks/Précis switch: inside the hero on larger screens, as separate cards on phones
   const renderControls = (variant) => (
@@ -936,6 +1195,30 @@ export default function StudyMaterialsPage() {
               </div>
 
               <div className="smp-section-head-right">
+                {/* View Mode Switcher: Slider vs Grid */}
+                {booksWithCombinations.length > 1 && (
+                  <div className="smp-view-mode-toggle" role="group" aria-label="Book view layout">
+                    <button
+                      type="button"
+                      className={`smp-view-mode-btn ${viewMode === 'carousel' ? 'active' : ''}`}
+                      onClick={() => setViewMode('carousel')}
+                      title="Slide through books horizontally"
+                    >
+                      <GalleryHorizontal size={14} />
+                      <span>Slide</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={`smp-view-mode-btn ${viewMode === 'grid' ? 'active' : ''}`}
+                      onClick={() => setViewMode('grid')}
+                      title={`View all ${booksWithCombinations.length} books in grid`}
+                    >
+                      <LayoutGrid size={14} />
+                      <span>All Books ({booksWithCombinations.length})</span>
+                    </button>
+                  </div>
+                )}
+
                 <button
                   type="button"
                   className="smp-compare-books-btn"
@@ -946,228 +1229,145 @@ export default function StudyMaterialsPage() {
                   <span>Compare Books</span>
                 </button>
 
-                <div className="smp-scroll-nav-group">
+                {viewMode === 'carousel' && (
+                  <div className="smp-scroll-nav-group">
+                    <span className="smp-book-counter-pill" title="Current book position">
+                      {activeBookIdx + 1} / {booksWithCombinations.length}
+                    </span>
+                    <button
+                      type="button"
+                      className={`smp-scroll-nav-btn ${!canScrollLeft ? 'disabled' : ''}`}
+                      onClick={() => scrollBooks('left')}
+                      disabled={!canScrollLeft}
+                      aria-label="Previous books"
+                      title="Previous book"
+                    >
+                      <ChevronLeft size={18} />
+                    </button>
+                    <button
+                      type="button"
+                      className={`smp-scroll-nav-btn ${!canScrollRight ? 'disabled' : ''}`}
+                      onClick={() => scrollBooks('right')}
+                      disabled={!canScrollRight}
+                      aria-label="Next books"
+                      title="Next book"
+                    >
+                      <ChevronRight size={18} />
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Books Area: Either Carousel or Grid */}
+            {viewMode === 'carousel' ? (
+              <div className="smp-books-scroll-wrap">
+                {/* Floating Navigation Arrow Left */}
+                {canScrollLeft && (
                   <button
                     type="button"
-                    className={`smp-scroll-nav-btn ${!canScrollLeft ? 'disabled' : ''}`}
+                    className="smp-floating-arrow smp-floating-arrow-left"
                     onClick={() => scrollBooks('left')}
-                    disabled={!canScrollLeft}
-                    aria-label="Previous books"
-                    title="Previous books"
+                    aria-label="Previous book"
+                    title="Previous book"
                   >
-                    <ChevronLeft size={18} />
+                    <ChevronLeft size={22} />
                   </button>
+                )}
+
+                {/* Floating Navigation Arrow Right */}
+                {canScrollRight && (
                   <button
                     type="button"
-                    className={`smp-scroll-nav-btn ${!canScrollRight ? 'disabled' : ''}`}
+                    className="smp-floating-arrow smp-floating-arrow-right"
                     onClick={() => scrollBooks('right')}
-                    disabled={!canScrollRight}
-                    aria-label="Next books"
-                    title="Next books"
+                    aria-label="Next book"
+                    title="Next book"
                   >
-                    <ChevronRight size={18} />
+                    <ChevronRight size={22} />
+                  </button>
+                )}
+
+                {/* Subtle right-edge cue indicating more books are available */}
+                {canScrollRight && (
+                  <div
+                    className="smp-books-edge-cue"
+                    onClick={() => scrollBooks('right')}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view more books"
+                  >
+                    <span className="smp-edge-cue-pill">
+                      <span>+{booksWithCombinations.length - (activeBookIdx + 1)} more</span>
+                      <ChevronRight size={13} />
+                    </span>
+                  </div>
+                )}
+
+                <div
+                  className="smp-books-scroll-track"
+                  ref={booksScrollRef}
+                  onScroll={checkScroll}
+                >
+                  {booksWithCombinations.map((book) => renderBookCard(book))}
+                </div>
+
+                {/* Bottom Pagination & Quick Switch Bar */}
+                <div className="smp-books-pagination-bar">
+                  <div className="smp-books-dots" role="tablist" aria-label="Book pagination">
+                    {booksWithCombinations.map((b, i) => (
+                      <button
+                        key={b.id || i}
+                        type="button"
+                        role="tab"
+                        aria-selected={i === activeBookIdx}
+                        className={`smp-books-dot ${i === activeBookIdx ? 'active' : ''}`}
+                        onClick={() => scrollToBook(i)}
+                        title={`Go to Book ${i + 1}: ${b.displayTitle}`}
+                        aria-label={`Go to Book ${i + 1}`}
+                      >
+                        <span className="smp-books-dot-num">{i + 1}</span>
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="smp-books-pagination-info">
+                    <span className="smp-books-pagination-text">
+                      Showing <strong>Book {activeBookIdx + 1}</strong> of <strong>{booksWithCombinations.length}</strong>
+                    </span>
+                    {booksWithCombinations.length > 1 && (
+                      <button
+                        type="button"
+                        className="smp-books-switch-grid-link"
+                        onClick={() => setViewMode('grid')}
+                      >
+                        <span>View all {booksWithCombinations.length} books in grid</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="smp-books-grid-wrap">
+                <div className="smp-books-grid-layout">
+                  {booksWithCombinations.map((book) => renderBookCard(book))}
+                </div>
+                <div className="smp-books-grid-footer">
+                  <button
+                    type="button"
+                    className="smp-books-switch-grid-link"
+                    onClick={() => {
+                      setViewMode('carousel');
+                      window.scrollTo({ top: 380, behavior: 'smooth' });
+                    }}
+                  >
+                    <span>Switch back to Slider View</span>
+                    <ArrowRight size={13} />
                   </button>
                 </div>
               </div>
-            </div>
-
-            {/* Horizontally Scrollable Books Track */}
-            <div className="smp-books-scroll-wrap">
-              <div
-                className="smp-books-scroll-track"
-                ref={booksScrollRef}
-                onScroll={checkScroll}
-              >
-                {booksWithCombinations.map((book) => {
-                const { combo } = book;
-                const subject = resolveSubjectForTitle(book.displayTitle, isGuide ? 'Guide' : 'Precis');
-                const bg = getFamilyHex(subject.family);
-                const examStateName = selectedExam?.region?.name || selectedExam?.name || examNameParam || categoryParam || '';
-                const customCover =
-                  book.customCover ||
-                  getBookCoverUrl(book.slug, examStateName) ||
-                  getBookCoverUrl(book.displayTitle, examStateName);
-                const image = customCover || subjectUrl(subject.key) || book.thumbnail;
-                const hasCustomCover = !!customCover;
-                const spineTitle = book.spineTitle || book.titleSuffix?.toUpperCase() || subject.label?.toUpperCase() || (isGuide ? 'GUIDEBOOK' : 'PRECIS');
-
-                return (
-                  <div
-                    key={book.id}
-                    className="smp-book-card"
-                    onClick={() => {
-                      // Phones: tapping the book opens its notes directly (the buttons are hidden there)
-                      if (typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches) {
-                        navigate(`/reader/${book.resourceId || book.slug || 'sample'}`, {
-                          state: { from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }
-                        });
-                      }
-                    }}
-                  >
-                    {book.isBestSeller && (
-                      <div className="smp-bestseller-badge">
-                        <Star size={11} fill="#92400e" />
-                        <span>Best Seller</span>
-                      </div>
-                    )}
-
-                    <div className="smp-book-card-body">
-                      {/* Left: Original 3D Book Cover from VeerNext Design System */}
-                      <div className="smp-book-cover-wrap">
-                        <div className="vn-book-3d-scene" style={{ padding: '0 8px 0 50px', width: '298px' }}>
-                          <div className="vn-book-3d-item">
-                            {/* Rear hardcover base (Consistent brand dark green) */}
-                            <div className="vn-book-3d-back" style={{ background: '#032e23' }} />
-
-                            {/* Left extruded spine (Consistent brand green with official logo & authentic typography) */}
-                            <div className="vn-book-3d-spine">
-                              <div className="vn-book-spine-crest">
-                                <img src="/logo.png" alt="VeerNXT" className="vn-spine-logo-img" />
-                              </div>
-                              <div className="vn-book-3d-spine-text-wrap">
-                                <span className="vn-book-3d-spine-title">{spineTitle}</span>
-                                <span className="vn-book-3d-spine-sub">COMPLETE GUIDE</span>
-                              </div>
-                              <div className="vn-book-spine-brand">
-                                <span className="vn-spine-vn-logo">❖</span>
-                                <span className="vn-spine-vn-text">VeerNXT</span>
-                              </div>
-                              <div className="vn-book-3d-spine-light" />
-                            </div>
-
-                            {/* Right paper block thickness */}
-                            <div className="vn-book-3d-pages-right" />
-
-                            {/* Bottom paper block thickness */}
-                            <div className="vn-book-3d-pages-bottom" />
-
-                            {/* Front cover */}
-                            <div
-                              className="vn-book-3d-front"
-                              style={{
-                                backgroundImage: hasCustomCover
-                                  ? `url("${image}")`
-                                  : image
-                                  ? `linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.85) 100%), url("${image}")`
-                                  : `linear-gradient(160deg, ${bg || '#065f46'} 0%, #042f28 100%)`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center top',
-                                padding: hasCustomCover ? 0 : '10px 10px 10px 18px',
-                              }}
-                            >
-                              {/* Hardcover hinge crease line */}
-                              <div className="vn-book-3d-crease" />
-
-                              {/* Glossy light reflection sheen */}
-                              <div className="vn-book-3d-sheen" />
-
-                              {!hasCustomCover && (
-                                <>
-                                  {/* Top header: VeerNXT emblem + Lock Pill */}
-                                  <div className="vn-book-cover-header">
-                                    <div className="vn-book-cover-crest-badge">
-                                      <Shield size={10} style={{ color: 'var(--c-amber, #b45309)' }} />
-                                      <span className="vn-book-cover-crest-text">VEERNXT</span>
-                                    </div>
-                                    <div className="vn-book-lock-pill unlocked">
-                                      <Unlock size={11} color="white" />
-                                    </div>
-                                  </div>
-
-                                  {/* Center Cover Typography Banner */}
-                                  <div className="vn-book-cover-center-banner">
-                                    <span className="vn-book-cover-exam-tag">{currentExamShortName}</span>
-                                    <h4 className="vn-book-cover-main-title">{book.shortCoverTitle || book.displayTitle}</h4>
-                                    <span className="vn-book-cover-sub-bar">{subject.label || (isGuide ? 'COMPLETE GUIDE' : 'PRECIS')}</span>
-                                  </div>
-
-                                  {/* Bottom Category Chip */}
-                                  <div className="vn-book-cover-footer">
-                                    <span className="vn-book-cover-category-chip">{isGuide ? 'GUIDEBOOK' : 'PRECIS'}</span>
-                                  </div>
-                                </>
-                              )}
-                            </div>
-                          </div>
-                          {/* Ground cast shadow */}
-                          <div className="vn-book-3d-ground-shadow" />
-                        </div>
-                      </div>
-
-                      {/* Right: Info & Bullets (Generated from 1 of the 5 Combinations) */}
-                      <div className="smp-book-card-info">
-                        <h3 className="smp-book-title">{book.displayTitle}</h3>
-
-                        <p className="smp-book-desc">{combo.description}</p>
-
-                        {/* 5 Bullet Points with Colored Checkmarks */}
-                        <ul className="smp-book-bullets">
-                          {combo.bullets.map((bText, bIdx) => (
-                            <li key={bIdx} className="smp-book-bullet-item">
-                              <span
-                                className="smp-check-circle"
-                                style={{
-                                  background: combo.badgeBg || '#ecfdf5',
-                                  color: combo.checkColor || '#059669',
-                                }}
-                              >
-                                <Check size={11} strokeWidth={3} />
-                              </span>
-                              <span>{bText}</span>
-                            </li>
-                          ))}
-                        </ul>
-
-                        {/* Stat Chips Row */}
-                        <div className="smp-book-stats-row">
-                          {combo.stats.map((s, sIdx) => (
-                            <span key={sIdx} className="smp-book-stat-chip">
-                              <span className="smp-book-stat-icon">
-                                {s.icon === 'book' && <BookOpen size={12} />}
-                                {s.icon === 'laptop' && <Laptop size={12} />}
-                                {s.icon === 'check' && <CheckSquare size={12} />}
-                                {s.icon === 'badge' && <Sparkles size={12} />}
-                              </span>
-                              <span>{s.label}</span>
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* Actions Row */}
-                        <div className="smp-book-actions-row">
-                          <button
-                            type="button"
-                            className="smp-btn-details"
-                            onClick={() => setActiveDetailsBook(book)}
-                          >
-                            View Details
-                          </button>
-
-                          <Link
-                            to={`/reader/${book.resourceId || book.slug || 'sample'}`}
-                            state={{ from: window.location.pathname + window.location.search, stateName: examStateName, examId: selectedExam?.id }}
-                            className="smp-btn-explore"
-                            style={{
-                              background: combo.accentColor || '#064e3b',
-                              borderColor: combo.accentColor || '#064e3b',
-                            }}
-                          >
-                            <span>Explore Book</span>
-                            <ArrowRight size={15} />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-              </div>
-              <div className="smp-books-dots" aria-hidden="true">
-                {booksWithCombinations.map((b, i) => (
-                  <span key={i} className={`smp-books-dot ${i === activeBookIdx ? 'active' : ''}`} />
-                ))}
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Right Column: Sidebar */}

@@ -12,9 +12,9 @@ const PAD_TOP = 46; // running header
 const PAD_BOTTOM = 48; // page folio
 const COVER = 14; // hardcover thickness
 
-const Page = forwardRef(function Page({ children, number, side, runHead }, ref) {
+const Page = forwardRef(function Page({ children, number, side, runHead, style }, ref) {
   return (
-    <div className={`pr-page pr-paper-vars pr-side-${side}`} ref={ref}>
+    <div className={`pr-page pr-paper-vars pr-side-${side}`} ref={ref} style={style}>
       <div className="pr-run">{runHead}</div>
       <div className="pr-page-inner">{children}</div>
       <div className="pr-foot">
@@ -54,14 +54,22 @@ export default function PaginatedReader({
   const isSpread = isBook && vp.w >= 1000;
 
   const phone = vp.w < 600; // phones: near full-width page, controls float as a bottom dock
+  const compact = vp.w <= 768; // matches @media (max-width: 768px) .pr-page { padding: 42px 22px 42px }
+  const padX = compact ? 22 : PAD_X;
+  const padTop = compact ? 42 : PAD_TOP;
+  const padBottom = compact ? 42 : PAD_BOTTOM;
   const pageH = clamp(vp.h - (phone ? 250 : 170), phone ? 400 : 520, 920);
   const pageW = isBook
     ? (isSpread ? clamp((vp.w - 180) / 2, 380, 580) : clamp(vp.w - (phone ? 28 : 48), 300, 560))
     : clamp(vp.w - (phone ? 28 : 48), 300, 780);
-  const contentW = pageW - PAD_X * 2;
-  const contentH = pageH - PAD_TOP - PAD_BOTTOM;
+  const contentW = pageW - padX * 2;
+  const contentH = pageH - padTop - padBottom;
+  const scaleVars = useMemo(
+    () => ({ '--reader-body-size': `${(0.95 * (fontScale || 1)).toFixed(3)}rem` }),
+    [fontScale]
+  );
 
-  const { measureRef, pages: rawPages } = usePagination(items, contentH, `${contentW}|${fontKey}|${chapterIndex}`);
+  const { measureRef, pages: rawPages, sig } = usePagination(items, contentH, `${contentW}|${fontKey}|${chapterIndex}`);
 
   const canPrevChapter = chapterIndex > 0;
   const canNextChapter = chapterIndex < chapterCount - 1;
@@ -335,7 +343,7 @@ export default function PaginatedReader({
       return (
         <div className={`pr-fit ${isActive ? 'bk-tts-active' : ''}`} key={k} style={{ height: Math.min(contentH, e.h * e.scale) }}>
           <div
-            className={it.cls || ''}
+            className={`pr-item ${it.cls || ''}`}
             style={{ width: `${100 / e.scale}%`, transform: `scale(${e.scale})`, transformOrigin: 'top left' }}
           >{it.el}</div>
         </div>
@@ -343,7 +351,7 @@ export default function PaginatedReader({
     }
     return (
       <div className={`pr-fit ${isActive ? 'bk-tts-active' : ''}`} key={k} style={{ height: e.end - e.start }}>
-        <div className={it.cls || ''} style={{ transform: `translateY(${-e.start}px)` }}>{it.el}</div>
+        <div className={`pr-item ${it.cls || ''}`} style={{ transform: `translateY(${-e.start}px)` }}>{it.el}</div>
       </div>
     );
   };
@@ -364,7 +372,7 @@ export default function PaginatedReader({
         : chapterTitle;
 
     return (
-      <Page key={n} number={n + 1} side={side} runHead={runHead}>
+      <Page key={n} number={n + 1} side={side} runHead={runHead} style={scaleVars}>
         {isEndLeaf ? (
           <div className="pr-end-leaf">
             {subType === 'summary' ? (
@@ -442,7 +450,7 @@ export default function PaginatedReader({
     );
   };
 
-  const flipKey = `${pageW}x${pageH}-${total}-${isSpread}-${chapterIndex}`;
+  const flipKey = `${pageW}x${pageH}-${total}-${isSpread}-${chapterIndex}-${sig}`;
   const shownLabel = isSpread && pageIndex + 2 <= total && pageIndex > 0
     ? `${pageIndex + 1}–${pageIndex + 2}` : `${pageIndex + 1}`;
   const percent = total > 1 ? Math.round(((pageIndex + 1) / total) * 100) : 100;
@@ -450,7 +458,7 @@ export default function PaginatedReader({
   return (
     <div className={`pr-desk pr-mode-${mode}`}>
       <div className="pr-measure-clip" aria-hidden="true">
-        <div className="pr-measurer pr-paper-vars" ref={measureRef} style={{ width: contentW }}>
+        <div className="pr-measurer pr-paper-vars" ref={measureRef} style={{ width: contentW, ...scaleVars }}>
           {items.map((it) => <div className={`pr-item ${it.cls || ''}`} key={it.key}>{it.el}</div>)}
         </div>
       </div>

@@ -523,10 +523,62 @@
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* ── View Mode Switcher (Slide vs All Books) ── */
+.smp-view-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--c-bg-1, #f1f5f9);
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  gap: 2px;
+}
+
+.smp-view-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--c-ink-4, #64748b);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.smp-view-mode-btn:hover:not(.active) {
+  color: var(--c-ink-1, #0f172a);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.smp-view-mode-btn.active {
+  background: #ffffff;
+  color: var(--c-green, #064e3b);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .smp-scroll-nav-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+}
+
+.smp-book-counter-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  background: var(--c-bg-1, #f1f5f9);
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c-ink-2, #334155);
+  letter-spacing: 0.02em;
 }
 
 .smp-scroll-nav-btn {
@@ -585,6 +637,236 @@
   position: relative;
   width: 100%;
   min-width: 0;
+}
+
+/* ── Floating Navigation Arrows on Carousel ── */
+.smp-floating-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 12;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #064e3b;
+  color: #064e3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(6, 78, 59, 0.22);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.smp-floating-arrow:hover {
+  background: #064e3b;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(6, 78, 59, 0.32);
+}
+
+.smp-floating-arrow-left {
+  left: -14px;
+}
+
+.smp-floating-arrow-right {
+  right: -14px;
+}
+
+/* ── Subtle right-edge cue indicating more books ── */
+.smp-books-edge-cue {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  bottom: 20px;
+  width: 80px;
+  background: linear-gradient(to right, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.88) 100%);
+  pointer-events: none;
+  z-index: 9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 12px;
+  padding-top: 18px;
+}
+
+.smp-edge-cue-pill {
+  pointer-events: auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #064e3b;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(6, 78, 59, 0.28);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.smp-edge-cue-pill:hover {
+  background: #04382a;
+  transform: translateX(2px) scale(1.03);
+  box-shadow: 0 4px 14px rgba(6, 78, 59, 0.38);
+}
+
+/* ── Bottom Pagination Bar ── */
+.smp-books-pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border: 1px solid var(--c-line-2, #e2e8f0);
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.smp-books-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.smp-books-dot {
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: var(--c-bg-1, #f1f5f9);
+  border: 1px solid var(--c-line-3, #cbd5e1);
+  color: var(--c-ink-2, #475569);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+}
+
+.smp-books-dot:hover:not(.active) {
+  background: #ffffff;
+  border-color: #064e3b;
+  color: #064e3b;
+  transform: translateY(-1px);
+}
+
+.smp-books-dot.active {
+  background: #064e3b;
+  border-color: #064e3b;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(6, 78, 59, 0.28);
+}
+
+.smp-books-dot-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.smp-books-pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.smp-books-pagination-text {
+  font-size: 13px;
+  color: var(--c-ink-4, #64748b);
+}
+
+.smp-books-pagination-text strong {
+  color: var(--c-ink-1, #0f172a);
+}
+
+.smp-books-switch-grid-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #064e3b;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.smp-books-switch-grid-link:hover {
+  background: #ecfdf5;
+  color: #04382a;
+  text-decoration: underline;
+}
+
+/* ── Grid View Layout ── */
+.smp-books-grid-wrap {
+  width: 100%;
+}
+
+.smp-books-grid-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+
+.smp-books-grid-layout .smp-book-card {
+  flex: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  scroll-snap-align: none;
+}
+
+.smp-books-grid-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* ── Précis Edition Badge on 3D Cover ── */
+.vn-book-precis-cover-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.96) 0%, rgba(3, 46, 35, 0.98) 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 4px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.vn-precis-badge-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.vn-precis-badge-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.92;
+  line-height: 1.2;
 }
 
 .smp-books-scroll-track {
@@ -1453,15 +1735,8 @@
   .smp-res-card-top { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
 
-/* ── Phone: peeking carousel with dots, "why choose" as an icon grid ── */
-.smp-books-dots { display: none; }
+/* ── Phone: "why choose" as an icon grid ── */
 @media (max-width: 600px) {
-  .smp-books-scroll-track { gap: 12px; scroll-snap-type: x mandatory; padding-bottom: 4px; }
-  .smp-book-card { flex: 0 0 88%; max-width: 88%; scroll-snap-align: start; }
-  .smp-books-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
-  .smp-books-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-line-3, #cbd5e1); transition: width .2s, background .2s; }
-  .smp-books-dot.active { width: 18px; border-radius: 99px; background: var(--c-green, #064e3b); }
-
   .smp-why-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .smp-why-item { flex-direction: column; align-items: flex-start; gap: 8px; padding: 10px; border: 1px solid var(--c-line-2, #e2e8f0); border-radius: 12px; background: var(--c-bg-1, #f8fafc); font-size: 11px; line-height: 1.3; }
   .smp-why-icon-wrap { width: 26px; height: 26px; }
@@ -1598,12 +1873,31 @@
   .smp-hero-card { min-height: 230px; }
 }
 
+@media (max-width: 900px) {
+  .smp-floating-arrow,
+  .smp-books-edge-cue {
+    display: none !important;
+  }
+  .smp-books-pagination-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
 /* ── Phones: a plain two-per-row grid of books (cover + title); tapping a book opens its notes ── */
 .smp-title-short { display: none; }
 @media (max-width: 600px) {
   .smp-title-full, .smp-section-sub { display: none; }
   .smp-title-short { display: inline; }
-  .smp-scroll-nav-group, .smp-books-dots { display: none !important; }
+  .smp-scroll-nav-group,
+  .smp-books-dots,
+  .smp-view-mode-toggle,
+  .smp-floating-arrow,
+  .smp-books-edge-cue,
+  .smp-books-pagination-bar {
+    display: none !important;
+  }
 
   .smp-books-scroll-wrap { overflow: visible; }
   .smp-books-scroll-track {

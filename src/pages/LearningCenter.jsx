@@ -54,6 +54,7 @@ import CategoryExplorerPortal from '../components/CategoryExplorerPortal';
 import { useExamContent, getExamResourceCount } from '../hooks/useExamContent';
 import { cleanContentTitle } from '../lib/contentTitle';
 import { STATE_IMAGES, getStateBannerImage } from '../lib/stateImages';
+import { getCategoryBannerImage } from '../lib/categoryBannerHelper';
 import './LearningCenter.css';
 
 // A handful of representative subjects for the Syllabus teaser card's chip
@@ -3251,7 +3252,7 @@ const LearningCenter = () => {
 
                     <div className="lc-state-directory-grid">
                       {filteredExplorerCategoryList.map((item) => {
-                        const IconComponent = item.icon || ClipboardList;
+                        const bannerImg = getCategoryBannerImage(item.key, regionMode, activeState?.name);
                         return (
                           <button
                             key={item.key}
@@ -3260,32 +3261,27 @@ const LearningCenter = () => {
                             onClick={() => handleCategoryFilterChange(item.key)}
                             style={{ textAlign: 'left', cursor: 'pointer' }}
                           >
-                            <div
-                              className="lc-state-card-image-wrap"
-                              style={{
-                                height: '110px',
-                                background: `linear-gradient(135deg, ${item.bg || 'var(--c-tint-blue, #e0f2fe)'} 0%, #ffffff 100%)`,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                position: 'relative',
-                              }}
-                            >
-                              <div
-                                style={{
-                                  width: '56px',
-                                  height: '56px',
-                                  borderRadius: '16px',
-                                  backgroundColor: item.bg || 'var(--c-tint-blue, #e0f2fe)',
-                                  color: item.color || 'var(--c-blue, #0284c7)',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
-                                }}
-                              >
-                                <IconComponent size={28} strokeWidth={2.2} />
-                              </div>
+                            <div className="lc-state-card-image-wrap">
+                              {bannerImg ? (
+                                <img
+                                  src={bannerImg}
+                                  alt={item.label}
+                                  className="lc-state-card-img"
+                                  loading="lazy"
+                                />
+                              ) : (
+                                <div
+                                  className="lc-state-card-placeholder-banner"
+                                  style={{
+                                    background: `linear-gradient(135deg, ${item.bg || 'var(--c-tint-blue, #e0f2fe)'} 0%, #ffffff 100%)`,
+                                  }}
+                                >
+                                  <span className="lc-state-watermark-text">
+                                    {item.label.slice(0, 2).toUpperCase()}
+                                  </span>
+                                </div>
+                              )}
+                              <div className="lc-state-card-image-fade" />
 
                               <div className="lc-state-card-floating-bar">
                                 <span className="lc-state-card-count-badge">

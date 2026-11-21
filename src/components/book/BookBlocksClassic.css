@@ -14,19 +14,6 @@
   hyphens: auto;
 }
 
-/* Drop Cap for the first paragraph in the chapter */
-:where(.bk-classic) .bk-blocks-container > .bk-paragraph:first-of-type::first-letter {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  float: left;
-  font-size: 5rem;
-  line-height: 0.8;
-  padding-top: 0.25rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.2rem;
-  color: #0f766e;
-  font-weight: 700;
-}
-
 /* Ensure strong text inside paragraphs is highlighted slightly */
 :where(.bk-classic) .bk-paragraph strong {
   color: #0f172a;
@@ -553,7 +540,7 @@
    so bullets and numbers vanished even though the book data holds real list blocks.
    Restore them here, including nested, lettered/roman and in-table lists. */
 :where(.bk-classic) .bk-list, :where(.bk-classic) .bk-numbered-list {
-  padding-left: 1.75rem;
+  padding-left: 2.25rem;
   list-style-position: outside;
 }
 :where(.bk-classic) .bk-list { list-style-type: disc; }

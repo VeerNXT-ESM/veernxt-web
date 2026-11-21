@@ -162,12 +162,14 @@ export async function parseDocxDirect(buffer, { onImage } = {}) {
     const fill = shd && shd.getAttribute('w:fill');
     const va = rPr && wv(first(rPr, 'vertAlign'));
     const u = rPr && first(rPr, 'u');
+    const resolvedBg = hl && hl !== 'none' ? hl : fill && !['auto', 'FFFFFF', 'ffffff'].includes(fill) ? '#' + fill : '';
+    const isWhiteTextWithoutBg = color && ['ffffff', 'fff', 'fefefe'].includes(color.toLowerCase()) && !resolvedBg;
     return {
       b: flag('b', 'b'), i: flag('i', 'i'),
       u: !!u && !isOff(u), s: !!(rPr && first(rPr, 'strike') && !isOff(first(rPr, 'strike'))),
       sup: va === 'superscript', sub: va === 'subscript',
-      color: color && !['auto', '000000'].includes(color.toLowerCase()) ? color : '',
-      bg: hl && hl !== 'none' ? hl : fill && !['auto', 'FFFFFF', 'ffffff'].includes(fill) ? '#' + fill : '',
+      color: color && !['auto', '000000'].includes(color.toLowerCase()) && !isWhiteTextWithoutBg ? color : '',
+      bg: resolvedBg,
     };
   }
   const keyOf = (p) => [p.b, p.i, p.u, p.s, p.sup, p.sub, p.color, p.bg, p.href || ''].join('|');

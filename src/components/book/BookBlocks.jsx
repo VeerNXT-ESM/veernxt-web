@@ -2,9 +2,62 @@ import React from 'react';
 import { Info, AlertTriangle, Lightbulb, BookOpen, Star, Zap, TrendingUp } from 'lucide-react';
 import './BookBlocks.css';
 
+export function sanitizeReadableHtml(html) {
+  if (!html || typeof html !== 'string') return html;
+  let s = html
+    .replace(/<br\s*><\/br>|<\/br>/gi, '<br />');
+
+  // Strip inline white / near-white text color when no background color is set on the same element
+  s = s.replace(/<([a-z0-9]+)\b([^>]*?)\bstyle=(["'])([^"']*?)\3([^>]*)>/gi, (full, tag, before, quote, styleStr, after) => {
+    const hasBg = /background(?:-color)?\s*:/i.test(styleStr);
+    if (hasBg) return full;
+    const cleanedStyle = styleStr
+      .replace(/(?:^|;)\s*color\s*:\s*(?:#fff(?:fff)?|#fefefe|#f8fafc|#f1f5f9|white|rgb\(\s*255\s*,\s*255\s*,\s*255\s*\))\s*(?=;|$)/gi, '')
+      .replace(/^;\s*|\s*;$/g, '')
+      .trim();
+    if (!cleanedStyle) {
+      return `<${tag}${before}${after}>`;
+    }
+    return `<${tag}${before}style=${quote}${cleanedStyle}${quote}${after}>`;
+  });
+
+  // Convert centered topic subtitle bars (e.g. from DOCX dark header strips) into .bk-topic-bar
+  const trimmed = s.trim();
+  const centeredMatch = trimmed.match(/^<div\b[^>]*text-align\s*:\s*center[^>]*>([\s\S]*?)<\/div>$/i);
+  if (centeredMatch) {
+    const inner = centeredMatch[1].trim();
+    const plain = inner.replace(/<[^>]+>/g, '').trim();
+    if (plain.includes('|') || /color\s*:\s*#fff/i.test(html)) {
+      return `<div class="bk-topic-bar">${inner}</div>`;
+    }
+  }
+
+  return s;
+}
+
+function parseInlineMcqOptions(line) {
+  if (!/^\(?A[\.\)]\s*\S/i.test(line)) return null;
+  if (!/\s+\(?B[\.\)]\s*\S/i.test(line) || !/\s+\(?C[\.\)]\s*\S/i.test(line)) return null;
+  const parts = line.split(/\s+(?=\(?[B-E][\.\)]\s*\S)/i);
+  if (parts.length < 2) return null;
+  const parsed = [];
+  for (const part of parts) {
+    const m = part.trim().match(/^\(?([A-E])[\.\)]\s*(.*)$/i);
+    if (!m) return null;
+    parsed.push(
+      `<div class="bk-option-line"><span class="bk-opt-badge">${m[1].toUpperCase()}</span><span class="bk-opt-text">${m[2].trim()}</span></div>`
+    );
+  }
+  return `<div class="bk-options-inline-grid">${parsed.join('')}</div>`;
+}
+
 export function cleanParagraphContent(content) {
   if (!content || typeof content !== 'string') return content;
-  let text = content.trim();
+  let text = sanitizeReadableHtml(content.trim());
+
+  if (/^<div class="bk-topic-bar">/i.test(text)) {
+    return text;
+  }
 
   // Normalize all variations of <br></br>, </br>, <br/> into <br>
   let s = text
@@ -14,13 +67,19 @@ export function cleanParagraphContent(content) {
     .replace(/(\s*<br>\s*)+$/gi, '');
 
   if (!s.includes('<br>')) {
-    return text;
+    const inlineOpts = parseInlineMcqOptions(s);
+    if (inlineOpts) return inlineOpts;
+    if (/^<(?:strong|b)>(Practice Questions|Solved Example|Important Questions|Sample Questions)[^<]*<\/(?:strong|b)>$/i.test(s)) {
+      const title = s.replace(/<[^>]+>/g, '').trim().replace(/:\s*$/, '');
+      return `<div class="bk-section-banner">${title}</div>`;
+    }
+    return s;
   }
 
   // Split lines on <br>
   const lines = s.split(/<br>/).map((l) => l.trim()).filter(Boolean);
   if (lines.length <= 1) {
-    return text;
+    return s;
   }
 
   const out = [];
@@ -76,7 +135,14 @@ export function cleanParagraphContent(content) {
       continue;
     }
 
-    // Multiple choice options: A., B., C., D. (with or without space, e.g. A.Only I follows)
+    // Multiple inline MCQ options on one line: A. ... B. ... C. ... D. ...
+    const inlineOpts = parseInlineMcqOptions(line);
+    if (inlineOpts) {
+      out.push(inlineOpts);
+      continue;
+    }
+
+    // Single multiple choice option: A., B., C., D. (with or without space, e.g. A.Only I follows)
     const optMatch = line.match(/^([A-D])[\.\)]\s*(.*)$/i);
     if (optMatch) {
       out.push(
@@ -116,7 +182,7 @@ export const ParagraphBlock = ({ content }) => {
 
 export function cleanHeadingContent(content) {
   if (!content || typeof content !== 'string') return content;
-  let text = content.trim();
+  let text = sanitizeReadableHtml(content.trim());
 
   // Strip leading and trailing break tags (including malformed <br></br>, </br>, <br/>)
   const stripBreaks = (s) => s
@@ -133,8 +199,12 @@ export function cleanHeadingContent(content) {
     text = stripBreaks(text);
   } while (text !== prev);
 
-  // Normalize any remaining internal <br></br> or </br> into <br />
-  text = text.replace(/<br\s*><\/br>|<\/br>/gi, '<br />');
+  // Normalize any remaining internal <br></br>, </br>, or literal newlines into <br />
+  text = text
+    .replace(/<br\s*><\/br>|<\/br>/gi, '<br />')
+    .replace(/\r?\n/g, '<br />')
+    // Separate jammed numbered items in headings like "one by one3. Do not"
+    .replace(/([a-z])(\d+[\.\)]\s+[A-Z])/g, '$1 <br />$2');
 
   return text;
 }
@@ -160,7 +230,7 @@ export const ImportantBlock = ({ content }) => {
       <div className="bk-callout-icon"><AlertTriangle size={20} /></div>
       <div className="bk-callout-content">
         <h4 className="bk-callout-title">IMPORTANT</h4>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(content) }} />
       </div>
     </div>
   );
@@ -172,7 +242,7 @@ export const ExamTipBlock = ({ content }) => {
       <div className="bk-callout-icon"><Lightbulb size={20} /></div>
       <div className="bk-callout-content">
         <h4 className="bk-callout-title">EXAM TIP</h4>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(content) }} />
       </div>
     </div>
   );
@@ -184,7 +254,7 @@ export const DefinitionBlock = ({ content }) => {
       <div className="bk-callout-icon"><BookOpen size={20} /></div>
       <div className="bk-callout-content">
         <h4 className="bk-callout-title">DEFINITION</h4>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(content) }} />
       </div>
     </div>
   );
@@ -195,7 +265,7 @@ export const ExampleBlock = ({ content }) => {
     <div className="bk-callout bk-example">
       <div className="bk-callout-content">
         <h4 className="bk-callout-title">EXAMPLE</h4>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(content) }} />
       </div>
     </div>
   );
@@ -206,7 +276,7 @@ export const GenericCalloutBlock = ({ content }) => {
     <div className="bk-callout bk-generic">
       <div className="bk-callout-icon"><Info size={20} /></div>
       <div className="bk-callout-content">
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(content) }} />
       </div>
     </div>
   );
@@ -214,7 +284,10 @@ export const GenericCalloutBlock = ({ content }) => {
 
 export function cleanListItemContent(content) {
   if (!content || typeof content !== 'string') return content;
-  return content
+  return sanitizeReadableHtml(content)
+    .replace(/<br\s*><\/br>|<\/br>/gi, '<br />')
+    .replace(/^(\s*<\/?br\s*\/?>\s*)+/gi, '')
+    .replace(/(\s*<\/?br\s*\/?>\s*)+$/gi, '')
     .replace(/^(\s*<p[^>]*>)?\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i, (_, p1) => p1 || '')
     .replace(/^\s*(?:[•●\u2022\u25cf\u25cb\u25aa\u25ab\-*]|&bull;|&#8226;|&#x2022;)\s*/i, '');
 }
@@ -257,8 +330,8 @@ export const TableBlock = ({ rows }) => {
               <tr key={i}>
                 {cells.map((cell, j) => (
                   isHeader ? 
-                    <th key={j} dangerouslySetInnerHTML={{ __html: String(cell ?? '') }} /> : 
-                    <td key={j} dangerouslySetInnerHTML={{ __html: String(cell ?? '') }} />
+                    <th key={j} dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(String(cell ?? '')) }} /> : 
+                    <td key={j} dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(String(cell ?? '')) }} />
                 ))}
               </tr>
             );
@@ -309,7 +382,7 @@ export const KeyFactsBlock = ({ title = 'Key Facts', items }) => {
         {items.map((item, i) => (
           <li key={i}>
             <span className="bk-keyfacts-bullet">{String(i + 1).padStart(2, '0')}</span>
-            <span dangerouslySetInnerHTML={{ __html: item }} />
+            <span dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(item) }} />
           </li>
         ))}
       </ul>
@@ -320,7 +393,7 @@ export const KeyFactsBlock = ({ title = 'Key Facts', items }) => {
 export const PullQuoteBlock = ({ content }) => (
   <blockquote className="bk-pullquote">
     <span className="bk-pullquote-mark">&ldquo;</span>
-    <p dangerouslySetInnerHTML={{ __html: content }} />
+    <p dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(content) }} />
   </blockquote>
 );
 
@@ -334,7 +407,7 @@ export const ExamAlertBlock = ({ items }) => {
       </div>
       <ul className="bk-exam-alert-list">
         {items.map((item, i) => (
-          <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+          <li key={i} dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(item) }} />
         ))}
       </ul>
     </div>
@@ -349,7 +422,7 @@ export const ComparisonTableBlock = ({ headers, rows }) => {
         {headers && headers.length > 0 && (
           <thead>
             <tr>
-              {headers.map((h, i) => <th key={i} dangerouslySetInnerHTML={{ __html: h }} />)}
+              {headers.map((h, i) => <th key={i} dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(h) }} />)}
             </tr>
           </thead>
         )}
@@ -357,8 +430,8 @@ export const ComparisonTableBlock = ({ headers, rows }) => {
           {rows.map((row, i) => (
             <tr key={i}>
               {Array.isArray(row) 
-                ? row.map((cell, j) => <td key={j} dangerouslySetInnerHTML={{ __html: cell }} />)
-                : Object.values(row).map((cell, j) => <td key={j} dangerouslySetInnerHTML={{ __html: cell }} />)
+                ? row.map((cell, j) => <td key={j} dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(cell) }} />)
+                : Object.values(row).map((cell, j) => <td key={j} dangerouslySetInnerHTML={{ __html: sanitizeReadableHtml(cell) }} />)
               }
             </tr>
           ))}

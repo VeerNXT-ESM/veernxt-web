@@ -13,6 +13,8 @@ export const BOOK_COVERS_MAP = {
   'english': '/thumbnails/books/english.webp',
   'hindi': '/thumbnails/books/hindi.webp',
   'computer-science': '/thumbnails/books/computer-science.webp',
+  'descriptive-writing': '/thumbnails/books/descriptive-writing.webp',
+  '2026-descriptive-writing-bank-exams': '/thumbnails/books/descriptive-writing.webp',
 
   // State & UT GS Guides
   'rajasthan-gs': '/thumbnails/books/rajasthan-gs.webp',
@@ -190,6 +192,9 @@ export function getBookCoverUrl(slugOrTitle, explicitRegion) {
   }
   if (normalized.includes('computer')) {
     return BOOK_COVERS_MAP['computer-science'];
+  }
+  if (normalized.includes('descriptive') || normalized.includes('writing') || normalized.includes('essay')) {
+    return BOOK_COVERS_MAP['descriptive-writing'];
   }
 
   // 4. Check if the book title specifically targets a state

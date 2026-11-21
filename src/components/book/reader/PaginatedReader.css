@@ -152,10 +152,14 @@
   --reader-heading: #1a1007;
   --reader-text-muted: #72604d;
   --reader-border: rgba(90, 68, 42, 0.22);
+  --reader-border-strong: rgba(90, 68, 42, 0.35);
+  --reader-background: #f5efe0;
   --reader-surface: #fbf7ee;
+  --reader-surface-alt: rgba(140, 100, 50, 0.08);
   --reader-body-font: 'Lora', 'Merriweather', 'Baskerville', serif;
   --reader-heading-font: 'Playfair Display', Georgia, serif;
   --reader-dropcap-font: 'Playfair Display', Georgia, serif;
+  --reader-body-size: 0.95rem;
   --reader-body-line-height: 1.48;
   --reader-space-xs: 0.2rem;
   --reader-space-sm: 0.25rem;
@@ -167,7 +171,7 @@
   --reader-h3-size: 0.9rem;
   font-family: var(--reader-body-font);
   color: var(--reader-text);
-  font-size: 0.95rem;
+  font-size: var(--reader-body-size);
   line-height: 1.48;
   letter-spacing: 0.005em;
   text-rendering: optimizeLegibility;
@@ -511,7 +515,7 @@
 .pr-paper-vars .bk-numbered-list {
   margin-top: 0.2rem;
   margin-bottom: 0.4rem;
-  padding-left: 1.2rem;
+  padding-left: 2.25rem;
 }
 .pr-paper-vars .bk-list li,
 .pr-paper-vars .bk-numbered-list li {
@@ -519,6 +523,32 @@
   padding-bottom: 0 !important;
   margin-bottom: 0.14rem !important;
   line-height: 1.42 !important;
+}
+
+.pr-paper-vars .bk-topic-bar {
+  text-align: center;
+  font-family: var(--reader-body-font);
+  font-size: 0.86rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #5a3e20;
+  background: rgba(140, 100, 50, 0.09);
+  border-top: 1px solid rgba(120, 85, 45, 0.28);
+  border-bottom: 1px solid rgba(120, 85, 45, 0.28);
+  padding: 0.35rem 0.75rem;
+  margin: 0.25rem 0 0.55rem;
+  border-radius: 3px;
+}
+
+.pr-paper-vars .bk-options-inline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 8px;
+  margin: 4px 0 6px;
+}
+
+.pr-paper-vars .bk-options-inline-grid .bk-option-line {
+  margin: 0;
 }
 
 /* Elegant marginalia-style book callouts */
@@ -593,26 +623,23 @@
   font-family: var(--reader-heading-font);
   font-weight: 700;
   color: #1a1007;
+  background-color: rgba(140, 100, 50, 0.08);
   text-align: left;
 }
 .pr-paper-vars .bk-table td {
   border-bottom: 1px solid rgba(90, 68, 42, 0.18);
   padding: 0.35rem 0.5rem;
   color: #281d14;
+  background-color: transparent;
+}
+.pr-paper-vars .bk-table tr:nth-child(even) td {
+  background-color: rgba(140, 100, 50, 0.04);
+}
+.pr-paper-vars .bk-table tr:nth-child(odd) td {
+  background-color: transparent;
 }
 .pr-paper-vars .bk-table tr:last-child td {
   border-bottom: 2px solid #281d14;
-}
-
-/* Drop cap on section start */
-.pr-dropcap .bk-paragraph::first-letter {
-  font-family: var(--reader-dropcap-font);
-  float: left;
-  font-size: 3.4em;
-  line-height: 0.82;
-  padding: 0.1em 0.12em 0 0;
-  color: #5c2014;
-  font-weight: 700;
 }
 
 /* ── Normal Mode (PDF Sheet) ── */

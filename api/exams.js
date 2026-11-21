@@ -1,29 +1,155 @@
 import { createClient } from '@supabase/supabase-js';
+import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 
 const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://jtcyeufhvpieyngracpo.supabase.co';
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+function pickCanonicalStorageBaseUrl(rows) {
+  const counts = new Map();
+  const maxChaptersByUrl = new Map();
+  for (const r of rows) {
+    if (!r.storage_base_url) continue;
+    const w = r.status === 'Published' ? 10 : 1;
+    counts.set(r.storage_base_url, (counts.get(r.storage_base_url) || 0) + w);
+    const ch = Number(r.chapter_count) || 0;
+    if (ch > (maxChaptersByUrl.get(r.storage_base_url) || 0)) {
+      maxChaptersByUrl.set(r.storage_base_url, ch);
+    }
+  }
+  let best = null;
+  let bestCount = -1;
+  let bestCh = -1;
+  for (const [url, c] of counts) {
+    const ch = maxChaptersByUrl.get(url) || 0;
+    if (c > bestCount || (c === bestCount && ch > bestCh)) {
+      best = url;
+      bestCount = c;
+      bestCh = ch;
+    }
+  }
+  return best;
+}
+
+async function resolveCanonicalResource(resource) {
+  if (!resource) return resource;
+  const cat = (resource.category || '').trim();
+  if ((cat === 'Guide' || cat === 'Precis') && resource.title) {
+    const { data: groupRows } = await supabase
+      .from('resources')
+      .select('resource_id, title, category, storage_base_url, chapter_count, status, is_freemium')
+      .eq('category', cat)
+      .eq('format', 'blocks')
+      .ilike('title', resource.title.trim());
+    if (groupRows && groupRows.length > 0) {
+      const canonicalUrl = pickCanonicalStorageBaseUrl(groupRows);
+      if (canonicalUrl) {
+        resource.storage_base_url = canonicalUrl;
+      }
+      const maxCh = Math.max(...groupRows.map((r) => Number(r.chapter_count) || 0));
+      if (maxCh > (Number(resource.chapter_count) || 0)) {
+        resource.chapter_count = maxCh;
+      }
+    }
+  }
+  return resource;
+}
+
+async function fetchJsonFromR2(fullUrl) {
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 6000);
+    const resp = await fetch(`${fullUrl}${fullUrl.includes('?') ? '&' : '?'}t=${Date.now()}`, {
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    if (resp.ok) {
+      return await resp.json();
+    }
+  } catch (err) {
+    // Fall through to S3 client fallback if public r2.dev domain times out
+  }
+
+  const r2AccountId = process.env.R2_ACCOUNT_ID;
+  const r2Bucket = process.env.R2_BUCKET_NAME;
+  const r2AccessKeyId = process.env.R2_ACCESS_KEY_ID;
+  const r2SecretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+  const r2PublicUrl = (process.env.R2_PUBLIC_URL || '').replace(/\/+$/, '');
+  const cleanUrl = fullUrl.split('?')[0];
+
+  if (r2AccountId && r2Bucket && r2AccessKeyId && r2SecretAccessKey && r2PublicUrl && cleanUrl.startsWith(`${r2PublicUrl}/`)) {
+    const key = cleanUrl.slice(r2PublicUrl.length + 1);
+    const s3 = new S3Client({
+      region: 'auto',
+      endpoint: `https://${r2AccountId}.r2.cloudflarestorage.com`,
+      credentials: { accessKeyId: r2AccessKeyId, secretAccessKey: r2SecretAccessKey },
+    });
+    const out = await s3.send(new GetObjectCommand({ Bucket: r2Bucket, Key: key }));
+    const bodyStr = await out.Body.transformToString('utf-8');
+    return JSON.parse(bodyStr);
+  }
+  return null;
+}
+
+async function handleFetchMetadata(req, res) {
+  const { resourceId } = req.query;
+  if (!resourceId) {
+    return res.status(400).json({ ok: false, error: 'resourceId is required' });
+  }
+  try {
+    const { data: rawResource, error: resErr } = await supabase
+      .from('resources')
+      .select('resource_id, title, category, storage_base_url, chapter_count, status, is_freemium')
+      .eq('resource_id', resourceId)
+      .maybeSingle();
+
+    if (resErr || !rawResource) {
+      return res.status(404).json({ ok: false, error: 'Resource not found' });
+    }
+
+    const resource = await resolveCanonicalResource(rawResource);
+    if (!resource.storage_base_url) {
+      return res.status(404).json({ ok: false, error: 'Resource storage URL missing' });
+    }
+
+    const base = resource.storage_base_url.endsWith('/') ? resource.storage_base_url : `${resource.storage_base_url}/`;
+    const metadata = await fetchJsonFromR2(`${base}metadata.json`);
+    if (!metadata) {
+      return res.status(404).json({ ok: false, error: 'Metadata not found' });
+    }
+
+    return res.status(200).json({
+      ok: true,
+      storageBaseUrl: resource.storage_base_url,
+      metadata,
+    });
+  } catch (err) {
+    console.error('handleFetchMetadata error:', err);
+    return res.status(500).json({ ok: false, error: err.message });
+  }
+}
+
 async function handleFetchChapter(req, res) {
-  const { resourceId, chapterIndex } = req.query;
+  const { resourceId, chapterIndex, fileName } = req.query;
   const idx = parseInt(chapterIndex, 10);
   if (!resourceId || isNaN(idx)) {
     return res.status(400).json({ ok: false, error: 'resourceId and chapterIndex are required' });
   }
 
   try {
-    // 1. Fetch resource metadata from DB
-    const { data: resource, error: resErr } = await supabase
+    // 1. Fetch resource metadata from DB and resolve canonical storage_base_url
+    const { data: rawResource, error: resErr } = await supabase
       .from('resources')
-      .select('resource_id, title, category, storage_base_url, is_freemium')
+      .select('resource_id, title, category, storage_base_url, chapter_count, status, is_freemium')
       .eq('resource_id', resourceId)
       .maybeSingle();
 
-    if (resErr || !resource) {
+    if (resErr || !rawResource) {
       return res.status(404).json({ ok: false, error: 'Resource not found' });
     }
 
+    const resource = await resolveCanonicalResource(rawResource);
     const cat = (resource.category || '').toLowerCase().trim();
 
     // 2. Paid category gate: Open to everyone by default directly in code
@@ -65,13 +191,14 @@ async function handleFetchChapter(req, res) {
     }
 
     const base = resource.storage_base_url.endsWith('/') ? resource.storage_base_url : `${resource.storage_base_url}/`;
-    const chapterUrl = `${base}chapters/chapter-${idx + 1}.json`;
-    const resp = await fetch(chapterUrl);
-    if (!resp.ok) {
+    const safeFileName = typeof fileName === 'string' && /^chapters\/chapter-\d+\.json$/.test(fileName)
+      ? fileName
+      : `chapters/chapter-${idx + 1}.json`;
+    const chapterData = await fetchJsonFromR2(`${base}${safeFileName}`);
+    if (!chapterData) {
       return res.status(404).json({ ok: false, error: 'Chapter content not found' });
     }
 
-    const chapterData = await resp.json();
     return res.status(200).json({ ok: true, chapter: chapterData });
   } catch (err) {
     console.error('handleFetchChapter error:', err);
@@ -94,6 +221,7 @@ async function handleFetchChapter(req, res) {
 export default async function handler(req, res) {
   const { fn, examId } = req.query;
   if (fn === 'chapter') return handleFetchChapter(req, res);
+  if (fn === 'metadata') return handleFetchMetadata(req, res);
 
   if (!examId) {
     return res.status(400).json({ ok: false, error: 'Missing examId' });

@@ -76,19 +76,6 @@
   hyphens: auto;
 }
 
-/* Drop Cap for the first paragraph in the chapter */
-:where(.reader-theme-container) .bk-blocks-container > .bk-paragraph:first-of-type::first-letter {
-  font-family: var(--reader-dropcap-font);
-  float: left;
-  font-size: 5rem;
-  line-height: 0.8;
-  padding-top: 0.25rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.2rem;
-  color: var(--reader-primary);
-  font-weight: 700;
-}
-
 :where(.reader-theme-container) .bk-paragraph strong {
   color: var(--reader-heading);
   font-weight: 700;
@@ -665,7 +652,7 @@
    so bullets and numbers vanished even though the book data holds real list blocks.
    Restore them here, including nested, lettered/roman and in-table lists. */
 :where(.reader-theme-container) .bk-list, :where(.reader-theme-container) .bk-numbered-list {
-  padding-left: 1.75rem;
+  padding-left: 2.25rem;
   list-style-position: outside;
 }
 :where(.reader-theme-container) .bk-list { list-style-type: disc; }
@@ -867,4 +854,30 @@
 .bk-expl-label {
   color: #166534;
   margin-right: 4px;
+}
+
+.bk-topic-bar {
+  text-align: center;
+  font-family: var(--reader-body-font, serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--reader-primary, #0f766e);
+  background: var(--reader-primary-soft, rgba(15, 118, 110, 0.08));
+  border-top: 1px solid var(--reader-border-strong, #cbd5e1);
+  border-bottom: 1px solid var(--reader-border-strong, #cbd5e1);
+  padding: 0.45rem 0.9rem;
+  margin: 0.35rem 0 0.85rem;
+  border-radius: 4px;
+}
+
+.bk-options-inline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 6px 10px;
+  margin: 4px 0 8px;
+}
+
+.bk-options-inline-grid .bk-option-line {
+  margin: 0;
 }

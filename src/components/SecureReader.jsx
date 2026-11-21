@@ -165,8 +165,8 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         const idLower = id.toLowerCase().trim();
 
         // 1. If slug is explicitly state-focused (e.g. 'assam-gs', 'bihar-gs', 'state-gs') or stateContext exists for a GS slug
-        const isStateSlug = idLower.endsWith('-gs') || idLower.includes('state') || (stateContext && ['gk-gs', 'gk', 'general-knowledge', 'general-studies'].includes(idLower));
-        if (isStateSlug) {
+        const isStateSlug = idLower.endsWith('-gs') || idLower.includes('state') || (stateContext && ['gk-gs', 'gs-gk', 'gk', 'general-knowledge', 'general-studies'].includes(idLower));
+        if (isStateSlug && !['gk-gs', 'gs-gk'].includes(idLower)) {
           const stateQuery = idLower.endsWith('-gs')
             ? idLower.replace(/-gs$/i, '').replace(/[-_]/g, ' ')
             : (stateContext || '').toLowerCase();
@@ -177,6 +177,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
               .select('*')
               .ilike('title', `%${stateQuery}%GS%`)
               .eq('format', 'blocks')
+              .eq('status', 'Published')
               .limit(1)
               .maybeSingle();
 
@@ -191,12 +192,17 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
           const SLUG_TO_TITLE = {
             'english': 'ENGLISH',
             'gk-gs': 'GS & GK',
+            'gs-gk': 'GS & GK',
             'gk': 'GS & GK',
             'general-knowledge': 'GS & GK',
+            'general-studies': 'GS & GK',
             'mathematics': 'MATHEMATICS',
             'maths': 'MATHEMATICS',
             'math': 'MATHEMATICS',
             'reasoning': 'REASONING',
+            'computer-science': 'Computer Science',
+            'computer': 'Computer Science',
+            'hindi': 'HINDI',
           };
           const titleQuery = SLUG_TO_TITLE[idLower] || idLower.replace(/[-_]/g, ' ');
 
@@ -206,6 +212,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
             .select('*')
             .ilike('title', `%${titleQuery}%`)
             .eq('format', 'blocks')
+            .eq('status', 'Published')
             .limit(1)
             .maybeSingle();
 
@@ -230,47 +237,96 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         return;
       }
 
-      // Upgrade html to canonical blocks format if available
-      if (data.format !== 'blocks' && data.title) {
-        const { data: canonical } = await supabase
+      // Resolve canonical blocks row & storage_base_url across duplicate rows for Guide / Precis
+      if (data.title && (data.format !== 'blocks' || data.category === 'Guide' || data.category === 'Precis')) {
+        const { data: groupRows } = await supabase
           .from('resources')
-          .select('*')
-          .eq('title', data.title)
+          .select('resource_id, title, category, format, storage_base_url, chapter_count, status')
           .eq('category', data.category)
           .eq('format', 'blocks')
-          .limit(1)
-          .maybeSingle();
-        if (canonical) {
-          data = canonical;
+          .ilike('title', data.title.trim())
+          .limit(200);
+        if (groupRows && groupRows.length > 0) {
+          const urlWeights = new Map();
+          const urlMaxCh = new Map();
+          for (const r of groupRows) {
+            if (!r.storage_base_url) continue;
+            const w = r.status === 'Published' ? 10 : 1;
+            urlWeights.set(r.storage_base_url, (urlWeights.get(r.storage_base_url) || 0) + w);
+            const ch = Number(r.chapter_count) || 0;
+            if (ch > (urlMaxCh.get(r.storage_base_url) || 0)) urlMaxCh.set(r.storage_base_url, ch);
+          }
+          let canonicalUrl = null;
+          let bestW = -1;
+          let bestCh = -1;
+          for (const [u, w] of urlWeights) {
+            const ch = urlMaxCh.get(u) || 0;
+            if (w > bestW || (w === bestW && ch > bestCh)) {
+              canonicalUrl = u;
+              bestW = w;
+              bestCh = ch;
+            }
+          }
+          if (canonicalUrl) {
+            data.storage_base_url = canonicalUrl;
+            data.format = 'blocks';
+            if (bestCh > (Number(data.chapter_count) || 0)) {
+              data.chapter_count = bestCh;
+            }
+          }
         }
       }
 
-      // Authoritative chapter metadata resolution from R2 metadata.json
+      // Authoritative chapter metadata resolution from R2 metadata.json (with server proxy fallback)
       let stubs = null;
+      let meta = null;
       if (data.storage_base_url) {
         try {
           const base = data.storage_base_url.endsWith('/') ? data.storage_base_url : `${data.storage_base_url}/`;
           const metaResp = await fetch(`${base}metadata.json?t=${Date.now()}`);
           if (metaResp.ok) {
-            const meta = await metaResp.json();
-            if (Array.isArray(meta.chapters) && meta.chapters.length > 0) {
-              data.chapter_count = meta.chapters.length;
-              if (meta.title && !data.title) {
-                data.title = meta.title;
-              }
-              stubs = meta.chapters.map((ch, idx) => ({
-                index: idx,
-                title: ch.title || `Chapter ${idx + 1}`,
-                part: ch.part || '',
-                body_html: null,
-                loaded: false,
-                blocks: null,
-              }));
-            }
+            meta = await metaResp.json();
           }
         } catch (mErr) {
-          console.warn('Could not fetch book metadata.json:', mErr);
+          console.warn('Direct R2 metadata.json fetch failed, trying server fallback:', mErr);
         }
+      }
+
+      if (!meta && data.resource_id) {
+        try {
+          const apiMetaResp = await fetch(`/api/exams?fn=metadata&resourceId=${encodeURIComponent(data.resource_id)}`);
+          if (apiMetaResp.ok) {
+            const apiMetaJson = await apiMetaResp.json();
+            if (apiMetaJson?.ok && apiMetaJson.metadata) {
+              meta = apiMetaJson.metadata;
+              if (apiMetaJson.storageBaseUrl) {
+                data.storage_base_url = apiMetaJson.storageBaseUrl;
+              }
+            }
+          }
+        } catch (sErr) {
+          console.warn('Server metadata fallback failed:', sErr);
+        }
+      }
+
+      if (meta && Array.isArray(meta.chapters) && meta.chapters.length > 0) {
+        const sortedMetaChapters = [...meta.chapters].sort(
+          (a, b) => (Number(a.order) || 0) - (Number(b.order) || 0)
+        );
+        data.chapter_count = sortedMetaChapters.length;
+        if (meta.title && !data.title) {
+          data.title = meta.title;
+        }
+        stubs = sortedMetaChapters.map((ch, idx) => ({
+          index: idx,
+          order: ch.order || idx + 1,
+          fileName: ch.file_name || `chapters/chapter-${ch.order || idx + 1}.json`,
+          title: ch.title || `Chapter ${idx + 1}`,
+          part: ch.part || '',
+          body_html: null,
+          loaded: false,
+          blocks: null,
+        }));
       }
 
       // Fallback stubs from chapter_count if metadata.json was unreachable
@@ -278,7 +334,10 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         const count = data.chapter_count || 1;
         stubs = Array.from({ length: count }, (_, i) => ({
           index: i,
+          order: i + 1,
+          fileName: `chapters/chapter-${i + 1}.json`,
           title: `Chapter ${i + 1}`,
+          part: '',
           body_html: null,
           loaded: false
         }));
@@ -308,13 +367,24 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
 
   // Load a chapter from R2 storage
   const loadChapter = async (res, index, currentChapters) => {
-    const cacheKey = `${res.resource_id}_${index}`;
+    const stub = currentChapters?.[index];
+    const stubFileName = stub?.fileName || `chapters/chapter-${index + 1}.json`;
+    const cacheKey = `${res.resource_id}_${index}_${stubFileName}`;
     if (chapterCache.current[cacheKey]) {
       // Already cached — update chapters state with cached data
       setChapters(prev => {
         if (!prev) return prev;
         const updated = [...prev];
-        updated[index] = { ...updated[index], ...chapterCache.current[cacheKey], loaded: true };
+        const cached = chapterCache.current[cacheKey];
+        updated[index] = {
+          ...updated[index],
+          title: cached.title || updated[index]?.title || `Chapter ${index + 1}`,
+          part: cached.part || updated[index]?.part || '',
+          body_html: cached.body_html || '',
+          images: cached.images || [],
+          blocks: Array.isArray(cached.blocks) ? cached.blocks : null,
+          loaded: true
+        };
         return updated;
       });
       return;
@@ -331,7 +401,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
           ...(token ? { Authorization: `Bearer ${token}` } : {}),
           ...(testerKey ? { 'x-tester-key': String(testerKey) } : {}),
         };
-        const apiUrl = `/api/exams?fn=chapter&resourceId=${encodeURIComponent(res.resource_id)}&chapterIndex=${index}`;
+        const apiUrl = `/api/exams?fn=chapter&resourceId=${encodeURIComponent(res.resource_id)}&chapterIndex=${index}&fileName=${encodeURIComponent(stubFileName)}`;
         const apiResp = await fetch(apiUrl, { headers });
         if (apiResp.ok) {
           const payload = await apiResp.json();
@@ -347,7 +417,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
       // 2. Fallback to direct storage fetch if server proxy is unavailable
       if (!chapterData && res.storage_base_url) {
         const base = res.storage_base_url.endsWith('/') ? res.storage_base_url : `${res.storage_base_url}/`;
-        const chapterUrl = `${base}chapters/chapter-${index + 1}.json?t=${Date.now()}`;
+        const chapterUrl = `${base}${stubFileName}?t=${Date.now()}`;
         const response = await fetch(chapterUrl);
         if (!response.ok) throw new Error(`Failed to load chapter ${index + 1}`);
         chapterData = await response.json();
@@ -366,7 +436,8 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
         const updated = [...prev];
         updated[index] = {
           ...updated[index],
-          title: chapterData.title || `Chapter ${index + 1}`,
+          title: chapterData.title || updated[index]?.title || `Chapter ${index + 1}`,
+          part: chapterData.part || updated[index]?.part || '',
           body_html: chapterData.body_html || '',
           images: chapterData.images || [],
           blocks: Array.isArray(chapterData.blocks) ? chapterData.blocks : null,
@@ -427,7 +498,33 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
   };
 
   const activeChapter = chapters ? chapters[activeChapterIndex] : null;
-  const activeBlocks = activeChapter?.blocks || null;
+  const rawBlocks = activeChapter?.blocks || null;
+  const activeBlocks = React.useMemo(() => {
+    if (!Array.isArray(rawBlocks)) return null;
+    const chapTitlePlain = (activeChapter?.title || '').replace(/<[^>]+>/g, '').trim().toLowerCase();
+    const isTocChapter = chapTitlePlain === 'table of contents' || chapTitlePlain === 'contents';
+    const cleaned = [];
+    for (const b of rawBlocks) {
+      if (!b) continue;
+      if (b.type === 'pullQuote') {
+        const pqPlain = String(b.content || '').replace(/<[^>]+>/g, '').trim().toLowerCase();
+        if (!pqPlain || pqPlain === 'table of contents' || pqPlain === chapTitlePlain || (chapTitlePlain && chapTitlePlain.includes(pqPlain) && pqPlain.length < 40)) {
+          continue;
+        }
+      }
+      if (isTocChapter) {
+        if (b.type === 'statStrip' || b.type === 'keyFacts' || b.type === 'examAlert' || b.type === 'pullQuote') {
+          continue;
+        }
+        if (b.type === 'heading' && /^chapter\s+\d+/i.test(String(b.content || '').replace(/<[^>]+>/g, '').trim())) {
+          cleaned.push({ ...b, type: 'paragraph', content: `<strong>${String(b.content || '').replace(/^chapter\s+(\d+\.?)/i, 'Chapter $1</strong>')}` });
+          continue;
+        }
+      }
+      cleaned.push(b);
+    }
+    return cleaned;
+  }, [rawBlocks, activeChapter?.title]);
   const rawContent = activeChapter?.body_html || '';
   const currentContent = resource ? resolveImageSources(rawContent, resource.storage_base_url) : rawContent;
   const isLastChapter = chapters ? activeChapterIndex === chapters.length - 1 : true;
@@ -454,31 +551,37 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
     if (!isPaged || !activeChapter?.loaded) return [];
     if (isBlocksFormat && activeBlocks) {
       const out = [
-        { key: 'chapter-header', el: <ChapterHeader title={activeChapter?.title} order={activeChapterIndex + 1} /> },
+        { key: 'chapter-header', el: <ChapterHeader title={activeChapter?.title} part={activeChapter?.part} order={activeChapterIndex + 1} /> },
       ];
-      // Long lists/tables are split into row chunks so they flow across pages
-      // instead of being squeezed or scrolled.
-      const CHUNK = 6;
-      let dropCapDone = false;
+      // Long lists flow naturally via line-level splitting (`splittable: true`) so items stay
+      // in one continuous <ol>/<ul> without artificial block gaps. Very large tables (> 8 rows)
+      // are split into chunks so they never get miniature-scaled.
+      const LIST_CHUNK = 25;
+      const TABLE_CHUNK = 8;
       activeBlocks.forEach((b) => {
-        if ((b.type === 'list' || b.type === 'numberedList') && Array.isArray(b.items) && b.items.length > CHUNK) {
-          for (let s = 0; s < b.items.length; s += CHUNK) {
-            const part = { ...b, items: b.items.slice(s, s + CHUNK), start: (b.start || 1) + s };
+        if ((b.type === 'list' || b.type === 'numberedList') && Array.isArray(b.items) && b.items.length > LIST_CHUNK) {
+          for (let s = 0; s < b.items.length; s += LIST_CHUNK) {
+            const part = { ...b, items: b.items.slice(s, s + LIST_CHUNK), start: (b.start || 1) + s };
+            out.push({ key: `${b.id}-c${s}`, splittable: true, el: <BlockRenderer block={part} /> });
+          }
+        } else if (b.type === 'table' && Array.isArray(b.rows) && b.rows.length > TABLE_CHUNK + 1) {
+          const head = b.rows[0];
+          const isHeaderRow = !Array.isArray(head) ? !!head?.isHeader : true;
+          const body = isHeaderRow ? b.rows.slice(1) : b.rows;
+          for (let s = 0; s < body.length; s += TABLE_CHUNK) {
+            const chunkRows = isHeaderRow ? [head, ...body.slice(s, s + TABLE_CHUNK)] : body.slice(s, s + TABLE_CHUNK);
+            const part = { ...b, rows: chunkRows };
             out.push({ key: `${b.id}-c${s}`, el: <BlockRenderer block={part} /> });
           }
-        } else if (b.type === 'table' && Array.isArray(b.rows) && b.rows.length > CHUNK + 1) {
-          const head = b.rows[0];
-          const body = b.rows.slice(1);
-          for (let s = 0; s < body.length; s += CHUNK) {
-            const part = { ...b, rows: [head, ...body.slice(s, s + CHUNK)] };
+        } else if (b.type === 'comparisonTable' && Array.isArray(b.rows) && b.rows.length > TABLE_CHUNK) {
+          for (let s = 0; s < b.rows.length; s += TABLE_CHUNK) {
+            const part = { ...b, rows: b.rows.slice(s, s + TABLE_CHUNK) };
             out.push({ key: `${b.id}-c${s}`, el: <BlockRenderer block={part} /> });
           }
         } else {
-          const cls = b.type === 'paragraph' && !dropCapDone ? 'pr-dropcap' : '';
-          if (b.type === 'paragraph') dropCapDone = true;
           out.push({
             key: b.id,
-            cls,
+            cls: '',
             isHeading: b.type === 'heading',
             splittable: b.type === 'paragraph' || b.type === 'list' || b.type === 'numberedList',
             el: <BlockRenderer block={b} />
@@ -728,7 +831,7 @@ const SecureReader = ({ resourceId, onBack, isEmbedded = false }) => {
                 </div>
               ) : (
                 <>
-                  <ChapterHeader title={activeChapter?.title} order={activeChapterIndex + 1} />
+                  <ChapterHeader title={activeChapter?.title} part={activeChapter?.part} order={activeChapterIndex + 1} />
                   <div className="bk-blocks-container">
                     {(activeBlocks || []).map((block) => (
                       <BlockRenderer

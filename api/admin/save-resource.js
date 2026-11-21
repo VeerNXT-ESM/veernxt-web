@@ -1698,17 +1698,20 @@ async function handleBooksFindReplace(req, res) {
     }
     if (modifiedChapters.length > 0 || metadataChanged) {
       await uploadToR2(s3, bucket, `${prefix}/metadata.json`, Buffer.from(JSON.stringify(metadata, null, 2)), 'application/json', 'no-cache, no-store, must-revalidate');
-    }
-
-    if (metadataChanged && newTitle !== oldTitle) {
       try {
-        await supabase
-          .from('resources')
-          .update({ title: newTitle, updated_at: new Date().toISOString() })
-          .eq('category', row.category)
-          .ilike('title', escapeIlike(oldTitle));
+        const updatePatch = {
+          format: 'blocks',
+          storage_base_url: canonicalUrl,
+          metadata_url: `${canonicalUrl}metadata.json`,
+          chapter_count: chapters.length,
+          updated_at: new Date().toISOString(),
+        };
+        if (metadataChanged && newTitle !== oldTitle) {
+          updatePatch.title = newTitle;
+        }
+        await bookRowsFilter(supabase.from('resources').update(updatePatch), row);
       } catch (dbErr) {
-        console.error('[books-find-replace] Failed to update resources table title:', dbErr.message);
+        console.error('[books-find-replace] Failed to consolidate resources rows:', dbErr.message);
       }
     }
 

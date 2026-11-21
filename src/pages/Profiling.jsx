@@ -104,6 +104,31 @@ const FINANCIAL_GOALS_OPTIONS = [
   { value: 'I Am Not Sure, Guide Me', label: '13. I Am Not Sure, Guide Me' },
 ];
 
+const CAPF_FORCES = [
+  'Central Reserve Police Force (CRPF)',
+  'Border Security Force (BSF)',
+  'Central Industrial Security Force (CISF)',
+  'Indo-Tibetan Border Police (ITBP)',
+  'Sashastra Seema Bal (SSB)',
+  'Assam Rifles (AR)',
+  'National Security Guard (NSG)',
+  'Other Paramilitary / Central Armed Police Force',
+];
+
+const CAPF_ROLES = [
+  'General Duty (GD) / Constable',
+  'Head Constable / ASI',
+  'Sub-Inspector (SI) / Inspector',
+  'Assistant Commandant / Officer Cadre',
+  'Ministerial / Head Constable (Clerk) / Steno',
+  'Wireless Operator / Radio Mechanic / Signals',
+  'Motor Transport / Driver',
+  'Armourer / Technical / Workshop',
+  'Medical / Nursing Staff',
+  'Tradesman / Support Staff',
+  'Other Trade / Role',
+];
+
 const DRAFT_KEY = 'veernxt_profiling_draft_v1';
 
 const Profiling = () => {
@@ -119,7 +144,7 @@ const Profiling = () => {
     dobDay: '',
     dobMonth: '',
     dobYear: '',
-    gender: 'Male',
+    gender: '',
     category: '',
     disabilityStatus: '',
     disabilityType: '',
@@ -463,19 +488,26 @@ const Profiling = () => {
         );
 
       case 10: {
-        const availableArms = d.serviceBranch
-          ? [...new Set(designationsData.designations.filter(x => x.service === d.serviceBranch).map(x => x.arm_corps))]
-          : [];
+        const isParamilitary = d.serviceBranch === 'Paramilitary / CAPF';
+        const availableArms = isParamilitary
+          ? CAPF_FORCES
+          : d.serviceBranch
+            ? [...new Set(designationsData.designations.filter(x => x.service === d.serviceBranch).map(x => x.arm_corps))]
+            : [];
         return (
           <Select name="armCorpsTrade" value={d.armCorpsTrade} onChange={handleChange} searchable
-            placeholder="Start typing your arm/corps…" options={availableArms.map(arm => ({ value: arm, label: arm }))} />
+            placeholder={isParamilitary ? 'Start typing your force (CRPF, BSF, CISF...)' : 'Start typing your arm/corps…'}
+            options={availableArms.map(arm => ({ value: arm, label: arm }))} />
         );
       }
 
       case 11: {
-        const availableRoles = d.armCorpsTrade
-          ? designationsData.designations.filter(x => x.service === d.serviceBranch && x.arm_corps === d.armCorpsTrade).map(x => x.trade)
-          : [];
+        const isParamilitary = d.serviceBranch === 'Paramilitary / CAPF';
+        const availableRoles = isParamilitary
+          ? CAPF_ROLES
+          : d.armCorpsTrade
+            ? designationsData.designations.filter(x => x.service === d.serviceBranch && x.arm_corps === d.armCorpsTrade).map(x => x.trade)
+            : [];
         return (
           <Select name="roleAppointment" value={d.roleAppointment} onChange={handleChange} searchable
             placeholder="Start typing your role/appointment…" options={availableRoles.map(role => ({ value: role, label: role }))} />
