@@ -522,11 +522,11 @@ export function matchJobsV2ForRecommendations(allJobs, recommendations, profile)
     });
   });
 
-  if (collected.length >= 4) {
-    return collected.slice(0, 6);
+  if (collected.length >= 10) {
+    return collected.slice(0, 10);
   }
 
-  // Supplement if fewer than 4 matched directly to the top exams
+  // Supplement if fewer than 10 matched directly to the top exams
   const candidateTracks = (profile?.careerPreferences || profile?.preferred_sectors || []).map(t => String(t).toUpperCase());
   const candidateTrade = (profile?.armCorpsTrade || profile?.trade || '').toLowerCase();
 
@@ -534,7 +534,7 @@ export function matchJobsV2ForRecommendations(allJobs, recommendations, profile)
     .filter(j => !seenIds.has(j.job_id || j.id || j.url))
     .map(job => {
       const fullText = `${job.title} ${(job.tags || []).join(' ')} ${job.ai_description || ''}`.toLowerCase();
-      let score = 30;
+      let score = 35;
       const reasons = [];
 
       const jobTrack = (job.career_track || job.careerTrack || '').toUpperCase();
@@ -546,7 +546,7 @@ export function matchJobsV2ForRecommendations(allJobs, recommendations, profile)
         score += 25;
         reasons.push(`Trade Match: ${profile.armCorpsTrade || profile.trade}`);
       }
-      if ((job.tags || []).includes('ex_servicemen_job')) {
+      if ((job.tags || []).includes('ex_servicemen_job') || fullText.includes('ex-servicemen') || fullText.includes('esm')) {
         score += 15;
         reasons.push('ESM Quota Available');
       }
@@ -554,125 +554,348 @@ export function matchJobsV2ForRecommendations(allJobs, recommendations, profile)
       return {
         ...job,
         _matchScore: Math.min(95, score),
-        _matchReasons: reasons,
+        _matchReasons: reasons.length ? reasons : ['Eligible Government Opening'],
       };
     })
-    .filter(j => j._matchScore >= 45)
+    .filter(j => j._matchScore >= 35)
     .sort((a, b) => b._matchScore - a._matchScore);
 
-  return [...collected, ...supplement].slice(0, 6);
+  return [...collected, ...supplement].slice(0, 10);
 }
 
 /**
- * Returns trade-aligned civilian job recommendations for candidates,
- * ensuring high-value career roles are always displayed post-profiling.
+ * Returns trade-aligned civilian & government job recommendations for candidates,
+ * ensuring 10 high-value career roles are always available post-profiling.
  */
 export function getRecommendedCivilianRoles(profile = {}) {
   const _branch = (profile.serviceBranch || '').toLowerCase();
   const trade = (profile.armCorpsTrade || profile.trade || '').toLowerCase();
+  const role = (profile.roleAppointment || profile.rank || '').toLowerCase();
   const skills = (profile.specificSkills || []).map(s => String(s).toLowerCase());
+  const loc = profile.stateOfDomicile || 'All India';
 
   const roles = [];
 
-  if (trade.includes('signal') || skills.some(s => s.includes('computer') || s.includes('radio') || s.includes('network'))) {
+  if (trade.includes('signal') || trade.includes('telecommunication') || trade.includes('communication') || skills.some(s => s.includes('computer') || s.includes('radio') || s.includes('network'))) {
     roles.push({
+      id: 'role-telecom-sup',
       title: 'Telecom & Network Operations Supervisor',
-      company: 'Infrastructure & Telecom Providers',
-      location: profile.stateOfDomicile || 'All India',
+      company: 'PSU Telecom & Tower Infrastructure (BSNL / Indus / Jio)',
+      career_track: 'ENGINEERING & TELECOM',
+      location: loc,
+      salary: '₹4.8L – ₹7.5L / year',
+      matchScore: 96,
+      reason: 'Direct match for your Signals, Radio & Communications technical background.',
+      tags: ['Signals Match', 'Technical Supervision', 'High Demand'],
+    });
+    roles.push({
+      id: 'role-datacenter-spec',
+      title: 'Data Center & Command Room Systems Specialist',
+      company: 'Corporate IT, Defence PSUs & Cloud Facilities',
+      career_track: 'IT & CYBER',
+      location: 'Metro & Tier-1 Hubs',
+      salary: '₹5.2L – ₹8.5L / year',
+      matchScore: 93,
+      reason: 'Aligned with secure communications, network monitoring, and electronics maintenance.',
+      tags: ['IT & Cyber', '24x7 Command Ops', 'ESM Preferred'],
+    });
+  }
+
+  if (trade.includes('infantry') || trade.includes('general duty') || trade.includes('armoured') || trade.includes('artillery') || trade.includes('combat') || trade.includes('commando') || skills.some(s => s.includes('weapon') || s.includes('security'))) {
+    roles.push({
+      id: 'role-sec-ops-lead',
+      title: 'Security Operations & Executive Protection Lead',
+      company: 'MNC Corporate Campuses, Airports & Strategic Assets',
+      career_track: 'CORPORATE SECURITY',
+      location: loc,
+      salary: '₹4.5L – ₹7.2L / year',
+      matchScore: 97,
+      reason: 'Direct match for your combat arm leadership, tactical vigilance, and weapons handling.',
+      tags: ['Combat Leadership', 'ESM Priority', 'Immediate Hiring'],
+    });
+    roles.push({
+      id: 'role-psu-sec-officer',
+      title: 'Chief Security Cum Vigilance Supervisor',
+      company: 'Public Sector Undertakings (ONGC, IOCL, NTPC, BHEL)',
+      career_track: 'PSU SECURITY',
+      location: 'All India PSU Units',
+      salary: '₹5.5L – ₹8.8L / year',
+      matchScore: 95,
+      reason: 'PSUs reserve dedicated supervisory security quotas for Armed Forces & CAPF veterans.',
+      tags: ['PSU Pay Scale', 'ESM Quota', 'Perimeter Defence'],
+    });
+  }
+
+  if (/\beme\b/i.test(trade) || trade.includes('workshop') || trade.includes('technical') || trade.includes('yantrik') || trade.includes('engineer') || skills.some(s => s.includes('mechanical') || s.includes('electrical') || s.includes('machinery'))) {
+    roles.push({
+      id: 'role-plant-maint',
+      title: 'Plant Maintenance & Heavy Machinery Supervisor',
+      company: 'Defence Manufacturing (HAL, BEL, L&T Defence, Tata Advanced)',
+      career_track: 'ENGINEERING & PSU',
+      location: 'Industrial & Defence Corridors',
+      salary: '₹5.0L – ₹8.0L / year',
+      matchScore: 95,
+      reason: 'Direct match for your EME/Technical workshop and equipment maintenance expertise.',
+      tags: ['Defence OEM', 'Technical Trade', 'High Growth'],
+    });
+    roles.push({
+      id: 'role-rail-tech',
+      title: 'Senior Technician & Rolling Stock Inspector',
+      company: 'Indian Railways / Metro Rail Corporations (DMRC, MMRCL)',
+      career_track: 'RAILWAYS & METRO',
+      location: loc,
+      salary: '₹4.4L – ₹6.8L / year',
+      matchScore: 92,
+      reason: 'Strong technical trade equivalence for electrical, mechanical, and instrumentation fitters.',
+      tags: ['Metro & Railways', 'ESM Reservation', 'Technical'],
+    });
+  }
+
+  if (trade.includes('medical') || trade.includes('nursing') || trade.includes('hospital') || trade.includes('veterinary') || role.includes('pharmacist') || role.includes('medic') || skills.some(s => s.includes('medical') || s.includes('first aid'))) {
+    roles.push({
+      id: 'role-emergency-med',
+      title: 'Emergency Trauma & Occupational Health Officer',
+      company: 'Multi-Specialty Hospitals, Industrial Plants & Oil Rigs',
+      career_track: 'HEALTHCARE & MEDICAL',
+      location: loc,
+      salary: '₹4.2L – ₹7.0L / year',
+      matchScore: 95,
+      reason: 'Direct match for your battlefield nursing, paramedical, and emergency triage training.',
+      tags: ['Paramedical Fit', 'Healthcare', 'High Stability'],
+    });
+  }
+
+  if (trade.includes('asc') || trade.includes('aoc') || trade.includes('store') || trade.includes('logistics') || skills.some(s => s.includes('store') || s.includes('logistics') || s.includes('supply'))) {
+    roles.push({
+      id: 'role-supply-chain',
+      title: 'Warehouse & Supply Chain Operations Manager',
+      company: 'E-Commerce, 3PL & Defence Logistics Hubs',
+      career_track: 'LOGISTICS & SUPPLY',
+      location: loc,
       salary: '₹4.5L – ₹7.2L / year',
       matchScore: 94,
-      reason: 'Direct match for your Signals & Communications technical background',
-    });
-    roles.push({
-      title: 'Data Center & Systems Specialist',
-      company: 'Corporate IT & Cloud Facilities',
-      location: 'Metro & Tier-1 Hubs',
-      salary: '₹5.0L – ₹8.5L / year',
-      matchScore: 91,
-      reason: 'Aligned with IT, cyber, and electronics maintenance skills',
+      reason: 'Direct match for your military ordnance, stores accounting, and inventory control experience.',
+      tags: ['Supply Chain', 'Inventory Control', 'Corporate Leadership'],
     });
   }
 
-  if (trade.includes('infantry') || trade.includes('armoured') || skills.some(s => s.includes('weapon') || s.includes('security'))) {
+  if (trade.includes('clerk') || trade.includes('admin') || trade.includes('office') || skills.some(s => s.includes('office') || s.includes('admin') || s.includes('hr'))) {
     roles.push({
-      title: 'Security Operations & Executive Protection Lead',
-      company: 'Corporate Parks & Multinational Facilities',
-      location: profile.stateOfDomicile || 'All India',
-      salary: '₹4.2L – ₹6.8L / year',
-      matchScore: 96,
-      reason: 'Direct match for your military operational duties and combat arm leadership',
-    });
-    roles.push({
-      title: 'Industrial Safety & Crisis Management Officer',
-      company: 'Manufacturing, Ports & Infrastructure',
-      location: profile.stateOfDomicile || 'State Industrial Zones',
+      id: 'role-admin-hr',
+      title: 'Administration, Compliance & HR Operations Executive',
+      company: 'Banking, NBFCs & Corporate Enterprises',
+      career_track: 'BANKING & ADMIN',
+      location: loc,
       salary: '₹4.0L – ₹6.5L / year',
-      matchScore: 89,
-      reason: 'Leverages discipline, emergency protocol execution, and physical vigilance',
-    });
-  }
-
-  if (trade.includes('asc') || trade.includes('aoc') || trade.includes('store') || trade.includes('logistics') || skills.some(s => s.includes('store') || s.includes('logistics') || s.includes('fleet'))) {
-    roles.push({
-      title: 'Warehouse & Logistics Operations Incharge',
-      company: 'E-Commerce & Supply Chain Hubs',
-      location: profile.stateOfDomicile || 'Regional Hubs',
-      salary: '₹3.8L – ₹6.0L / year',
-      matchScore: 92,
-      reason: 'Direct match for your military stores, inventory, and supply chain experience',
-    });
-  }
-
-  if (trade.includes('clerk') || trade.includes('admin') || skills.some(s => s.includes('office') || s.includes('admin') || s.includes('hr'))) {
-    roles.push({
-      title: 'Office Administration & Facilities Executive',
-      company: 'Banking & Financial Corporates',
-      location: profile.stateOfDomicile || 'Home State',
-      salary: '₹3.6L – ₹5.5L / year',
-      matchScore: 90,
-      reason: 'Aligned with your documentation, HR records, and administrative trade',
-    });
-  }
-
-  if (trade.includes('eme') || trade.includes('engineer') || skills.some(s => s.includes('mechanical') || s.includes('electrical') || s.includes('repair'))) {
-    roles.push({
-      title: 'Plant Maintenance & Machinery Supervisor',
-      company: 'Automotive & Heavy Engineering Units',
-      location: 'Industrial Corridors',
-      salary: '₹4.5L – ₹7.0L / year',
       matchScore: 93,
-      reason: 'Direct match for your technical engineering and equipment maintenance expertise',
+      reason: 'Aligned with your clerical accuracy, roster management, and official documentation record.',
+      tags: ['Clerical & HR', 'Office Admin', 'Banking Fit'],
     });
   }
 
-  // Universal baseline roles if trade-specific match was sparse
-  if (roles.length < 3) {
+  if (trade.includes('driver') || trade.includes('transport') || skills.some(s => s.includes('driving') || s.includes('fleet'))) {
     roles.push({
-      title: 'Corporate Security & Asset Protection Manager',
-      company: 'Private Sector Enterprises',
-      location: profile.stateOfDomicile || 'All India',
+      id: 'role-fleet-mgr',
+      title: 'Fleet Operations & Convoy Logistics Controller',
+      company: 'National Logistics, Aviation Ground Support & Mining',
+      career_track: 'TRANSPORT & FLEET',
+      location: loc,
+      salary: '₹4.0L – ₹6.2L / year',
+      matchScore: 93,
+      reason: 'Leverages heavy vehicle expertise, preventive maintenance, and convoy discipline.',
+      tags: ['Fleet Control', 'Transport Ops', 'Immediate Fit'],
+    });
+  }
+
+  if (trade.includes('water wing') || trade.includes('marine') || trade.includes('navik') || _branch.includes('navy') || _branch.includes('coast guard') || skills.some(s => s.includes('marine') || s.includes('shipboard'))) {
+    roles.push({
+      id: 'role-maritime-ops',
+      title: 'Port Security & Marine Terminal Operations Officer',
+      company: 'Adani Ports, Cochin Shipyard, Mazagon Dock & Shipping Lines',
+      career_track: 'MARITIME & PORTS',
+      location: 'Coastal & Port Hubs',
+      salary: '₹5.0L – ₹8.5L / year',
+      matchScore: 95,
+      reason: 'Tailored for Naval, Coast Guard, and Water Wing personnel with seamanship expertise.',
+      tags: ['Maritime & Ports', 'Vessel Ops', 'High CTC'],
+    });
+  }
+
+  if (trade.includes('fire') || skills.some(s => s.includes('firefighting') || s.includes('emergency'))) {
+    roles.push({
+      id: 'role-fire-safety',
+      title: 'Fire & Industrial HSE Safety Officer',
+      company: 'Airports (AAI / GMR), Refineries & Chemical Plants',
+      career_track: 'FIRE & SAFETY',
+      location: loc,
+      salary: '₹4.5L – ₹7.5L / year',
+      matchScore: 96,
+      reason: 'Direct match for fire safety, rescue operations, and hazard response training.',
+      tags: ['Fire & HSE', 'Airport & Refinery', 'Critical Role'],
+    });
+  }
+
+  // Baseline high-value roles applicable across all disciplined veterans & Agniveers
+  const baselinePool = [
+    {
+      id: 'role-bank-armoured-guard',
+      title: 'Armed Security & Currency Chest Officer (ESM Quota)',
+      company: 'SBI, PNB, Bank of Baroda & Public Sector Banks',
+      career_track: 'BANKING & PSU',
+      location: loc,
+      salary: '₹4.2L – ₹6.8L / year',
+      matchScore: 94,
+      reason: 'Public Sector Banks reserve direct entry quotas for Ex-Servicemen and Agniveers with exemplary character.',
+      tags: ['14.5% ESM Quota', 'PSU Bank Pay', 'Home State Posting'],
+    },
+    {
+      id: 'role-capf-constable-si',
+      title: 'CAPF & State Police Tactical Cadre (Agniveer Reservation)',
+      company: 'CISF, BSF, CRPF, ITBP & State Police Forces',
+      career_track: 'POLICE & CAPF',
+      location: 'All India / Home State',
       salary: '₹4.0L – ₹6.5L / year',
+      matchScore: 95,
+      reason: '10% horizontal reservation and 3–5 year age relaxation specifically notified for trained Agniveers.',
+      tags: ['10% Agniveer Quota', 'Physical Exemption', 'Central Pay Level'],
+    },
+    {
+      id: 'role-corp-sec-mgr',
+      title: 'Corporate Security & Asset Protection Officer',
+      company: 'IT Parks, Banking Headquarters & Hospitality Chains',
+      career_track: 'CORPORATE & PRIVATE',
+      location: loc,
+      salary: '₹4.2L – ₹6.8L / year',
+      matchScore: 90,
+      reason: 'High corporate preference for military veterans with proven team leadership and crisis readiness.',
+      tags: ['Corporate Management', 'Team Supervision', 'Fast-Track Growth'],
+    },
+    {
+      id: 'role-facility-ops',
+      title: 'Operations & Facility Management Supervisor',
+      company: 'Commercial Real Estate, Smart Cities & Infrastructure',
+      career_track: 'OPERATIONS',
+      location: loc,
+      salary: '₹3.8L – ₹6.0L / year',
       matchScore: 88,
-      reason: 'Ideal for military veterans with proven leadership and operational integrity',
-    });
-    roles.push({
-      title: 'Operations & Facilities Supervisor',
-      company: 'Commercial Properties & Hospitality',
-      location: profile.stateOfDomicile || 'State Capital',
-      salary: '₹3.5L – ₹5.5L / year',
-      matchScore: 85,
-      reason: 'Leverages structured task execution and team supervision skills',
-    });
-    roles.push({
-      title: 'Fleet & Transportation Controller',
-      company: 'Logistics & Transit Services',
-      location: 'Regional Hubs',
+      reason: 'Leverages structured task execution, vendor coordination, and manpower supervision skills.',
+      tags: ['Facility Ops', 'Manpower Lead', 'Civilian Transition'],
+    },
+    {
+      id: 'role-rail-rpf-groupc',
+      title: 'Railway Protection & Technical Operations Cadre',
+      company: 'Indian Railways (RRB / RPF / Level 1–5 Posts)',
+      career_track: 'RAILWAYS',
+      location: 'Zonal Railways',
+      salary: '₹3.9L – ₹6.2L / year',
+      matchScore: 89,
+      reason: '20% ESM/Agniveer reservation in Level-1 and 10% in Level-2+ posts with Central Government perks.',
+      tags: ['20% Railway Quota', 'Central Govt Benefits', 'Job Security'],
+    },
+    {
+      id: 'role-disaster-emergency',
+      title: 'Disaster Response & Industrial Safety Coordinator',
+      company: 'State Disaster Management, Metro Rail & Manufacturing',
+      career_track: 'SAFETY & HSE',
+      location: loc,
+      salary: '₹4.0L – ₹6.5L / year',
+      matchScore: 87,
+      reason: 'Strong fit for field endurance, emergency evacuation protocols, and rapid decision-making.',
+      tags: ['Emergency Response', 'HSE Compliance', 'Field Leadership'],
+    },
+    {
+      id: 'role-supply-warehouse',
+      title: 'Regional Hub & Inventory Control Supervisor',
+      company: 'E-Commerce Fulfilment, FMCG & Retail Supply Chains',
+      career_track: 'LOGISTICS',
+      location: loc,
       salary: '₹3.8L – ₹5.8L / year',
+      matchScore: 86,
+      reason: 'Military discipline in shift management, dispatch timelines, and zero-loss asset tracking.',
+      tags: ['Hub Operations', 'Shift In-Charge', 'Private Sector'],
+    },
+    {
+      id: 'role-Fleet-convoy',
+      title: 'Fleet & Transit Operations Controller',
+      company: 'Surface Transport, Ports & Aviation Ground Services',
+      career_track: 'TRANSPORT',
+      location: 'Regional & Airport Hubs',
+      salary: '₹3.8L – ₹5.8L / year',
+      matchScore: 85,
+      reason: 'High demand for disciplined route planning, vehicle turnaround, and crew supervision.',
+      tags: ['Transit Control', 'Aviation & Ports', 'Operations'],
+    },
+    {
+      id: 'role-training-instructor',
+      title: 'Physical Training, Drill & Security Academy Instructor',
+      company: 'Private Security Academies, Sainik Schools & Colleges',
+      career_track: 'TRAINING & EDUCATION',
+      location: loc,
+      salary: '₹3.6L – ₹5.5L / year',
       matchScore: 84,
-      reason: 'Strong demand for disciplined transport and convoy management experience',
-    });
+      reason: 'Directly monetizes drill mastery, physical fitness standards, and instructional leadership.',
+      tags: ['Instruction & Drill', 'Academy Role', 'Respectable Career'],
+    },
+    {
+      id: 'role-govt-ssc-cgl-chsl',
+      title: 'Central Secretariat, Preventive & Inspector Cadre',
+      company: 'SSC (CGL / CHSL / MTS / Havildar CBIC & CBN)',
+      career_track: 'SSC & CENTRAL GOVT',
+      location: 'All India',
+      salary: '₹4.2L – ₹8.0L / year',
+      matchScore: 88,
+      reason: 'Dedicated ESM reservation across Group B & C central ministries and customs/excise departments.',
+      tags: ['Central Ministries', 'ESM Age Relaxation', 'Prestigious Cadre'],
+    },
+  ];
+
+  const existingIds = new Set(roles.map(r => r.id));
+  for (const baseRole of baselinePool) {
+    if (roles.length >= 12) break;
+    if (!existingIds.has(baseRole.id)) {
+      roles.push(baseRole);
+      existingIds.add(baseRole.id);
+    }
   }
 
-  return roles.slice(0, 4);
+  return roles.sort((a, b) => b.matchScore - a.matchScore).slice(0, 10);
+}
+
+/**
+ * Builds a unified list of 10 recommended jobs for the candidate:
+ * Prioritizes live database openings (`jobs_v2`) matched to their profile/exams,
+ * and fills the remaining slots up to 10 with trade-aligned career roles.
+ */
+export function getTop10RecommendedJobs(liveJobs = [], recommendations = [], profile = {}) {
+  const matchedLive = matchJobsV2ForRecommendations(liveJobs, recommendations, profile).map((job, idx) => ({
+    ...job,
+    _isLiveOpening: true,
+    _displayRank: idx + 1,
+    _trackLabel: job.career_track || job.careerTrack || 'GOVT OPENING',
+    _matchScore: job._matchScore || 88,
+  }));
+
+  if (matchedLive.length >= 10) {
+    return matchedLive.slice(0, 10);
+  }
+
+  const civilianRoles = getRecommendedCivilianRoles(profile);
+  const needed = 10 - matchedLive.length;
+  const roleItems = civilianRoles.slice(0, needed).map((role, idx) => ({
+    id: role.id || `civilian-role-${idx}`,
+    title: role.title,
+    company: role.company,
+    location: role.location,
+    salary: role.salary,
+    career_track: role.career_track || 'CAREER ROLE',
+    _trackLabel: role.career_track || 'CAREER ROLE',
+    _matchScore: role.matchScore,
+    _matchReasons: role.tags || ['Trade Aligned', 'ESM Suitable'],
+    ai_description: role.reason,
+    _isLiveOpening: false,
+    _displayRank: matchedLive.length + idx + 1,
+  }));
+
+  return [...matchedLive, ...roleItems];
 }
 
