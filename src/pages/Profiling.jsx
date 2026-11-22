@@ -4,6 +4,12 @@ import axios from 'axios';
 import { supabase } from '../lib/supabase';
 import { STATE_DISTRICTS } from '../lib/districts';
 import designationsData from '../data/designations.json';
+import {
+  CAPF_FORCES,
+  getCapfBranches,
+  getCapfTrades,
+  getCapfBranchCategory,
+} from '../data/capfHierarchy';
 import GuidedStep from '../components/ui/GuidedStep';
 import Select from '../components/ui/Select';
 import Button from '../components/ui/Button';
@@ -104,31 +110,6 @@ const FINANCIAL_GOALS_OPTIONS = [
   { value: 'I Am Not Sure, Guide Me', label: '13. I Am Not Sure, Guide Me' },
 ];
 
-const CAPF_FORCES = [
-  'Central Reserve Police Force (CRPF)',
-  'Border Security Force (BSF)',
-  'Central Industrial Security Force (CISF)',
-  'Indo-Tibetan Border Police (ITBP)',
-  'Sashastra Seema Bal (SSB)',
-  'Assam Rifles (AR)',
-  'National Security Guard (NSG)',
-  'Other Paramilitary / Central Armed Police Force',
-];
-
-const CAPF_ROLES = [
-  'General Duty (GD) / Constable',
-  'Head Constable / ASI',
-  'Sub-Inspector (SI) / Inspector',
-  'Assistant Commandant / Officer Cadre',
-  'Ministerial / Head Constable (Clerk) / Steno',
-  'Wireless Operator / Radio Mechanic / Signals',
-  'Motor Transport / Driver',
-  'Armourer / Technical / Workshop',
-  'Medical / Nursing Staff',
-  'Tradesman / Support Staff',
-  'Other Trade / Role',
-];
-
 const DRAFT_KEY = 'veernxt_profiling_draft_v1';
 
 const Profiling = () => {
@@ -156,6 +137,7 @@ const Profiling = () => {
     mobile: '',
     servicePhase: 'Agniveer',
     serviceBranch: '',
+    capfForce: '',
     armCorpsTrade: '',
     roleAppointment: '',
     totalServiceDuration: '',
@@ -253,6 +235,15 @@ const Profiling = () => {
       const updates = { [name]: type === 'checkbox' ? checked : value };
       if (name === 'stateOfDomicile' && value !== prev.stateOfDomicile) {
         updates.district = '';
+      }
+      if (name === 'servicePhase' && value !== prev.servicePhase) {
+        const wasCapf = prev.servicePhase === 'Paramilitary / CAPF';
+        const isCapf = value === 'Paramilitary / CAPF';
+        if (wasCapf !== isCapf) {
+          updates.serviceBranch = '';
+          updates.armCorpsTrade = '';
+          updates.roleAppointment = '';
+        }
       }
       if (name === 'serviceBranch' && value !== prev.serviceBranch) {
         updates.armCorpsTrade = '';
@@ -466,7 +457,15 @@ const Profiling = () => {
             placeholder="10-digit mobile number" autoComplete="tel" />
         );
 
-      case 9:
+      case 9: {
+        const isParamilitaryPhase = d.servicePhase === 'Paramilitary / CAPF';
+        const branchOptions = isParamilitaryPhase
+          ? CAPF_FORCES.map(f => ({ value: f.fullName, label: f.fullName }))
+          : ['Indian Army', 'Indian Navy', 'Indian Air Force'].map(s => ({ value: s, label: s }));
+        const selForce = isParamilitaryPhase
+          ? CAPF_FORCES.find(f => f.fullName === d.serviceBranch || f.key === d.serviceBranch)
+          : null;
+
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div>
@@ -482,35 +481,77 @@ const Profiling = () => {
             <div>
               <p style={{ margin: '0 0 0.5rem', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.03em' }}>Service Branch</p>
               <ChoiceGroup columns={2} value={d.serviceBranch} onChange={(v) => setField('serviceBranch', v)}
-                options={['Indian Army', 'Indian Navy', 'Indian Air Force', 'Paramilitary / CAPF'].map(s => ({ value: s, label: s }))} />
+                options={branchOptions} />
+              {selForce && (
+                <div style={{
+                  marginTop: '0.75rem',
+                  padding: '10px 14px',
+                  background: 'rgba(15, 58, 26, 0.05)',
+                  border: '1px solid rgba(15, 58, 26, 0.18)',
+                  borderRadius: '8px',
+                  fontSize: '0.82rem',
+                  color: 'var(--c-brand, #0F3A1A)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '4px'
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <strong>{selForce.fullName}</strong>
+                    <span style={{ fontSize: '0.72rem', background: '#0F3A1A', color: '#fff', padding: '2px 8px', borderRadius: '10px', fontWeight: 600 }}>
+                      {selForce.badge}
+                    </span>
+                  </div>
+                  <span style={{ color: 'var(--c-ink-3, #475569)', fontSize: '0.78rem', lineHeight: '1.4' }}>
+                    {selForce.summary}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         );
+      }
 
       case 10: {
-        const isParamilitary = d.serviceBranch === 'Paramilitary / CAPF';
-        const availableArms = isParamilitary
-          ? CAPF_FORCES
-          : d.serviceBranch
-            ? [...new Set(designationsData.designations.filter(x => x.service === d.serviceBranch).map(x => x.arm_corps))]
-            : [];
+        const isParamilitary = d.servicePhase === 'Paramilitary / CAPF' || CAPF_FORCES.some(f => f.fullName === d.serviceBranch || f.key === d.serviceBranch);
+        let availableArms = d.serviceBranch
+          ? [...new Set(designationsData.designations.filter(x => x.service === d.serviceBranch).map(x => x.arm_corps))]
+          : [];
+        if (isParamilitary && availableArms.length === 0) {
+          availableArms = getCapfBranches(d.serviceBranch);
+        }
+
         return (
-          <Select name="armCorpsTrade" value={d.armCorpsTrade} onChange={handleChange} searchable
-            placeholder={isParamilitary ? 'Start typing your force (CRPF, BSF, CISF...)' : 'Start typing your arm/corps…'}
-            options={availableArms.map(arm => ({ value: arm, label: arm }))} />
+          <Select
+            name="armCorpsTrade"
+            value={d.armCorpsTrade}
+            onChange={handleChange}
+            searchable
+            placeholder={isParamilitary ? `Start typing your branch/wing in ${d.serviceBranch || 'your force'}…` : 'Start typing your arm/corps…'}
+            options={availableArms.map(arm => ({ value: arm, label: arm }))}
+          />
         );
       }
 
       case 11: {
-        const isParamilitary = d.serviceBranch === 'Paramilitary / CAPF';
-        const availableRoles = isParamilitary
-          ? CAPF_ROLES
-          : d.armCorpsTrade
-            ? designationsData.designations.filter(x => x.service === d.serviceBranch && x.arm_corps === d.armCorpsTrade).map(x => x.trade)
-            : [];
+        const isParamilitary = d.servicePhase === 'Paramilitary / CAPF' || CAPF_FORCES.some(f => f.fullName === d.serviceBranch || f.key === d.serviceBranch);
+        let availableRoles = d.armCorpsTrade
+          ? designationsData.designations
+              .filter(x => x.service === d.serviceBranch && x.arm_corps === d.armCorpsTrade)
+              .map(x => x.trade)
+          : [];
+        if (isParamilitary && availableRoles.length === 0 && d.armCorpsTrade) {
+          availableRoles = getCapfTrades(d.serviceBranch, d.armCorpsTrade);
+        }
+
         return (
-          <Select name="roleAppointment" value={d.roleAppointment} onChange={handleChange} searchable
-            placeholder="Start typing your role/appointment…" options={availableRoles.map(role => ({ value: role, label: role }))} />
+          <Select
+            name="roleAppointment"
+            value={d.roleAppointment}
+            onChange={handleChange}
+            searchable
+            placeholder={isParamilitary ? `Start typing your role/trade in ${d.armCorpsTrade || 'your branch'}…` : 'Start typing your role/appointment…'}
+            options={availableRoles.map(role => ({ value: role, label: role }))}
+          />
         );
       }
 
@@ -648,12 +689,15 @@ const Profiling = () => {
             options={FINANCIAL_GOALS_OPTIONS} />
         );
 
-      case 24:
+      case 24: {
+        const isParamilitary = d.servicePhase === 'Paramilitary / CAPF' || CAPF_FORCES.some(f => f.fullName === d.serviceBranch || f.key === d.serviceBranch);
         return (
           <div>
             <div className="pf-summary-card">
               <p><strong>Name:</strong> {d.fullName || '—'}</p>
               <p><strong>Service branch:</strong> {d.serviceBranch || '—'}</p>
+              <p><strong>{isParamilitary ? 'Branch / Wing:' : 'Arm / Corps:'}</strong> {d.armCorpsTrade || '—'}</p>
+              <p><strong>{isParamilitary ? 'Trade / Specialisation:' : 'Role / Trade:'}</strong> {d.roleAppointment || '—'}</p>
               <p><strong>Qualification:</strong> {d.highestQualification || '—'}</p>
               <p><strong>English Comfort:</strong> {d.englishComfort || '—'}</p>
             </div>
@@ -666,6 +710,7 @@ const Profiling = () => {
             </label>
           </div>
         );
+      }
 
       default:
         return null;
@@ -713,8 +758,20 @@ const Profiling = () => {
         activeStageId={QUESTION_STAGE[currentStep]}
         stepNumber={currentStep + 1}
         totalSteps={TOTAL_STEPS}
-        title={QUESTION_TITLES[currentStep]}
-        helpText={QUESTION_HELP[currentStep]}
+        title={
+          currentStep === 10 && formData.servicePhase === 'Paramilitary / CAPF'
+            ? 'Which arm/corps/branch/wing/cadre were you posted at?'
+            : currentStep === 11 && formData.servicePhase === 'Paramilitary / CAPF'
+            ? 'What was your role/appointment/trade/specialisation?'
+            : QUESTION_TITLES[currentStep]
+        }
+        helpText={
+          currentStep === 10 && formData.servicePhase === 'Paramilitary / CAPF'
+            ? `This narrows down to the branches/wings that exist within ${formData.serviceBranch || 'your force'}.`
+            : currentStep === 11 && formData.servicePhase === 'Paramilitary / CAPF'
+            ? `This is filtered to roles and trades that exist within ${formData.armCorpsTrade || 'your branch'}.`
+            : QUESTION_HELP[currentStep]
+        }
         insights={insights}
         onBack={goBack}
         backDisabled={currentStep === 0}

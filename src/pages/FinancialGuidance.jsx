@@ -46,6 +46,7 @@ import './FinancialGuidance.css';
 import FinancialServicesSuite from '../components/finance/FinancialServicesSuite';
 import GoalPlanningSuite from '../components/finance/GoalPlanningSuite';
 import FinancialPlanningSuite from '../components/finance/FinancialPlanningSuite';
+import AiFinancialCoach from '../components/finance/AiFinancialCoach';
 
 // ─── Phase Constants ────────────────────────────────────────────
 const PHASE = {
@@ -647,6 +648,14 @@ const EmbeddedQuizSection = ({
             </table>
           </div>
         </div>
+
+        {/* AI Financial Coach & Explainer (Hybrid Intelligence Layer) */}
+        <AiFinancialCoach
+          profile={profile}
+          corpusAmount={corpusAmount}
+          allocation={allocation}
+          answers={answers}
+        />
 
         {/* 3 Golden Rules */}
         <div className="fg-section animate-fade-in" style={{ animationDelay: '0.25s', marginTop: '40px' }}>

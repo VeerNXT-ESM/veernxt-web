@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/api/v1/finance-coach", "destination": "/api/v1/router?fn=finance-coach" },
     { "source": "/api/v1/chat/completions", "destination": "/api/v1/router?fn=chat" },
     { "source": "/api/v1/health", "destination": "/api/v1/router?fn=health" },
     { "source": "/api/payments/create-subscription", "destination": "/api/payments/actions?fn=create-subscription" },

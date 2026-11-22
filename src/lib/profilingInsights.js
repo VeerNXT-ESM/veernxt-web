@@ -36,6 +36,14 @@ const TRANSFERABLE_SKILLS_BY_BRANCH = {
     'Technical precision and adherence to safety-critical procedures',
     'Rapid decision-making under time pressure',
   ],
+  'Paramilitary / CAPF': [
+    'Border security, internal vigilance, and tactical public safety operations',
+    'Crisis management, discipline, and counter-threat response protocols',
+  ],
+  'Indian Coast Guard (ICG)': [
+    'Coastal surveillance, maritime security, and technical navigation systems',
+    'Search & rescue operations and stringent maritime safety compliance',
+  ],
 };
 
 /**

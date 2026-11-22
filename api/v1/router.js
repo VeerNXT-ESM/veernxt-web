@@ -175,5 +175,9 @@ export default async function handler(req, res) {
   const { fn } = req.query || {};
   if (fn === 'health') return handleHealth(req, res);
   if (fn === 'chat') return handleChatCompletions(req, res);
+  if (fn === 'finance-coach') {
+    const { default: handleFinanceCoach } = await import('../_lib/financeCoach.js');
+    return handleFinanceCoach(req, res);
+  }
   return res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Unknown v1 endpoint.' } });
 }
