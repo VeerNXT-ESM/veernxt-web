@@ -25,6 +25,8 @@ const InteractiveQuiz = () => {
   const [quizPhase, setQuizPhase] = useState('setup'); // 'setup' | 'active' | 'results'
   const [activeQuiz, setActiveQuiz] = useState(null);
   const [savedQuiz, setSavedQuiz] = useState(null);
+  const [userAttempts, setUserAttempts] = useState([]);
+  const [loadingAttempts, setLoadingAttempts] = useState(false);
 
   // Load Quiz & Check Permissions
   useEffect(() => {
@@ -151,6 +153,29 @@ const InteractiveQuiz = () => {
         setQuiz(quizData);
         setQuestions(mappedQuestions);
 
+        // Fetch user's previous attempt history for this quiz
+        try {
+          const { data: { session: currentSession } } = await supabase.auth.getSession();
+          if (currentSession?.user) {
+            setLoadingAttempts(true);
+            const targetIds = [id, quizData.id].filter(Boolean);
+            const { data: pastAttempts, error: attemptsErr } = await supabase
+              .from('quiz_attempts')
+              .select('*')
+              .eq('user_id', currentSession.user.id)
+              .in('quiz_id', targetIds)
+              .order('completed_at', { ascending: false });
+
+            if (!attemptsErr && pastAttempts) {
+              setUserAttempts(pastAttempts);
+            }
+          }
+        } catch (attErr) {
+          console.warn('Error fetching quiz attempt history:', attErr);
+        } finally {
+          setLoadingAttempts(false);
+        }
+
         // Check if there is an in-progress saved session in localStorage
         const localSaved = localStorage.getItem('active_quiz_' + id);
         if (localSaved) {
@@ -268,6 +293,80 @@ const InteractiveQuiz = () => {
     setSavedQuiz(null);
   };
 
+  // Handler: View full score & analysis for a past attempt
+  const handleViewAttemptDetails = (attempt) => {
+    if (!attempt) return;
+
+    const reconstructedAnswers = {};
+    const totalQs = attempt.total_questions || questions.length;
+    const sessionQuestions = questions.slice(0, totalQs);
+
+    sessionQuestions.forEach(q => {
+      const chosenKey = attempt.answers?.[q.id];
+      if (chosenKey && chosenKey !== 'N/A' && chosenKey !== undefined) {
+        const optionKeys = q.originalKeys || ['A', 'B', 'C', 'D'];
+        const idx = optionKeys.indexOf(chosenKey);
+        if (idx !== -1) {
+          reconstructedAnswers[q.id] = {
+            questionId: q.id,
+            selectedIndex: idx,
+            isCorrect: idx === q.correctIndex
+          };
+        }
+      }
+    });
+
+    const correctCount = attempt.correct_answers || 0;
+    const answeredCount = attempt.answered_questions || Object.keys(reconstructedAnswers).length;
+    const wrongCount = attempt.wrong_answers !== undefined && attempt.wrong_answers !== null
+      ? attempt.wrong_answers
+      : Math.max(0, answeredCount - correctCount);
+    const unattemptedCount = attempt.skipped_questions !== undefined && attempt.skipped_questions !== null
+      ? attempt.skipped_questions
+      : Math.max(0, totalQs - (correctCount + wrongCount));
+
+    const rawMarks = (correctCount * 2) - (wrongCount * 0.5);
+    const maxMarks = totalQs * 2;
+    const marksObtained = Math.max(0, rawMarks);
+    const scorePercent = attempt.score_percent !== undefined
+      ? Number(attempt.score_percent)
+      : (maxMarks > 0 ? (marksObtained / maxMarks) * 100 : 0);
+
+    const timeSpent = attempt.time_taken_seconds || (totalQs * 35);
+    const totalDuration = totalQs * 60;
+
+    const historicalState = {
+      id: attempt.id,
+      quizId: attempt.quiz_id || id || quiz?.id,
+      quizTitle: attempt.quiz_title || quiz?.title || 'Full Mock Test 01',
+      isFinished: true,
+      isHistoricalReview: true,
+      completedAt: attempt.completed_at || attempt.created_at,
+      config: {
+        mode: 'exam',
+        language: 'en',
+        totalDurationSeconds: totalDuration,
+        questionCount: totalQs
+      },
+      questions: sessionQuestions,
+      currentIndex: 0,
+      answers: reconstructedAnswers,
+      score: marksObtained,
+      timeRemaining: Math.max(0, totalDuration - timeSpent),
+      markingStats: {
+        correctCount,
+        wrongCount,
+        unattemptedCount,
+        marksObtained,
+        totalPossibleMarks: maxMarks,
+        scorePercent
+      }
+    };
+
+    setActiveQuiz(historicalState);
+    setQuizPhase('results');
+  };
+
   // Handler: Complete Assessment & Sync with Supabase
   const handleFinishQuiz = async () => {
     if (!activeQuiz) return;
@@ -283,6 +382,8 @@ const InteractiveQuiz = () => {
     const totalPossibleMarks = sessionQs.length * 2;
     const marksObtained = Math.max(0, rawMarks);
     const scorePercent = totalPossibleMarks > 0 ? (marksObtained / totalPossibleMarks) * 100 : 0;
+    const totalDuration = activeQuiz.config?.totalDurationSeconds || (sessionQs.length * 60);
+    const timeSpent = Math.max(5, totalDuration - (activeQuiz.timeRemaining || 0));
 
     // Build DB answer map
     const dbAnswersMap = {};
@@ -318,17 +419,24 @@ const InteractiveQuiz = () => {
     // Save to Database
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
-      await supabase.from('quiz_attempts').insert({
+      const { data: insertedAttempt } = await supabase.from('quiz_attempts').insert({
         user_id: session.user.id,
         quiz_id: id,
         quiz_title: quiz.title,
         total_questions: sessionQs.length,
         answered_questions: answersList.length,
         correct_answers: correctCount,
+        wrong_answers: wrongCount,
+        skipped_questions: unattemptedCount,
         score_percent: scorePercent,
+        time_taken_seconds: timeSpent,
         answers: dbAnswersMap,
         completed_at: new Date().toISOString()
-      });
+      }).select().maybeSingle();
+
+      if (insertedAttempt) {
+        setUserAttempts(prev => [insertedAttempt, ...prev]);
+      }
 
       // Write to new Learning Journey tracking table
       try {
@@ -537,6 +645,9 @@ const InteractiveQuiz = () => {
           onResumeSavedQuiz={handleResumeSavedQuiz}
           onDiscardSavedQuiz={handleDiscardSavedQuiz}
           onExitToMenu={handleExit}
+          userAttempts={userAttempts}
+          loadingAttempts={loadingAttempts}
+          onViewAttemptDetails={handleViewAttemptDetails}
         />
       )}
 

@@ -14,7 +14,9 @@ import {
   ShieldCheck,
   Check,
   Award,
-  ChevronRight
+  ChevronRight,
+  Eye,
+  Target
 } from 'lucide-react';
 
 export const QuizSetup = ({
@@ -24,8 +26,12 @@ export const QuizSetup = ({
   savedQuiz,
   onResumeSavedQuiz,
   onDiscardSavedQuiz,
-  onExitToMenu
+  onExitToMenu,
+  userAttempts = [],
+  loadingAttempts = false,
+  onViewAttemptDetails
 }) => {
+  const [activeTab, setActiveTab] = useState('setup'); // 'setup' | 'history'
   const [currentStep, setCurrentStep] = useState('config'); // 'config' | 'instructions'
   const [selectedCount, setSelectedCount] = useState(totalQuestions || 50);
   const [language, setLanguage] = useState(() => {
@@ -182,31 +188,86 @@ export const QuizSetup = ({
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
       }}>
 
-        {/* Step Indicator & Header (Matching VeerNXT Branding) */}
-        <div style={{ borderBottom: '1px solid #f1f5f9', paddingBottom: '1.75rem', marginBottom: '2rem' }}>
-
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.75rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{
-                background: '#f0fdf4',
-                color: '#15803d',
-                border: '1px solid #bcf0da',
-                fontSize: '0.72rem',
+        {/* Top View Switcher Tabs: Start / Configure Test vs Past Attempt History */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '1rem',
+          borderBottom: '1px solid #f1f5f9',
+          paddingBottom: '1.25rem',
+          marginBottom: '2rem'
+        }}>
+          {/* Main Switching Buttons */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.35rem',
+            background: '#f1f5f9',
+            padding: '0.3rem',
+            borderRadius: '10px'
+          }}>
+            <button
+              type="button"
+              onClick={() => setActiveTab('setup')}
+              style={{
+                border: 'none',
+                background: activeTab === 'setup' ? '#0d4a2b' : 'transparent',
+                color: activeTab === 'setup' ? '#ffffff' : '#475569',
+                padding: '0.5rem 1.15rem',
+                borderRadius: '7px',
+                fontSize: '0.82rem',
                 fontWeight: 800,
-                textTransform: 'uppercase',
-                letterSpacing: '0.75px',
-                padding: '0.25rem 0.65rem',
-                borderRadius: '6px'
-              }}>
-                VeerNXT Examination Portal
-              </span>
-              <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>•</span>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b' }}>
-                {currentStep === 'config' ? 'Step 1 of 2: Test Parameters' : 'Step 2 of 2: Exam Instructions'}
-              </span>
-            </div>
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                boxShadow: activeTab === 'setup' ? '0 2px 6px rgba(13, 74, 43, 0.25)' : 'none',
+                transition: 'all 0.15s ease'
+              }}
+            >
+              <Play size={14} /> Start / Configure Test
+            </button>
 
-            {/* Stepper Navigation Pills */}
+            <button
+              type="button"
+              onClick={() => setActiveTab('history')}
+              style={{
+                border: 'none',
+                background: activeTab === 'history' ? '#0d4a2b' : 'transparent',
+                color: activeTab === 'history' ? '#ffffff' : '#475569',
+                padding: '0.5rem 1.15rem',
+                borderRadius: '7px',
+                fontSize: '0.82rem',
+                fontWeight: 800,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                boxShadow: activeTab === 'history' ? '0 2px 6px rgba(13, 74, 43, 0.25)' : 'none',
+                transition: 'all 0.15s ease'
+              }}
+            >
+              <Award size={15} /> Past Attempts
+              {userAttempts && userAttempts.length > 0 && (
+                <span style={{
+                  background: activeTab === 'history' ? '#ffffff' : '#e2e8f0',
+                  color: activeTab === 'history' ? '#0d4a2b' : '#334155',
+                  fontSize: '0.7rem',
+                  fontWeight: 800,
+                  padding: '0.1rem 0.45rem',
+                  borderRadius: '999px',
+                  marginLeft: '0.2rem'
+                }}>
+                  {userAttempts.length}
+                </span>
+              )}
+            </button>
+          </div>
+
+          {/* Stepper pills when in setup mode */}
+          {activeTab === 'setup' && (
             <div style={{ display: 'flex', gap: '0.5rem', background: '#f8fafc', padding: '0.25rem', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
               <button
                 type="button"
@@ -215,7 +276,7 @@ export const QuizSetup = ({
                   border: 'none',
                   fontSize: '0.75rem',
                   fontWeight: 700,
-                  padding: '0.4rem 0.85rem',
+                  padding: '0.35rem 0.8rem',
                   borderRadius: '6px',
                   background: currentStep === 'config' ? '#0d4a2b' : 'transparent',
                   color: currentStep === 'config' ? '#ffffff' : '#64748b',
@@ -236,7 +297,7 @@ export const QuizSetup = ({
                   border: 'none',
                   fontSize: '0.75rem',
                   fontWeight: 700,
-                  padding: '0.4rem 0.85rem',
+                  padding: '0.35rem 0.8rem',
                   borderRadius: '6px',
                   background: currentStep === 'instructions' ? '#0d4a2b' : 'transparent',
                   color: currentStep === 'instructions' ? '#ffffff' : '#64748b',
@@ -250,80 +311,173 @@ export const QuizSetup = ({
                 <span>2. Instructions</span>
               </button>
             </div>
-          </div>
+          )}
 
-          <h1 style={{ fontSize: '1.85rem', fontWeight: 800, margin: '0.5rem 0 0.4rem 0', color: '#0f172a', letterSpacing: '-0.5px' }}>
-            {currentStep === 'config' ? 'Configure Exam Practice' : 'Examination Guidelines & Instructions'}
-          </h1>
-          <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b', lineHeight: 1.5 }}>
-            {currentStep === 'config'
-              ? 'Select question count, overall timer duration, and preferred medium before entering the exam arena.'
-              : 'Please read the examination scheme, marking rules, and navigation guidelines before starting.'}
-          </p>
+          {/* Quick Start button when in history mode */}
+          {activeTab === 'history' && (
+            <button
+              type="button"
+              onClick={() => setActiveTab('setup')}
+              style={{
+                background: '#0d4a2b',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '0.5rem 1.15rem',
+                fontSize: '0.8rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                boxShadow: '0 2px 4px rgba(13, 74, 43, 0.2)'
+              }}
+            >
+              <Play size={14} /> Start New Attempt →
+            </button>
+          )}
         </div>
 
         {/* ══════════════════════════════════════════════════════════════════ */}
-        {/* STEP 1: CONFIGURATION VIEW */}
+        {/* VIEW 1: CONFIGURE & START TEST (Step 1 & Step 2) */}
         {/* ══════════════════════════════════════════════════════════════════ */}
-        {currentStep === 'config' && (
-          <form onSubmit={handleProceedToInstructions}>
-
-            {/* 1. Target Subject / Paper Card */}
+        {activeTab === 'setup' && (
+          <>
+            {/* Header / Subtitle */}
             <div style={{ marginBottom: '2rem' }}>
-              <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.75px', color: '#475569', marginBottom: '0.75rem' }}>
-                1. Target Subject / Paper
-              </label>
-
-              <div style={{
-                border: '1.5px solid #0d4a2b',
-                borderRadius: '12px',
-                padding: '1.5rem',
-                background: '#f8fafc',
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: '1rem',
-                boxShadow: '0 2px 8px rgba(13, 74, 43, 0.05)'
-              }}>
-                <div style={{
-                  width: '46px', height: '46px',
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <span style={{
                   background: '#f0fdf4',
+                  color: '#15803d',
                   border: '1px solid #bcf0da',
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
+                  fontSize: '0.72rem',
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.75px',
+                  padding: '0.25rem 0.65rem',
+                  borderRadius: '6px'
                 }}>
-                  <Compass size={24} color="#0d4a2b" />
-                </div>
-
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.35rem' }}>
-                    <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.2px' }}>
-                      {cleanTitle}
-                    </h3>
-                    <span style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 800,
-                      background: '#f0fdf4',
-                      color: '#15803d',
-                      border: '1px solid #bcf0da',
-                      padding: '0.25rem 0.65rem',
-                      borderRadius: '6px',
-                      fontFamily: 'monospace'
-                    }}>
-                      {totalQuestions} Qs Available
-                    </span>
-                  </div>
-                  <p style={{ margin: 0, fontSize: '0.82rem', color: '#64748b', lineHeight: 1.5 }}>
-                    Full Standard Competitive Syllabus & Official Benchmark Practice Pool
-                  </p>
-                </div>
+                  VeerNXT Examination Portal
+                </span>
+                <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>•</span>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b' }}>
+                  {currentStep === 'config' ? 'Step 1 of 2: Test Parameters' : 'Step 2 of 2: Exam Instructions'}
+                </span>
               </div>
+
+              <h1 style={{ fontSize: '1.85rem', fontWeight: 800, margin: '0.5rem 0 0.4rem 0', color: '#0f172a', letterSpacing: '-0.5px' }}>
+                {currentStep === 'config' ? 'Configure Exam Practice' : 'Examination Guidelines & Instructions'}
+              </h1>
+              <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b', lineHeight: 1.5 }}>
+                {currentStep === 'config'
+                  ? 'Select question count, overall timer duration, and preferred medium before entering the exam arena.'
+                  : 'Please read the examination scheme, marking rules, and navigation guidelines before starting.'}
+              </p>
             </div>
 
-            {/* 2. Questions Per Test */}
+            {/* STEP 1: CONFIGURATION VIEW */}
+            {currentStep === 'config' && (
+              <form onSubmit={handleProceedToInstructions}>
+
+                {/* 1. Target Subject / Paper Card */}
+                <div style={{ marginBottom: '1.75rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.75px', color: '#475569', marginBottom: '0.75rem' }}>
+                    1. Target Subject / Paper
+                  </label>
+
+                  <div style={{
+                    border: '1.5px solid #0d4a2b',
+                    borderRadius: '12px',
+                    padding: '1.5rem',
+                    background: '#f8fafc',
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '1rem',
+                    boxShadow: '0 2px 8px rgba(13, 74, 43, 0.05)'
+                  }}>
+                    <div style={{
+                      width: '46px', height: '46px',
+                      background: '#f0fdf4',
+                      border: '1px solid #bcf0da',
+                      borderRadius: '10px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}>
+                      <Compass size={24} color="#0d4a2b" />
+                    </div>
+
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.35rem' }}>
+                        <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.2px' }}>
+                          {cleanTitle}
+                        </h3>
+                        <span style={{
+                          fontSize: '0.75rem',
+                          fontWeight: 800,
+                          background: '#f0fdf4',
+                          color: '#15803d',
+                          border: '1px solid #bcf0da',
+                          padding: '0.25rem 0.65rem',
+                          borderRadius: '6px',
+                          fontFamily: 'monospace'
+                        }}>
+                          {totalQuestions} Qs Available
+                        </span>
+                      </div>
+                      <p style={{ margin: 0, fontSize: '0.82rem', color: '#64748b', lineHeight: 1.5 }}>
+                        Full Standard Competitive Syllabus & Official Benchmark Practice Pool
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Compact 1-Line Strip for Past Attempts (Never pushes Start Test down) */}
+                {userAttempts && userAttempts.length > 0 && (
+                  <div style={{
+                    background: '#f0fdf4',
+                    border: '1px solid #bcf0da',
+                    borderRadius: '10px',
+                    padding: '0.75rem 1.15rem',
+                    marginBottom: '1.75rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    flexWrap: 'wrap',
+                    gap: '0.75rem'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                      <Award size={18} color="#15803d" />
+                      <span style={{ fontSize: '0.82rem', color: '#166534', fontWeight: 600 }}>
+                        You have taken this test <strong>{userAttempts.length} {userAttempts.length === 1 ? 'time' : 'times'}</strong>.
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab('history')}
+                      style={{
+                        background: '#ffffff',
+                        border: '1px solid #bcf0da',
+                        color: '#0d4a2b',
+                        borderRadius: '6px',
+                        padding: '0.35rem 0.85rem',
+                        fontSize: '0.75rem',
+                        fontWeight: 800,
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        transition: 'all 0.15s ease'
+                      }}
+                    >
+                      <Award size={13} color="#0d4a2b" /> View Past Attempts ({userAttempts.length}) →
+                    </button>
+                  </div>
+                )}
+
+                {/* 2. Questions Per Test */}
             <div style={{ marginBottom: '2rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                 <label style={{ fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.75px', color: '#475569', margin: 0 }}>
@@ -401,7 +555,7 @@ export const QuizSetup = ({
                     type="button"
                     onClick={() => {
                       setLanguage('en');
-                      try { localStorage.setItem('veernxt_pref_lang', 'en'); } catch (e) {}
+                      try { localStorage.setItem('veernxt_pref_lang', 'en'); } catch (e) { }
                     }}
                     style={{
                       border: language === 'en' ? '2px solid #16a34a' : '1px solid #e2e8f0',
@@ -428,7 +582,7 @@ export const QuizSetup = ({
                     type="button"
                     onClick={() => {
                       setLanguage('hi');
-                      try { localStorage.setItem('veernxt_pref_lang', 'hi'); } catch (e) {}
+                      try { localStorage.setItem('veernxt_pref_lang', 'hi'); } catch (e) { }
                     }}
                     style={{
                       border: language === 'hi' ? '2px solid #16a34a' : '1px solid #e2e8f0',
@@ -719,6 +873,302 @@ export const QuizSetup = ({
 
           </form>
         )}
+      </>
+    )}
+
+    {/* ══════════════════════════════════════════════════════════════════ */}
+    {/* VIEW 2: DEDICATED ATTEMPT HISTORY VIEW */}
+    {/* ══════════════════════════════════════════════════════════════════ */}
+    {activeTab === 'history' && (
+      <div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.75rem' }}>
+          <div>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 0.35rem 0', color: '#0f172a' }}>
+              Your Past Attempt History
+            </h2>
+            <p style={{ margin: 0, fontSize: '0.88rem', color: '#64748b' }}>
+              Review your score, accuracy, and question-wise solutions across all attempts.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setActiveTab('setup')}
+            style={{
+              background: '#0d4a2b',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '0.6rem 1.25rem',
+              fontSize: '0.85rem',
+              fontWeight: 800,
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              boxShadow: '0 2px 6px rgba(13, 74, 43, 0.25)'
+            }}
+          >
+            <Play size={15} /> Start New Attempt
+          </button>
+        </div>
+
+        {loadingAttempts ? (
+          <div style={{
+            padding: '2.5rem',
+            textAlign: 'center',
+            color: '#64748b',
+            fontSize: '0.9rem',
+            background: '#f8fafc',
+            borderRadius: '12px',
+            border: '1px solid #e2e8f0'
+          }}>
+            Loading your attempt history...
+          </div>
+        ) : !userAttempts || userAttempts.length === 0 ? (
+          <div style={{
+            border: '1.5px dashed #cbd5e1',
+            borderRadius: '12px',
+            padding: '3rem 2rem',
+            background: '#f8fafc',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '1rem'
+          }}>
+            <div style={{
+              width: '56px',
+              height: '56px',
+              borderRadius: '14px',
+              background: '#f0fdf4',
+              border: '1px solid #bcf0da',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <Award size={28} color="#15803d" />
+            </div>
+            <div>
+              <h3 style={{ margin: '0 0 0.35rem 0', fontSize: '1.1rem', fontWeight: 800, color: '#0f172a' }}>
+                No Previous Attempts Recorded
+              </h3>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+                You haven't attempted this mock test yet. Ready to practice?
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setActiveTab('setup')}
+              style={{
+                background: '#0d4a2b',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '0.75rem 1.75rem',
+                fontSize: '0.88rem',
+                fontWeight: 800,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                boxShadow: '0 2px 6px rgba(13, 74, 43, 0.25)'
+              }}
+            >
+              <Play size={16} /> Configure & Start Test
+            </button>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {userAttempts.map((attempt, index) => {
+              const attemptNumber = userAttempts.length - index;
+              const isLatest = index === 0;
+
+              const totalQs = attempt.total_questions || totalQuestions || 50;
+              const correct = attempt.correct_answers || 0;
+              const answered = attempt.answered_questions || correct;
+              const wrong = attempt.wrong_answers !== undefined && attempt.wrong_answers !== null
+                ? attempt.wrong_answers
+                : Math.max(0, answered - correct);
+              const skipped = attempt.skipped_questions !== undefined && attempt.skipped_questions !== null
+                ? attempt.skipped_questions
+                : Math.max(0, totalQs - (correct + wrong));
+
+              const maxMarks = totalQs * 2;
+              const rawScore = (correct * 2) - (wrong * 0.5);
+              const marksObtained = Math.max(0, Number(rawScore.toFixed(1)));
+              const scorePct = attempt.score_percent !== undefined
+                ? Number(attempt.score_percent).toFixed(1)
+                : (maxMarks > 0 ? ((marksObtained / maxMarks) * 100).toFixed(1) : '0.0');
+
+              const accuracy = answered > 0
+                ? ((correct / answered) * 100).toFixed(1)
+                : '0.0';
+
+              const timeTakenSecs = attempt.time_taken_seconds || 0;
+              const mins = Math.floor(timeTakenSecs / 60);
+              const secs = timeTakenSecs % 60;
+              const formattedTime = timeTakenSecs > 0 ? `${mins}m ${secs}s` : 'Completed';
+
+              const attemptDate = new Date(attempt.completed_at || attempt.created_at).toLocaleDateString('en-GB', {
+                day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true
+              });
+
+              return (
+                <div
+                  key={attempt.id || index}
+                  style={{
+                    background: '#ffffff',
+                    border: isLatest ? '1.5px solid #0d4a2b' : '1px solid #e2e8f0',
+                    borderRadius: '12px',
+                    padding: '1.25rem 1.35rem',
+                    boxShadow: isLatest ? '0 4px 12px rgba(13, 74, 43, 0.08)' : '0 1px 4px rgba(0,0,0,0.04)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.85rem'
+                  }}
+                >
+                  {/* Top Row: Attempt badge, date, Details button */}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                      <span style={{
+                        background: isLatest ? '#0d4a2b' : '#f1f5f9',
+                        color: isLatest ? '#ffffff' : '#334155',
+                        fontSize: '0.78rem',
+                        fontWeight: 800,
+                        padding: '0.25rem 0.65rem',
+                        borderRadius: '6px'
+                      }}>
+                        Attempt #{attemptNumber}
+                      </span>
+
+                      {isLatest && (
+                        <span style={{
+                          background: '#f0fdf4',
+                          color: '#15803d',
+                          border: '1px solid #bcf0da',
+                          fontSize: '0.7rem',
+                          fontWeight: 800,
+                          padding: '0.2rem 0.55rem',
+                          borderRadius: '6px',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.5px'
+                        }}>
+                          Latest Attempt
+                        </span>
+                      )}
+
+                      <span style={{ fontSize: '0.8rem', color: '#64748b' }}>
+                        • Submitted on {attemptDate}
+                      </span>
+                    </div>
+
+                    {/* DETAILS BUTTON (Views complete score & analysis page) */}
+                    <button
+                      type="button"
+                      onClick={() => onViewAttemptDetails && onViewAttemptDetails(attempt)}
+                      style={{
+                        background: '#0d4a2b',
+                        color: '#ffffff',
+                        border: 'none',
+                        borderRadius: '8px',
+                        padding: '0.5rem 1.15rem',
+                        fontSize: '0.82rem',
+                        fontWeight: 700,
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.45rem',
+                        boxShadow: '0 2px 4px rgba(13, 74, 43, 0.2)',
+                        transition: 'all 0.15s ease'
+                      }}
+                    >
+                      <FileText size={15} /> Details
+                    </button>
+                  </div>
+
+                  {/* Metric Tiles Strip */}
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+                    gap: '0.75rem',
+                    background: '#f8fafc',
+                    padding: '0.85rem 1rem',
+                    borderRadius: '8px',
+                    border: '1px solid #f1f5f9'
+                  }}>
+                    <div>
+                      <span style={{ display: 'block', fontSize: '0.68rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Score
+                      </span>
+                      <span style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0d4a2b' }}>
+                        {marksObtained} <span style={{ fontSize: '0.75rem', color: '#64748b' }}>/ {maxMarks}</span>
+                      </span>
+                      <span style={{ fontSize: '0.72rem', color: '#16a34a', fontWeight: 700, marginLeft: '0.35rem' }}>
+                        ({scorePct}%)
+                      </span>
+                    </div>
+
+                    <div>
+                      <span style={{ display: 'block', fontSize: '0.68rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Accuracy
+                      </span>
+                      <span style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0f172a' }}>
+                        {accuracy}%
+                      </span>
+                    </div>
+
+                    <div>
+                      <span style={{ display: 'block', fontSize: '0.68rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Breakdown
+                      </span>
+                      <div style={{ fontSize: '0.78rem', fontWeight: 700, display: 'flex', gap: '0.4rem', marginTop: '0.1rem' }}>
+                        <span style={{ color: '#16a34a' }}>✔ {correct}</span>
+                        <span style={{ color: '#ef4444' }}>✖ {wrong}</span>
+                        <span style={{ color: '#64748b' }}>— {skipped}</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span style={{ display: 'block', fontSize: '0.68rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Time Spent
+                      </span>
+                      <span style={{ fontSize: '0.92rem', fontWeight: 700, color: '#334155' }}>
+                        {formattedTime}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Bottom Start New Attempt Button */}
+            <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+              <button
+                type="button"
+                onClick={() => setActiveTab('setup')}
+                style={{
+                  background: '#0d4a2b',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '10px',
+                  padding: '0.85rem 2rem',
+                  fontSize: '0.9rem',
+                  fontWeight: 800,
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  boxShadow: '0 4px 12px rgba(13, 74, 43, 0.25)'
+                }}
+              >
+                <Play size={16} /> Start New Test Attempt
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    )}
 
       </div>
     </div>

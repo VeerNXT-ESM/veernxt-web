@@ -166,7 +166,8 @@ export const QuizResults = ({
     return () => { isMounted = false; };
   }, [currentSolutionQ, solutionLang, selectedSolutionIndex, state.questions]);
 
-  const submissionDateFormatted = new Date().toLocaleDateString('en-GB', {
+  const submissionDate = state.completedAt ? new Date(state.completedAt) : new Date();
+  const submissionDateFormatted = submissionDate.toLocaleDateString('en-GB', {
     day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true
   });
 
@@ -186,7 +187,7 @@ export const QuizResults = ({
           {/* Top Breadcrumb & Back Bar */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.85rem', flexWrap: 'wrap', gap: '0.5rem' }}>
             <button
-              onClick={onExit}
+              onClick={state.isHistoricalReview ? onRestart : onExit}
               style={{
                 background: 'white',
                 border: '1px solid #cbd5e1',
@@ -203,7 +204,7 @@ export const QuizResults = ({
                 transition: 'all 0.15s ease'
               }}
             >
-              <ArrowLeft size={16} /> Back to Test Library
+              <ArrowLeft size={16} /> {state.isHistoricalReview ? 'Back to Test Setup' : 'Back to Test Library'}
             </button>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: '#64748b' }}>
