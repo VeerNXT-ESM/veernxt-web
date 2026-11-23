@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { 
-  Clock, 
-  Bookmark, 
-  BookmarkCheck, 
-  ArrowLeft, 
-  ArrowRight, 
-  RotateCcw, 
-  Send, 
-  Maximize2, 
-  Minimize2, 
-  ChevronDown, 
-  ChevronUp, 
-  Check, 
+import {
+  Clock,
+  Bookmark,
+  BookmarkCheck,
+  ArrowLeft,
+  ArrowRight,
+  RotateCcw,
+  Send,
+  Maximize2,
+  Minimize2,
+  ChevronDown,
+  ChevronUp,
+  Check,
   X,
   Languages,
   LogOut,
@@ -28,7 +28,7 @@ import { translateQuestion, prefetchTranslations, getCachedQuestion } from '../.
  */
 export function organizeSections(questions) {
   if (!questions || questions.length === 0) return [];
-  
+
   const hasRealSections = questions.some(q => q.section || q.section_name || q.subject_tag);
   if (!hasRealSections) {
     return [];
@@ -67,7 +67,7 @@ export const QuizView = ({
   const totalQuestions = state.questions.length;
   const sections = useMemo(() => organizeSections(state.questions), [state.questions]);
   const hasSections = sections.length > 1;
-  
+
   // Track visited questions (index in set)
   const [visitedIndices, setVisitedIndices] = useState(() => new Set([0]));
   const [showSubmitModal, setShowSubmitModal] = useState(false);
@@ -167,10 +167,10 @@ export const QuizView = ({
   // Toggle fullscreen
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
+      document.documentElement.requestFullscreen().catch(() => { });
       setIsFullscreen(true);
     } else {
-      document.exitFullscreen().catch(() => {});
+      document.exitFullscreen().catch(() => { });
       setIsFullscreen(false);
     }
   };
@@ -295,7 +295,7 @@ export const QuizView = ({
         boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
         minHeight: '56px'
       }}>
-        
+
         {/* Left Side: Exit Button + VeerNXT Brand + Test Title (Reference 4) */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', minWidth: 0, flexShrink: 1 }}>
           <button
@@ -363,7 +363,7 @@ export const QuizView = ({
 
         {/* Right Controls: Language Selector, Fullscreen Toggle, Timer Pill, Submit Test Button (Exact Reference 3 & 4) */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', flexWrap: 'nowrap', flexShrink: 0 }}>
-          
+
           {/* Language Switcher Pill (EN | HI) */}
           <div style={{
             display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.15)',
@@ -492,7 +492,7 @@ export const QuizView = ({
         gap: '1.25rem',
         alignItems: 'start'
       }}>
-        
+
         {/* LEFT COLUMN: QUESTION CARD & ACTION CONTROLS */}
         <div style={{
           background: 'white',
@@ -503,7 +503,7 @@ export const QuizView = ({
           flexDirection: 'column',
           minHeight: '560px'
         }}>
-          
+
           {/* Question Header: Number on Left, Marks & Bookmark on Right (Reference 3 & 4) */}
           <div style={{
             padding: '1.25rem 1.5rem',
@@ -565,9 +565,9 @@ export const QuizView = ({
 
           {/* Question Body */}
           <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            
+
             {/* Question Text */}
-            <div 
+            <div
               style={{
                 fontSize: '1.05rem',
                 lineHeight: 1.6,
@@ -615,7 +615,7 @@ export const QuizView = ({
                       {letter}.
                     </span>
 
-                    <div 
+                    <div
                       style={{
                         flex: 1,
                         fontSize: '0.92rem',
@@ -644,7 +644,7 @@ export const QuizView = ({
             flexWrap: 'wrap',
             gap: '0.75rem'
           }}>
-            
+
             {/* Mark for Review Checkbox with Info Icon on Left (Reference 3 & 4) */}
             <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 600, color: '#334155' }}>
               <input
@@ -716,7 +716,7 @@ export const QuizView = ({
           flexDirection: 'column',
           gap: '1rem'
         }}>
-          
+
           {/* Palette Header with Collapse Toggle */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #f1f5f9', paddingBottom: '0.65rem' }}>
             <h3 style={{ margin: 0, fontSize: '0.9rem', fontWeight: 800, color: '#0f172a' }}>
@@ -894,7 +894,7 @@ export const QuizView = ({
                 Exit Exam Practice?
               </h3>
             </div>
-            
+
             <p style={{ margin: '0 0 1.5rem 0', fontSize: '0.88rem', color: '#475569', lineHeight: 1.55 }}>
               Your progress, selected answers, and remaining time are <strong>safely saved</strong> in this browser. You can return and resume your test anytime from the Mock Test Library.
             </p>

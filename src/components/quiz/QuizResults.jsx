@@ -68,26 +68,29 @@ export const QuizResults = ({
   const timeSpentSecs = timeSpentSeconds % 60;
   const avgTimePerQ = answersList.length > 0 ? Math.round(timeSpentSeconds / answersList.length) : Math.round(timeSpentSeconds / totalQuestions);
 
-  // Dynamic cohort and peer analytics state
+  // Dynamic cohort and peer analytics state strictly from database
   const [cohort, setCohort] = useState(() => ({
-    totalCandidates: 1420,
-    rank: Math.max(1, Math.round(1420 * (1 - (scorePercent / 100)))),
-    percentile: Number(Math.min(99.6, Math.max(8.5, scorePercent * 0.95 + accuracy * 0.05)).toFixed(1)),
-    topperScore: Number((maxMarks * 0.95).toFixed(1)),
-    averageScore: Number((maxMarks * 0.58).toFixed(1))
+    totalCandidates: 1,
+    rank: 1,
+    percentile: Math.round(scorePercent),
+    topperScore: Number(finalScore.toFixed(1)),
+    averageScore: Number(finalScore.toFixed(1)),
+    isSingleCandidate: true,
+    distribution: [0, 0, 0, 0, 1]
   }));
 
   useEffect(() => {
     let isMounted = true;
     async function loadStats() {
-      const stats = await getQuizCohortAnalytics(state.quizId || state.id, finalScore, maxMarks, accuracy);
+      const targetQuizId = state.quizId || state.lc_exam_id || state.id;
+      const stats = await getQuizCohortAnalytics(targetQuizId, finalScore, maxMarks, accuracy);
       if (isMounted && stats) {
         setCohort(stats);
       }
     }
     loadStats();
     return () => { isMounted = false; };
-  }, [state.quizId, state.id, finalScore, maxMarks, accuracy]);
+  }, [state.quizId, state.lc_exam_id, state.id, finalScore, maxMarks, accuracy]);
 
   // Section-wise statistics (ONLY if genuine sections exist in data)
   const sectionStats = useMemo(() => {
@@ -768,7 +771,9 @@ export const QuizResults = ({
                 Overall Performance Curve
               </h3>
               <p style={{ margin: '0 0 1.25rem 0', fontSize: '0.78rem', color: '#64748b' }}>
-                Distribution of candidate scores across India with your comparative percentile placement.
+                {cohort.isSingleCandidate
+                  ? 'Candidate performance percentile evaluated from active attempts recorded in database.'
+                  : `Distribution of ${cohort.totalCandidates} student scores in database with your comparative percentile placement.`}
               </p>
 
               {/* SVG Bell Curve with Dynamic Percentile Position */}

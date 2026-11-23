@@ -1,51 +1,102 @@
 import { supabase } from './supabase';
 
 /**
- * Calculates or fetches authentic cohort benchmark analytics for a completed test attempt.
+ * Calculates authentic cohort benchmark analytics strictly from the database.
+ * No hardcoded or fabricated candidate numbers.
+ * 
+ * @param {string} quizId - The actual Supabase quiz UUID
+ * @param {number} studentScore - The student's obtained marks
+ * @param {number} maxMarks - Total possible marks
+ * @param {number} accuracy - Accuracy percentage
  */
 export async function getQuizCohortAnalytics(quizId, studentScore, maxMarks, accuracy) {
-  const score = parseFloat(studentScore) || 0;
+  const currentScore = parseFloat(studentScore) || 0;
   const max = parseFloat(maxMarks) || 100;
-  const scoreRatio = max > 0 ? score / max : 0;
 
-  // Baseline statistical parameters
-  let totalCandidates = 1420;
-  let percentile = Number(Math.min(99.6, Math.max(8.5, (scoreRatio * 92 + (accuracy || 0) * 0.08))).toFixed(1));
-  let rank = Math.max(1, Math.round(totalCandidates * (1 - (percentile / 100))));
-  let topperScore = Number((max * 0.95).toFixed(1));
-  let averageScore = Number((max * 0.58).toFixed(1));
+  // Real DB state defaults for first or single candidate
+  let scores = [currentScore];
+  let totalCandidates = 1;
+  let rank = 1;
+  let topperScore = currentScore;
+  let averageScore = currentScore;
+  let percentile = 100;
+  let isSingleCandidate = true;
 
   try {
-    // Attempt to query Supabase directly for real peer submissions
     if (quizId) {
+      // 1. Query quiz_attempts for genuine peer submissions on this test
       const { data: attempts, error } = await supabase
         .from('quiz_attempts')
         .select('score, score_percent')
         .eq('quiz_id', quizId);
 
-      if (!error && attempts && attempts.length >= 2) {
-        const scores = attempts.map(a => Number(a.score || 0)).filter(s => !isNaN(s));
-        scores.push(score);
+      let realAttempts = [];
+      if (!error && attempts && attempts.length > 0) {
+        realAttempts = attempts;
+      } else {
+        // Fallback: check user_quiz_attempts table
+        const { data: uAttempts } = await supabase
+          .from('user_quiz_attempts')
+          .select('score_pct')
+          .eq('quiz_id', quizId);
+        
+        if (uAttempts && uAttempts.length > 0) {
+          realAttempts = uAttempts.map(u => ({
+            score: (Number(u.score_pct || 0) / 100) * max,
+            score_percent: Number(u.score_pct || 0)
+          }));
+        }
+      }
 
-        totalCandidates = scores.length;
-        topperScore = Number(Math.max(...scores).toFixed(1));
-        const sum = scores.reduce((a, b) => a + b, 0);
-        averageScore = Number((sum / scores.length).toFixed(1));
-        rank = scores.filter(s => s > score).length + 1;
-        const scoredBelow = scores.filter(s => s <= score).length;
-        percentile = Number(((scoredBelow / totalCandidates) * 100).toFixed(1));
-        percentile = Math.min(99.8, Math.max(5.0, percentile));
+      if (realAttempts.length > 0) {
+        const dbScores = realAttempts
+          .map(a => Number(a.score ?? (Number(a.score_percent || 0) / 100) * max))
+          .filter(s => !isNaN(s) && isFinite(s));
+
+        if (dbScores.length > 0) {
+          scores = [...dbScores, currentScore];
+          totalCandidates = scores.length;
+          isSingleCandidate = false;
+
+          topperScore = Number(Math.max(...scores).toFixed(1));
+          const totalSum = scores.reduce((sum, val) => sum + val, 0);
+          averageScore = Number((totalSum / scores.length).toFixed(1));
+
+          // Strict competitive rank: count candidates who scored higher + 1
+          const higherCount = scores.filter(s => s > currentScore).length;
+          rank = higherCount + 1;
+
+          // True Percentile: percentage of candidates who scored below current student
+          const scoredBelow = scores.filter(s => s < currentScore).length;
+          const tied = scores.filter(s => s === currentScore).length;
+          const rawPercentile = ((scoredBelow + 0.5 * tied) / totalCandidates) * 100;
+          percentile = Number(Math.min(100, Math.max(1, rawPercentile)).toFixed(1));
+        }
       }
     }
-  } catch (e) {
-    console.warn('Cohort analytics lookup fallback to empirical model:', e);
+  } catch (err) {
+    console.warn('Real cohort analytics DB query notice:', err);
   }
+
+  // Generate 5-bucket distribution histogram strictly from real scores
+  const bucketCounts = [0, 0, 0, 0, 0];
+  scores.forEach(s => {
+    const pct = max > 0 ? (s / max) * 100 : 0;
+    if (pct < 20) bucketCounts[0]++;
+    else if (pct < 40) bucketCounts[1]++;
+    else if (pct < 60) bucketCounts[2]++;
+    else if (pct < 80) bucketCounts[3]++;
+    else bucketCounts[4]++;
+  });
 
   return {
     totalCandidates,
     rank,
     percentile,
     topperScore,
-    averageScore
+    averageScore,
+    isSingleCandidate,
+    distribution: bucketCounts,
+    totalPeerAttempts: scores.length - 1
   };
 }

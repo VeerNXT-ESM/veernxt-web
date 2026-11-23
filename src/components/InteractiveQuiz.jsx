@@ -183,6 +183,7 @@ const InteractiveQuiz = () => {
     const totalDuration = config.totalDurationSeconds || (sessionQuestions.length * 60);
     const newQuizState = {
       id: 'quiz-' + Date.now(),
+      quizId: id || quiz?.id,
       startedAt: Date.now(),
       quizTitle: quiz?.title || 'Full Mock Test 01',
       config: {
@@ -296,6 +297,7 @@ const InteractiveQuiz = () => {
 
     const finalQuizState = {
       ...activeQuiz,
+      quizId: id || quiz?.id || activeQuiz.quizId,
       quizTitle: activeQuiz.quizTitle || quiz?.title || 'Full Mock Test 01',
       isFinished: true,
       score: marksObtained,

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  Play, 
-  RotateCcw, 
-  Trash2, 
-  Clock, 
-  BookOpen, 
-  Compass, 
-  Languages, 
-  CheckCircle2, 
-  ArrowRight, 
+import {
+  Play,
+  RotateCcw,
+  Trash2,
+  Clock,
+  BookOpen,
+  Compass,
+  Languages,
+  CheckCircle2,
+  ArrowRight,
   ArrowLeft,
   FileText,
   ShieldCheck,
@@ -35,7 +35,7 @@ export const QuizSetup = ({
       return 'en';
     }
   });
-  
+
   // Calculate recommended duration: 1 minute per question, rounded to standard minutes (minimum 10 mins)
   const defaultDuration = Math.max(10, Math.min(120, Math.ceil((totalQuestions || 50) * 1)));
   const [durationMinutes, setDurationMinutes] = useState(defaultDuration);
@@ -78,7 +78,7 @@ export const QuizSetup = ({
 
   return (
     <div style={{ maxWidth: '980px', margin: '0 auto', padding: '1.5rem 1.25rem 3rem 1.25rem', fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif", color: '#0f172a' }}>
-      
+
       {/* TOP NAVIGATION & PROMINENT BACK BAR */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.75rem' }}>
         <button
@@ -181,10 +181,10 @@ export const QuizSetup = ({
         padding: '2.5rem 2rem',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
       }}>
-        
+
         {/* Step Indicator & Header (Matching VeerNXT Branding) */}
         <div style={{ borderBottom: '1px solid #f1f5f9', paddingBottom: '1.75rem', marginBottom: '2rem' }}>
-          
+
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.75rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{
@@ -267,13 +267,13 @@ export const QuizSetup = ({
         {/* ══════════════════════════════════════════════════════════════════ */}
         {currentStep === 'config' && (
           <form onSubmit={handleProceedToInstructions}>
-            
+
             {/* 1. Target Subject / Paper Card */}
             <div style={{ marginBottom: '2rem' }}>
               <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.75px', color: '#475569', marginBottom: '0.75rem' }}>
                 1. Target Subject / Paper
               </label>
-              
+
               <div style={{
                 border: '1.5px solid #0d4a2b',
                 borderRadius: '12px',
@@ -333,7 +333,7 @@ export const QuizSetup = ({
                   Total Pool: <strong style={{ color: '#0d4a2b', fontFamily: 'monospace' }}>{totalQuestions} Qs</strong>
                 </span>
               </div>
-              
+
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
@@ -389,13 +389,13 @@ export const QuizSetup = ({
 
             {/* 3. Language & Overall Timer Options (2-Column Grid) */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.75rem', marginBottom: '2.5rem' }}>
-              
+
               {/* Test Language Selection */}
               <div>
                 <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.75px', color: '#475569', marginBottom: '0.75rem' }}>
                   <Languages size={15} color="#0d4a2b" /> 3. Test Language
                 </label>
-                
+
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                   <button
                     type="button"
@@ -458,7 +458,7 @@ export const QuizSetup = ({
                 <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.75px', color: '#475569', marginBottom: '0.75rem' }}>
                   <Clock size={15} color="#0d4a2b" /> 4. Overall Test Duration
                 </label>
-                
+
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem' }}>
                   {[15, 30, 45, 60].map((mins) => (
                     <button
@@ -553,7 +553,7 @@ export const QuizSetup = ({
         {/* ══════════════════════════════════════════════════════════════════ */}
         {currentStep === 'instructions' && (
           <form onSubmit={handleStartTest}>
-            
+
             {/* Quick Summary Pill Bar (4 Themed Tiles) */}
             <div style={{
               display: 'grid',
@@ -587,7 +587,7 @@ export const QuizSetup = ({
 
             {/* Instruction Points */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginBottom: '2rem' }}>
-              
+
               {/* Marking Scheme */}
               <div style={{ border: '1px solid #e2e8f0', borderRadius: '10px', padding: '1.25rem', background: '#ffffff' }}>
                 <h4 style={{ margin: '0 0 0.65rem 0', fontSize: '0.88rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0f172a' }}>
