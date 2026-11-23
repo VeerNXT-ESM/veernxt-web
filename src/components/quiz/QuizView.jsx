@@ -19,7 +19,7 @@ import {
   Info,
   RefreshCw
 } from 'lucide-react';
-import { translateQuestion, prefetchTranslations } from '../../lib/quizTranslator';
+import { translateQuestion, prefetchTranslations, getCachedQuestion } from '../../lib/quizTranslator';
 
 /**
  * Organizes questions into sections ONLY if questions carry real section tags.
@@ -104,18 +104,25 @@ export const QuizView = ({
       return;
     }
 
-    setIsTranslating(true);
-    translateQuestion(currentQ, 'hi').then(tq => {
-      if (isMounted && tq) {
-        setDisplayQ(tq);
-        setIsTranslating(false);
-      }
-    }).catch(() => {
-      if (isMounted) setIsTranslating(false);
-    });
+    // Instant render if cached in memory or localStorage
+    const cached = getCachedQuestion(currentQ, 'hi');
+    if (cached) {
+      setDisplayQ(cached);
+      setIsTranslating(false);
+    } else {
+      setIsTranslating(true);
+      translateQuestion(currentQ, 'hi').then(tq => {
+        if (isMounted && tq) {
+          setDisplayQ(tq);
+          setIsTranslating(false);
+        }
+      }).catch(() => {
+        if (isMounted) setIsTranslating(false);
+      });
+    }
 
     // Prefetch upcoming questions in Hindi for instant navigation
-    prefetchTranslations(state.questions, 'hi', state.currentIndex + 1, 3);
+    prefetchTranslations(state.questions, 'hi', state.currentIndex + 1, 4);
 
     return () => { isMounted = false; };
   }, [currentQ, selectedLanguage, state.questions, state.currentIndex]);
@@ -271,25 +278,26 @@ export const QuizView = ({
       flexDirection: 'column'
     }}>
 
-      {/* TOP HEADER BAR (Exact Reference 3 & 4 Layout) */}
+      {/* TOP HEADER BAR (Exact Reference 3 & 4 Layout - Single Clean Row) */}
       <header style={{
         position: 'sticky',
         top: 0,
         zIndex: 100,
         background: '#0d4a2b',
         color: 'white',
-        padding: '0.65rem 1.25rem',
+        padding: '0.55rem 1.25rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        flexWrap: 'wrap',
+        flexWrap: 'nowrap',
         gap: '0.75rem',
         borderBottom: '2px solid #09371f',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
+        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+        minHeight: '56px'
       }}>
         
-        {/* Left Side: Back Arrow / Exit + Brand & Test Title (Reference 3 & 4) */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+        {/* Left Side: Exit Button + VeerNXT Brand + Test Title (Reference 4) */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', minWidth: 0, flexShrink: 1 }}>
           <button
             type="button"
             onClick={() => setShowExitModal(true)}
@@ -300,53 +308,76 @@ export const QuizView = ({
               color: 'white',
               borderRadius: '6px',
               padding: '0.35rem 0.65rem',
-              fontSize: '0.8rem',
+              fontSize: '0.78rem',
               fontWeight: 700,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
               gap: '0.3rem',
+              whiteSpace: 'nowrap',
+              flexShrink: 0,
               transition: 'background 0.15s ease'
             }}
           >
-            <ArrowLeft size={15} /> Exit
+            <ArrowLeft size={14} /> Exit
           </button>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 900, letterSpacing: '-0.5px', fontSize: '1.15rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 900, letterSpacing: '-0.5px', fontSize: '1.15rem', flexShrink: 0 }}>
             <span style={{ color: '#86efac' }}>Veer</span>NXT
           </div>
-          <span style={{ opacity: 0.5, margin: '0 0.2rem' }}>|</span>
-          <h1 style={{ margin: 0, fontSize: '0.92rem', fontWeight: 700, letterSpacing: '0.2px' }}>
+          <span style={{ opacity: 0.4, margin: '0 0.2rem', flexShrink: 0 }}>|</span>
+          <h1 style={{
+            margin: 0,
+            fontSize: '0.9rem',
+            fontWeight: 700,
+            letterSpacing: '0.2px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '380px'
+          }}>
             {state.quizTitle || 'Full Mock Test 01'}
           </h1>
         </div>
 
-        {/* Center Metadata Chips (Reference 4) */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', fontSize: '0.75rem', opacity: 0.9 }}>
-          <span><strong>{totalQuestions}</strong> Questions</span>
+        {/* Center Metadata Chips (Reference 4: Compact Single Row) */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.65rem',
+          fontSize: '0.74rem',
+          opacity: 0.9,
+          whiteSpace: 'nowrap',
+          flexShrink: 0
+        }}>
+          <span><strong>{totalQuestions}</strong> Qs</span>
           <span>•</span>
           <span><strong>{totalQuestions * 2}</strong> Marks</span>
           <span>•</span>
           <span><strong>{Math.round(totalDuration / 60)}</strong> Mins</span>
           <span>•</span>
-          <span style={{ background: 'rgba(255,255,255,0.15)', padding: '0.2rem 0.5rem', borderRadius: '4px', fontWeight: 700 }}>
+          <span style={{ background: 'rgba(255,255,255,0.18)', padding: '0.15rem 0.45rem', borderRadius: '4px', fontWeight: 800 }}>
             +2.00 / -0.50
           </span>
         </div>
 
         {/* Right Controls: Language Selector, Fullscreen Toggle, Timer Pill, Submit Test Button (Exact Reference 3 & 4) */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', flexWrap: 'nowrap', flexShrink: 0 }}>
           
           {/* Language Switcher Pill (EN | HI) */}
           <div style={{
             display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.15)',
             border: '1px solid rgba(255,255,255,0.25)', borderRadius: '6px', padding: '0.2rem 0.5rem',
-            fontSize: '0.78rem', fontWeight: 800, color: 'white', gap: '0.35rem'
+            fontSize: '0.78rem', fontWeight: 800, color: 'white', gap: '0.35rem', whiteSpace: 'nowrap'
           }}>
             <Languages size={15} color="#86efac" />
             <select
               value={selectedLanguage}
-              onChange={(e) => setSelectedLanguage(e.target.value)}
+              onChange={(e) => {
+                const newLang = e.target.value;
+                setSelectedLanguage(newLang);
+                try { localStorage.setItem('veernxt_pref_lang', newLang); } catch (e) {}
+              }}
               title="Change Question Language"
               style={{
                 background: 'transparent', border: 'none', color: 'white',
@@ -359,36 +390,39 @@ export const QuizView = ({
           </div>
 
           <button
+            type="button"
             onClick={toggleFullscreen}
             title="Toggle Fullscreen"
             style={{
               background: 'rgba(255,255,255,0.12)', border: 'none', color: 'white',
-              width: '34px', height: '34px', borderRadius: '6px', display: 'flex',
-              alignItems: 'center', justifyContent: 'center', cursor: 'pointer'
+              width: '32px', height: '32px', borderRadius: '6px', display: 'flex',
+              alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0
             }}
           >
-            {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+            {isFullscreen ? <Minimize2 size={15} /> : <Maximize2 size={15} />}
           </button>
 
           {/* Time Left Clock Pill (Reference 3 & 4) */}
           <div style={{
             background: 'white', color: '#0d4a2b', borderRadius: '6px',
-            padding: '0.4rem 0.85rem', display: 'flex', alignItems: 'center', gap: '0.45rem',
-            fontWeight: 800, fontFamily: 'monospace', fontSize: '0.95rem', boxShadow: '0 1px 3px rgba(0,0,0,0.15)'
+            padding: '0.38rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.45rem',
+            fontWeight: 800, fontFamily: 'monospace', fontSize: '0.92rem', boxShadow: '0 1px 3px rgba(0,0,0,0.15)',
+            whiteSpace: 'nowrap'
           }}>
-            <Clock size={16} color="#0d4a2b" />
-            <span style={{ fontSize: '0.72rem', fontFamily: "'Inter', sans-serif", fontWeight: 700, color: '#475569' }}>Time Left:</span>
+            <Clock size={15} color="#0d4a2b" />
+            <span style={{ fontSize: '0.7rem', fontFamily: "'Inter', sans-serif", fontWeight: 700, color: '#475569' }}>Time Left:</span>
             <span>{formatTimer(timeLeft)}</span>
           </div>
 
           {/* Submit Test Button (Reference 3 & 4: Solid Green in Top-Right Header) */}
           <button
+            type="button"
             onClick={() => setShowSubmitModal(true)}
             style={{
               background: '#22c55e', color: 'white', border: 'none',
               padding: '0.45rem 1.25rem', borderRadius: '6px', fontWeight: 800,
               fontSize: '0.85rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.4rem',
-              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+              boxShadow: '0 2px 6px rgba(0,0,0,0.25)', whiteSpace: 'nowrap',
               transition: 'all 0.15s ease'
             }}
           >

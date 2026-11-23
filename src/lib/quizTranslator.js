@@ -38,8 +38,13 @@ export async function translateSingle(text, targetLang = 'hi') {
   try {
     const local = localStorage.getItem('v_' + cacheKey);
     if (local) {
-      memoryCache.set(cacheKey, local);
-      return local;
+      if (targetLang === 'hi' && !isHindi(local)) {
+        // Corrupt or fallback English entry from earlier runs - purge it!
+        localStorage.removeItem('v_' + cacheKey);
+      } else {
+        memoryCache.set(cacheKey, local);
+        return local;
+      }
     }
   } catch (e) {}
 
@@ -175,8 +180,15 @@ export async function translateQuestion(q, targetLang = 'hi') {
     const local = localStorage.getItem('v_q_' + qCacheKey);
     if (local) {
       const parsed = JSON.parse(local);
-      memoryCache.set(qCacheKey, parsed);
-      return parsed;
+      if (targetLang === 'hi' && isHindi(parsed?.question)) {
+        memoryCache.set(qCacheKey, parsed);
+        return parsed;
+      } else if (targetLang === 'en') {
+        memoryCache.set(qCacheKey, parsed);
+        return parsed;
+      }
+      // Purge corrupt/untranslated cache item
+      localStorage.removeItem('v_q_' + qCacheKey);
     }
   } catch (e) {}
 
@@ -212,16 +224,45 @@ export async function translateQuestion(q, targetLang = 'hi') {
       language: targetLang
     };
 
-    memoryCache.set(qCacheKey, translatedQ);
-    try {
-      localStorage.setItem('v_q_' + qCacheKey, JSON.stringify(translatedQ));
-    } catch (e) {}
+    if (targetLang === 'hi' && isHindi(translatedQuestionText)) {
+      memoryCache.set(qCacheKey, translatedQ);
+      try {
+        localStorage.setItem('v_q_' + qCacheKey, JSON.stringify(translatedQ));
+      } catch (e) {}
+    } else if (targetLang === 'en') {
+      memoryCache.set(qCacheKey, translatedQ);
+    }
 
     return translatedQ;
   } catch (err) {
     console.error('Error translating question:', err);
     return q;
   }
+}
+
+/**
+ * Synchronously checks if a question is already cached in memory or localStorage.
+ */
+export function getCachedQuestion(q, targetLang = 'hi') {
+  if (!q) return q;
+  if (targetLang === 'en') return q._originalEnglish || q;
+  if (isHindi(q.question)) return q;
+
+  const qCacheKey = `q_obj_${q.id || q.question}_${targetLang}`;
+  if (memoryCache.has(qCacheKey)) return memoryCache.get(qCacheKey);
+
+  try {
+    const local = localStorage.getItem('v_q_' + qCacheKey);
+    if (local) {
+      const parsed = JSON.parse(local);
+      if (isHindi(parsed?.question)) {
+        memoryCache.set(qCacheKey, parsed);
+        return parsed;
+      }
+    }
+  } catch (e) {}
+
+  return null;
 }
 
 /**

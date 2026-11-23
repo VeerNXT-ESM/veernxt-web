@@ -28,7 +28,13 @@ export const QuizSetup = ({
 }) => {
   const [currentStep, setCurrentStep] = useState('config'); // 'config' | 'instructions'
   const [selectedCount, setSelectedCount] = useState(totalQuestions || 50);
-  const [language, setLanguage] = useState('en'); // 'en' | 'hi'
+  const [language, setLanguage] = useState(() => {
+    try {
+      return localStorage.getItem('veernxt_pref_lang') || 'en';
+    } catch (e) {
+      return 'en';
+    }
+  });
   
   // Calculate recommended duration: 1 minute per question, rounded to standard minutes (minimum 10 mins)
   const defaultDuration = Math.max(10, Math.min(120, Math.ceil((totalQuestions || 50) * 1)));
@@ -393,7 +399,10 @@ export const QuizSetup = ({
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                   <button
                     type="button"
-                    onClick={() => setLanguage('en')}
+                    onClick={() => {
+                      setLanguage('en');
+                      try { localStorage.setItem('veernxt_pref_lang', 'en'); } catch (e) {}
+                    }}
                     style={{
                       border: language === 'en' ? '2px solid #16a34a' : '1px solid #e2e8f0',
                       background: language === 'en' ? '#f0fdf4' : '#ffffff',
@@ -417,7 +426,10 @@ export const QuizSetup = ({
 
                   <button
                     type="button"
-                    onClick={() => setLanguage('hi')}
+                    onClick={() => {
+                      setLanguage('hi');
+                      try { localStorage.setItem('veernxt_pref_lang', 'hi'); } catch (e) {}
+                    }}
                     style={{
                       border: language === 'hi' ? '2px solid #16a34a' : '1px solid #e2e8f0',
                       background: language === 'hi' ? '#f0fdf4' : '#ffffff',
