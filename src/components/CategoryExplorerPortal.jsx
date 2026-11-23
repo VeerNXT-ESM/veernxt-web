@@ -696,9 +696,9 @@ export default function CategoryExplorerPortal({
     if (divisionFilterCache[divKey]) divisionFilterCache[divKey].examSearch = val;
   }, [divKey]);
 
-  // Sync global search into portal searches
+  // Sync global search into portal searches (including clearing when emptied)
   useEffect(() => {
-    if (globalSearch !== undefined && globalSearch !== null && globalSearch.trim()) {
+    if (globalSearch !== undefined && globalSearch !== null) {
       setExamSearch(globalSearch);
       setOverviewSearch(globalSearch);
     }
@@ -712,6 +712,8 @@ export default function CategoryExplorerPortal({
   const [examJobs, setExamJobs] = useState([]);
   const [jobsLoading, setJobsLoading] = useState(false);
   const [effectiveTier, setEffectiveTier] = useState('FREE');
+  const [isPrimaryTarget, setIsPrimaryTarget] = useState(false);
+  const [primarySaving, setPrimarySaving] = useState(false);
 
   // URL search parameter updater helper
   const updatePortalParams = useCallback((updates, { replace = false } = {}) => {
@@ -982,7 +984,49 @@ export default function CategoryExplorerPortal({
   }, [levelExams, allCatalog, localDbExams, categoryName, profile]);
 
   // Hook for selected exam resources (Level 2 & 3)
-  const examTargetId = selectedExam?.id || selectedExam?.examId;
+  const examTargetId = selectedExam?.id || selectedExam?.examId || selectedExam?.exam_id;
+
+  // Check and toggle primary exam target (restored from ExamSyllabus)
+  useEffect(() => {
+    let mounted = true;
+    setIsPrimaryTarget(false);
+    if (!examTargetId) return;
+    (async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session?.user || !mounted) return;
+        const { data } = await supabase
+          .from('user_exam_targets')
+          .select('is_primary')
+          .eq('user_id', session.user.id)
+          .eq('exam_id', examTargetId)
+          .maybeSingle();
+        if (mounted && data) setIsPrimaryTarget(Boolean(data.is_primary));
+      } catch (err) {
+        console.warn('user_exam_targets check warning:', err);
+      }
+    })();
+    return () => { mounted = false; };
+  }, [examTargetId]);
+
+  const handleMakePrimary = async () => {
+    if (!examTargetId || primarySaving) return;
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user) {
+      navigate('/login');
+      return;
+    }
+    setPrimarySaving(true);
+    try {
+      const { error } = await supabase.rpc('set_primary_exam_target', { p_exam_id: examTargetId });
+      if (error) throw error;
+      setIsPrimaryTarget(true);
+    } catch (err) {
+      console.error('Error setting primary exam target:', err);
+    } finally {
+      setPrimarySaving(false);
+    }
+  };
   const {
     byCategory,
     quizzes,
@@ -1577,9 +1621,20 @@ export default function CategoryExplorerPortal({
               <div className="cep-exam-showcase-main">
                 <div className="cep-exam-showcase-title-row">
                   <h2 className="cep-exam-showcase-title">{selectedExam.name || selectedExam.title || 'Official Examination'}</h2>
-                  <span className="cep-exam-primary-pill">
-                    <Target size={13} /> Active Preparation
-                  </span>
+                  <button
+                    type="button"
+                    className="cep-exam-primary-pill"
+                    onClick={handleMakePrimary}
+                    disabled={primarySaving || isPrimaryTarget}
+                    style={{
+                      cursor: isPrimaryTarget ? 'default' : 'pointer',
+                      border: 'none',
+                    }}
+                    title={isPrimaryTarget ? 'This is your primary target exam' : 'Set as your primary target exam'}
+                  >
+                    <Target size={13} />
+                    <span>{isPrimaryTarget ? 'Primary Target' : (primarySaving ? 'Saving...' : 'Set as Primary Target')}</span>
+                  </button>
                 </div>
 
                 <div className="cep-exam-meta-pills-row">
@@ -1628,13 +1683,19 @@ export default function CategoryExplorerPortal({
           {/* ── The 5 Action Cards Row (Visual Showcase with Real Working Links) ── */}
           <div className="cep-modules-head"><span>Study Resource Modules</span><span>5 Sections</span></div>
           <div className="cep-actions-grid" aria-label="Exam Preparation Modules">
-            {/* 1. Introduction -> Expands and scrolls to collapsible introduction section */}
+            {/* 1. Introduction -> Opens Introduction in Book Reader (or expands overview while loading) */}
             <div
               className={`cep-action-card cep-card-peach cep-action-card-clickable ${isIntroExpanded ? 'cep-action-card-active' : ''}`}
               onClick={() => {
-                setIsIntroExpanded(true);
-                const elem = document.querySelector('.cep-intro-collapsible-section');
-                if (elem) elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (intro?.source === 'auto' && intro?.resource) {
+                  handleIntroCardClick();
+                } else if (intro?.source === 'manual' && intro?.body) {
+                  handleIntroCardClick();
+                } else {
+                  setIsIntroExpanded(true);
+                  const elem = document.querySelector('.cep-intro-collapsible-section');
+                  if (elem) elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
               }}
               role="button"
               tabIndex={0}

@@ -615,7 +615,7 @@ function buildExamSummary({ examName, category, conductingBodyName, regionLevel 
 }
 
 // 3-column Overview tab for the Popular Exams details panel
-function PopularExamOverview({ exam, relatedExams, navigate }) {
+function PopularExamOverview({ exam, relatedExams, navigate, onSelectExam }) {
   const location = useLocation();
   const { categoryUrl } = useThumbnails();
   const { intro, loading } = useExamContent(exam?.matchedName, undefined, exam?.examId);
@@ -671,7 +671,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
                 className="lc-related-exam-card"
                 onClick={() => {
                   if (exam?.examId) {
-                    updateSearchParams({ tab: 'explorer', exam: exam.examId });
+                    onSelectExam?.(exam.examId);
                   }
                 }}
               >
@@ -691,7 +691,7 @@ function PopularExamOverview({ exam, relatedExams, navigate }) {
               <div
                 key={e.id}
                 className="lc-related-exam-card"
-                onClick={() => updateSearchParams({ tab: 'explorer', exam: e.id })}
+                onClick={() => onSelectExam?.(e.id)}
               >
                 {categoryUrl(e.category) ? (
                   <img src={categoryUrl(e.category)} alt={e.name} className="lc-related-exam-img" onError={(ev) => { ev.target.style.visibility = 'hidden'; }} />
@@ -1563,7 +1563,7 @@ const LearningCenter = () => {
       ? levelExams.filter((exam) => examMatchesCategory(exam, categoryFilter))
       : levelExams;
     if (selectedBodyId) pool = pool.filter((exam) => exam.conducting_body_id === selectedBodyId);
-    const q = searchText.trim().toLowerCase();
+    const q = (searchText || topSearchText).trim().toLowerCase();
     if (q) {
       pool = pool.filter((exam) =>
         exam.name.toLowerCase().includes(q) ||
@@ -1572,11 +1572,26 @@ const LearningCenter = () => {
       );
     }
     return pool.slice().sort((a, b) => a.name.localeCompare(b.name));
-  }, [levelExams, categoryFilter, selectedBodyId, searchText]);
+  }, [levelExams, categoryFilter, selectedBodyId, searchText, topSearchText]);
+
+  // Live results for the top global search bar in Explorer mode (searches active division first, then full catalog)
+  const topSearchResults = useMemo(() => {
+    const q = topSearchText.trim().toLowerCase();
+    if (!q) return [];
+    const matchFn = (exam) =>
+      (exam.name || '').toLowerCase().includes(q) ||
+      (exam.conducting_body?.name || '').toLowerCase().includes(q) ||
+      (exam.category || '').toLowerCase().includes(q) ||
+      (exam.region?.name || '').toLowerCase().includes(q);
+    const inLevel = levelExams.filter(matchFn);
+    const matches = inLevel.length > 0 ? inLevel : catalog.filter(matchFn);
+    return matches.slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+  }, [topSearchText, levelExams, catalog]);
 
   const filtersActive =
     regionMode !== 'central' ||
     Boolean(searchText.trim()) ||
+    Boolean(topSearchText.trim()) ||
     Boolean(regionFilterId) ||
     Boolean(categoryFilter) ||
     Boolean(selectedBodyId);
@@ -1601,6 +1616,7 @@ const LearningCenter = () => {
     Boolean(categoryFilter) ||
     Boolean(selectedBodyId) ||
     Boolean(searchText.trim()) ||
+    Boolean(topSearchText.trim()) ||
     Boolean(regionFilterId) ||
     regionMode !== 'central';
 
@@ -2882,7 +2898,13 @@ const LearningCenter = () => {
                     type="text"
                     placeholder="Search any exam, syllabus or role..."
                     value={topSearchText}
-                    onChange={(e) => setTopSearchText(e.target.value)}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setTopSearchText(val);
+                      if (paramExam && val.trim()) {
+                        updateSearchParams({ exam: undefined });
+                      }
+                    }}
                     className="lc-top-search-input"
                     aria-label="Search all exams and syllabi"
                   />
@@ -3041,7 +3063,111 @@ const LearningCenter = () => {
                       </div>
                     </div>
                   </div>
-                ) : (regionMode === 'state' || regionMode === 'ut') && !regionFilterId ? (
+                ) : topSearchText.trim() && !paramExam ? (
+                  /* Global Top Search Results in Explorer Mode */
+                  <div className="lc-state-directory-container">
+                    <div className="lc-section-header" style={{ marginBottom: '1rem' }}>
+                      <div className="lc-section-header-left">
+                        <h2 className="lc-section-title">
+                          Search results for &ldquo;{topSearchText.trim()}&rdquo;
+                        </h2>
+                        <p className="lc-section-subtitle">
+                          {topSearchResults.length} exam{topSearchResults.length === 1 ? '' : 's'} found
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        className="lc-state-zone-chip active"
+                        onClick={() => setTopSearchText('')}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', padding: '0.4rem 0.9rem' }}
+                      >
+                        <X size={14} />
+                        <span>Clear Search</span>
+                      </button>
+                    </div>
+
+                    {topSearchResults.length === 0 ? (
+                      <div className="lc-empty-state" style={{ padding: '3rem 1rem', textAlign: 'center' }}>
+                        <Search size={32} style={{ color: 'var(--c-ink-4, #94a3b8)', marginBottom: '0.75rem' }} />
+                        <h3 style={{ margin: '0 0 0.4rem' }}>No matching exams found</h3>
+                        <p style={{ color: 'var(--c-ink-3, #64748b)', margin: 0 }}>
+                          Try another keyword, exam abbreviation (e.g., SSC CGL, UPSC, IBPS), or conducting body.
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="lc-state-directory-grid">
+                        {topSearchResults.slice(0, 60).map((exam) => {
+                          const catMeta = getCategoryIconMeta(exam.category);
+                          const CatIcon = catMeta.icon || ClipboardList;
+                          const bannerImg = getCategoryBannerImage(
+                            exam.category,
+                            exam.region?.level || 'central',
+                            exam.region?.name
+                          );
+                          return (
+                            <button
+                              key={exam.id}
+                              type="button"
+                              className="lc-state-card"
+                              onClick={() => {
+                                setTopSearchText('');
+                                updateSearchParams({ tab: 'explorer', exam: exam.id });
+                              }}
+                              style={{ textAlign: 'left', cursor: 'pointer' }}
+                            >
+                              <div className="lc-state-card-image-wrap">
+                                {bannerImg ? (
+                                  <img
+                                    src={bannerImg}
+                                    alt={exam.name}
+                                    className="lc-state-card-img"
+                                    loading="lazy"
+                                  />
+                                ) : (
+                                  <div
+                                    className="lc-state-card-placeholder-banner"
+                                    style={{ background: `linear-gradient(135deg, ${catMeta.bg} 0%, #ffffff 100%)` }}
+                                  >
+                                    <span className="lc-state-watermark-text">
+                                      {(exam.name || 'EX').slice(0, 2).toUpperCase()}
+                                    </span>
+                                  </div>
+                                )}
+                                <div className="lc-state-card-image-fade" />
+                                <div className="lc-state-card-floating-bar">
+                                  <span className="lc-state-card-count-badge">
+                                    {exam.region?.name || (exam.region?.level === 'central' ? 'Central' : 'All India')}
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="lc-state-card-body">
+                                <div className="lc-state-card-header-row">
+                                  <h3 className="lc-state-card-name">{exam.name}</h3>
+                                </div>
+                                <div className="lc-state-card-categories" style={{ marginTop: '0.35rem' }}>
+                                  {exam.category && (
+                                    <span className="lc-state-cat-pill">
+                                      <CatIcon size={11} style={{ color: catMeta.color }} />
+                                      <span>{exam.category}</span>
+                                    </span>
+                                  )}
+                                </div>
+                                <p style={{ fontSize: '12px', color: 'var(--c-ink-3, #64748b)', margin: '6px 0 10px 0', lineHeight: 1.4 }}>
+                                  {exam.conducting_body?.name || 'Government Recruitment'}
+                                </p>
+                                <div className="lc-state-card-footer">
+                                  <span className="lc-state-card-cta">Open Exam Hub</span>
+                                  <ArrowRight size={14} className="lc-state-card-arrow" />
+                                </div>
+                              </div>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                ) : (regionMode === 'state' || regionMode === 'ut') && !regionFilterId && !paramExam ? (
                   /* State/UT Directory Landing Grid when user is on State mode and hasn't picked a state yet */
                   <div className="lc-state-directory-container">
                     <div className="lc-state-directory-hero" style={bannerImageStyle(stateDirBanner, '--lc-state-hero-img')}>
@@ -3309,7 +3435,7 @@ const LearningCenter = () => {
                   </div>
                 ) : (
                   <CategoryExplorerPortal
-                    key={`${regionMode}-${categoryFilter || activeCategoryForExplorer || targetExamFromUrl?.category || 'portal'}`}
+                    key={paramExam ? 'exam-direct-portal' : `${regionMode}-${categoryFilter || activeCategoryForExplorer || targetExamFromUrl?.category || 'portal'}`}
                     categoryName={categoryFilter || activeCategoryForExplorer || targetExamFromUrl?.category || ''}
                     stateName={activeState?.name || ''}
                     division={regionMode}
@@ -3905,6 +4031,7 @@ const LearningCenter = () => {
                               exam={selectedPopularExam}
                               relatedExams={relatedPopularExams}
                               navigate={navigate}
+                              onSelectExam={(id) => updateSearchParams({ tab: 'explorer', exam: id })}
                             />
                           )}
                           {activePopularExamTab === 'syllabus' && (
