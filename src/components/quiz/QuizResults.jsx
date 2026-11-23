@@ -25,10 +25,12 @@ import {
   Share2,
   Download,
   Printer,
-  RefreshCw
+  RefreshCw,
+  Languages
 } from 'lucide-react';
 import { organizeSections } from './QuizView';
 import { getQuizCohortAnalytics } from '../../lib/quizAnalytics';
+import { translateQuestion, prefetchTranslations } from '../../lib/quizTranslator';
 
 export const QuizResults = ({
   state,
@@ -127,6 +129,39 @@ export const QuizResults = ({
 
   const currentSolutionQ = state.questions[selectedSolutionIndex] || state.questions[0];
   const currentSolutionAns = state.answers[currentSolutionQ?.id];
+
+  // Dynamic Solutions Translation State (English <-> Hindi)
+  const [solutionLang, setSolutionLang] = useState(state.config?.language || 'en');
+  const [displaySolutionQ, setDisplaySolutionQ] = useState(currentSolutionQ);
+  const [isSolutionTranslating, setIsSolutionTranslating] = useState(false);
+
+  useEffect(() => {
+    let isMounted = true;
+    if (!currentSolutionQ) return;
+
+    if (solutionLang === 'en') {
+      setDisplaySolutionQ(currentSolutionQ);
+      setIsSolutionTranslating(false);
+      return;
+    }
+
+    setIsSolutionTranslating(true);
+    translateQuestion(currentSolutionQ, 'hi').then(tq => {
+      if (isMounted && tq) {
+        setDisplaySolutionQ(tq);
+        setIsSolutionTranslating(false);
+      }
+    }).catch(() => {
+      if (isMounted) {
+        setDisplaySolutionQ(currentSolutionQ);
+        setIsSolutionTranslating(false);
+      }
+    });
+
+    prefetchTranslations(state.questions, 'hi', selectedSolutionIndex + 1, 4);
+
+    return () => { isMounted = false; };
+  }, [currentSolutionQ, solutionLang, selectedSolutionIndex, state.questions]);
 
   const submissionDateFormatted = new Date().toLocaleDateString('en-GB', {
     day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true
@@ -231,6 +266,26 @@ export const QuizResults = ({
                 >
                   <Download size={14} color="#16a34a" /> Download PDF
                 </button>
+
+                {/* Language Switcher (EN / HI) */}
+                <div style={{
+                  display: 'flex', alignItems: 'center', background: '#ffffff',
+                  border: '1px solid #cbd5e1', borderRadius: '8px', padding: '0.2rem 0.55rem', gap: '0.4rem',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.03)'
+                }}>
+                  <Languages size={15} color="#0d4a2b" />
+                  <select
+                    value={solutionLang}
+                    onChange={(e) => setSolutionLang(e.target.value)}
+                    style={{
+                      border: 'none', background: 'transparent', fontSize: '0.82rem', fontWeight: 700,
+                      color: '#0f172a', outline: 'none', cursor: 'pointer', padding: '0.35rem 0.2rem'
+                    }}
+                  >
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                  </select>
+                </div>
 
                 {/* < Question X of Y > Navigation Pill */}
                 <div style={{
@@ -1030,7 +1085,7 @@ export const QuizResults = ({
               {/* Question Text */}
               <div 
                 style={{ fontSize: '1.05rem', lineHeight: 1.6, fontWeight: 500, color: '#1e293b' }}
-                dangerouslySetInnerHTML={{ __html: currentSolutionQ.question }}
+                dangerouslySetInnerHTML={{ __html: displaySolutionQ?.question || currentSolutionQ.question }}
               />
 
               {/* Options & Result Comparison */}
@@ -1038,7 +1093,7 @@ export const QuizResults = ({
                 
                 {/* Options List */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
-                  {currentSolutionQ.options.map((opt, idx) => {
+                  {(displaySolutionQ?.options || currentSolutionQ.options).map((opt, idx) => {
                     const letter = String.fromCharCode(65 + idx);
                     const isUserChoice = currentSolutionAns?.selectedIndex === idx;
                     const isCorrectChoice = currentSolutionQ.correctIndex === idx;
@@ -1122,7 +1177,7 @@ export const QuizResults = ({
                 </div>
                 <div 
                   style={{ fontSize: '0.88rem', color: '#334155', lineHeight: 1.65 }}
-                  dangerouslySetInnerHTML={{ __html: currentSolutionQ.explanation || 'Complete step-by-step logic and concept verification provided for this problem.' }}
+                  dangerouslySetInnerHTML={{ __html: displaySolutionQ?.explanation || currentSolutionQ.explanation || 'Complete step-by-step logic and concept verification provided for this problem.' }}
                 />
               </div>
 

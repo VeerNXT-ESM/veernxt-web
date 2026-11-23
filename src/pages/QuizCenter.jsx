@@ -609,8 +609,3 @@ export default function QuizCenter() {
     </div>
   );
 }
-
-      </div>
-    </div>
-  );
-}
