@@ -175,15 +175,21 @@ const InteractiveQuiz = () => {
 
   // Handler: Start a new quiz session
   const handleStartQuiz = (config) => {
-    // Honour the question count picked in QuizSetup (it was previously ignored): random subset, kept in paper order.
+    // Honour the question count picked in QuizSetup: random subset, kept in paper order.
     const count = Number(config.questionCount);
     const sessionQuestions = count > 0 && count < questions.length
       ? [...questions].sort(() => Math.random() - 0.5).slice(0, count).sort((a, b) => questions.indexOf(a) - questions.indexOf(b))
       : questions;
+    const totalDuration = config.totalDurationSeconds || (sessionQuestions.length * 60);
     const newQuizState = {
       id: 'quiz-' + Date.now(),
       startedAt: Date.now(),
-      config,
+      quizTitle: quiz?.title || 'Full Mock Test 01',
+      config: {
+        ...config,
+        mode: 'exam',
+        totalDurationSeconds: totalDuration
+      },
       questions: sessionQuestions,
       currentIndex: 0,
       answers: {},
@@ -192,7 +198,7 @@ const InteractiveQuiz = () => {
       maxStreak: 0,
       bookmarkedIds: [],
       isFinished: false,
-      timeRemaining: config.timeLimitSeconds
+      timeRemaining: totalDuration
     };
 
     setActiveQuiz(newQuizState);
@@ -201,22 +207,27 @@ const InteractiveQuiz = () => {
   };
 
   // Handler: Update User Answers and progress to next question
-  const handleUpdateAnswer = (newAnswer, nextIndex, newScore, newStreak, newMaxStreak) => {
+  const handleUpdateAnswer = (newAnswer, nextIndex, newScore, newStreak, newMaxStreak, remainingTime) => {
     setActiveQuiz(prev => {
       if (!prev) return prev;
       
       const updatedAnswers = { ...prev.answers };
       if (newAnswer) {
-        updatedAnswers[newAnswer.questionId] = newAnswer;
+        if (newAnswer.selectedIndex === null || newAnswer.selectedIndex === undefined) {
+          delete updatedAnswers[newAnswer.questionId];
+        } else {
+          updatedAnswers[newAnswer.questionId] = newAnswer;
+        }
       }
 
       const updated = {
         ...prev,
-        currentIndex: nextIndex,
+        currentIndex: nextIndex !== undefined ? nextIndex : prev.currentIndex,
         answers: updatedAnswers,
-        score: newScore,
-        currentStreak: newStreak,
-        maxStreak: newMaxStreak
+        score: newScore !== undefined ? newScore : prev.score,
+        currentStreak: newStreak || 0,
+        maxStreak: newMaxStreak || 0,
+        timeRemaining: typeof remainingTime === 'number' ? remainingTime : prev.timeRemaining
       };
 
       localStorage.setItem('active_quiz_' + id, JSON.stringify(updated));
@@ -242,7 +253,10 @@ const InteractiveQuiz = () => {
   // Handler: Resume Saved Session
   const handleResumeSavedQuiz = () => {
     if (savedQuiz) {
-      setActiveQuiz(savedQuiz);
+      setActiveQuiz({
+        ...savedQuiz,
+        quizTitle: savedQuiz.quizTitle || quiz?.title || 'Full Mock Test 01'
+      });
       setQuizPhase('active');
     }
   };
@@ -258,15 +272,22 @@ const InteractiveQuiz = () => {
     if (!activeQuiz) return;
 
     const sessionQs = activeQuiz.questions || questions; // the subset actually played (QuizSetup count)
-    const answersList = Object.values(activeQuiz.answers);
+    const answersList = Object.values(activeQuiz.answers).filter(a => a.selectedIndex !== null && a.selectedIndex !== undefined);
     const correctCount = answersList.filter(a => a.isCorrect).length;
-    const scorePercent = (correctCount / sessionQs.length) * 100;
+    const wrongCount = answersList.filter(a => !a.isCorrect).length;
+    const unattemptedCount = sessionQs.length - (correctCount + wrongCount);
+
+    // Negative marking scheme: +2 for correct, -0.50 for wrong
+    const rawMarks = (correctCount * 2) - (wrongCount * 0.5);
+    const totalPossibleMarks = sessionQs.length * 2;
+    const marksObtained = Math.max(0, rawMarks);
+    const scorePercent = totalPossibleMarks > 0 ? (marksObtained / totalPossibleMarks) * 100 : 0;
 
     // Build DB answer map
     const dbAnswersMap = {};
     sessionQs.forEach(q => {
       const ansObj = activeQuiz.answers[q.id];
-      if (ansObj && ansObj.selectedIndex !== null) {
+      if (ansObj && ansObj.selectedIndex !== null && ansObj.selectedIndex !== undefined) {
         dbAnswersMap[q.id] = q.originalKeys[ansObj.selectedIndex];
       } else {
         dbAnswersMap[q.id] = 'N/A';
@@ -275,7 +296,17 @@ const InteractiveQuiz = () => {
 
     const finalQuizState = {
       ...activeQuiz,
-      isFinished: true
+      quizTitle: activeQuiz.quizTitle || quiz?.title || 'Full Mock Test 01',
+      isFinished: true,
+      score: marksObtained,
+      markingStats: {
+        correctCount,
+        wrongCount,
+        unattemptedCount,
+        marksObtained,
+        totalPossibleMarks,
+        scorePercent
+      }
     };
     setActiveQuiz(finalQuizState);
     localStorage.removeItem('active_quiz_' + id);
@@ -484,6 +515,14 @@ const InteractiveQuiz = () => {
     );
   }
 
+  const handleExit = () => {
+    if (window.history.length > 2) {
+      navigate(-1);
+    } else {
+      navigate('/quiz-center');
+    }
+  };
+
   // Render view phase
   return (
     <div style={{ minHeight: '100vh', background: 'var(--ios-bg)', paddingBottom: '4rem' }}>
@@ -495,7 +534,7 @@ const InteractiveQuiz = () => {
           savedQuiz={savedQuiz}
           onResumeSavedQuiz={handleResumeSavedQuiz}
           onDiscardSavedQuiz={handleDiscardSavedQuiz}
-          onExitToMenu={() => navigate('/learning-center')}
+          onExitToMenu={handleExit}
         />
       )}
 
@@ -505,7 +544,7 @@ const InteractiveQuiz = () => {
           onUpdateAnswer={handleUpdateAnswer}
           onToggleBookmark={handleToggleBookmark}
           onFinishQuiz={handleFinishQuiz}
-          onExitToMenu={() => navigate('/learning-center')}
+          onExitToMenu={handleExit}
         />
       )}
 
@@ -517,7 +556,7 @@ const InteractiveQuiz = () => {
             setActiveQuiz(null);
             setSavedQuiz(null);
           }}
-          onExit={() => navigate('/learning-center')}
+          onExit={handleExit}
         />
       )}
     </div>
