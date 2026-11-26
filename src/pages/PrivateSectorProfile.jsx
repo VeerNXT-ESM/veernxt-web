@@ -31,6 +31,7 @@ import {
   SERVICES,
   SERVICE_TAXONOMY,
   RANK_OPTIONS,
+  RANK_GROUPS,
   WORK_TYPES,
   DUTY_GROUPS,
   QUALIFICATION_AREAS,
@@ -549,7 +550,7 @@ const PrivateSectorProfile = ({ onDone = null }) => {
               </div>
 
               {/* Service Tabs */}
-              <div className="psp-services" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
+              <div className="psp-services" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '0.75rem' }}>
                 {SERVICES.map((s) => {
                   const sel = formData.service === s;
                   return (
@@ -614,9 +615,17 @@ const PrivateSectorProfile = ({ onDone = null }) => {
                     onChange={(e) => setField('rank', e.target.value)}
                     style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--c-line-3, #cbd5e1)', background: 'var(--c-bg-0, #fff)' }}
                   >
-                    {(RANK_OPTIONS[formData.service] || []).map((r) => (
-                      <option key={r} value={r}>{r}</option>
-                    ))}
+                    {RANK_GROUPS[formData.service]
+                      ? RANK_GROUPS[formData.service].map((group) => (
+                          <optgroup key={group.label} label={group.label}>
+                            {group.ranks.map((r) => (
+                              <option key={r} value={r}>{r}</option>
+                            ))}
+                          </optgroup>
+                        ))
+                      : (RANK_OPTIONS[formData.service] || []).map((r) => (
+                          <option key={r} value={r}>{r}</option>
+                        ))}
                   </select>
                 </div>
 

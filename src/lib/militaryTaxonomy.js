@@ -1,7 +1,46 @@
-// Tri-Service Military Capability and Civilian Employability Taxonomy
+// Tri-Service & Paramilitary/CAPF Military Capability and Civilian Employability Taxonomy
 // Extracted and unified from VeerNXT civilian transition specifications.
+import { CAPF_HIERARCHY } from '../data/capfHierarchy';
 
-export const SERVICES = ['Indian Army', 'Indian Navy', 'Indian Air Force'];
+export const SERVICES = ['Indian Army', 'Indian Navy', 'Indian Air Force', 'Paramilitary / CAPF'];
+
+export const RANK_GROUPS = {
+  'Paramilitary / CAPF': [
+    {
+      label: 'Army-style ranks (Assam Rifles)',
+      ranks: [
+        'Rifleman',
+        'Lance Naik',
+        'Naik',
+        'Havildar',
+        'Naib Subedar (Warrant Officer)',
+        'Subedar',
+        'Subedar Major',
+      ],
+    },
+    {
+      label: 'Police-style ranks (BSF, CISF, CRPF, ITBP, SSB)',
+      ranks: [
+        'Constable',
+        'Head Constable (HC)',
+        'Assistant Sub-Inspector (ASI)',
+        'Sub-Inspector (SI)',
+        'Inspector',
+      ],
+    },
+    {
+      label: 'Coast Guard sailor ranks (ICG)',
+      ranks: [
+        'Navik / Yantrik (entry rank)',
+        'Uttam Navik',
+        'Pradhan Navik',
+        'Adhikari (Sahayak Engineer in the technical branch)',
+        'Uttam Adhikari',
+        'Pradhan Adhikari',
+      ],
+    },
+  ],
+};
 
 export const RANK_OPTIONS = {
   'Indian Army': [
@@ -12,8 +51,58 @@ export const RANK_OPTIONS = {
   ],
   'Indian Air Force': [
     'Agniveervayu', 'Aircraftman', 'Leading Aircraftman', 'Corporal', 'Sergeant', 'Junior Warrant Officer', 'Warrant Officer', 'Master Warrant Officer'
-  ]
+  ],
+  'Paramilitary / CAPF': RANK_GROUPS['Paramilitary / CAPF'].flatMap((g) => g.ranks),
 };
+
+function inferCapfCaps(category = '', trade = '') {
+  const txt = `${category} ${trade}`.toLowerCase();
+  const caps = [];
+  if (txt.includes('signal') || txt.includes('communicat') || txt.includes('cipher') || txt.includes('radio') || txt.includes('telecom')) caps.push('communications');
+  if (txt.includes('medic') || txt.includes('nurse') || txt.includes('pharma') || txt.includes('doctor') || txt.includes('x-ray') || txt.includes('physio')) caps.push('medical');
+  if (txt.includes('mechanic') || txt.includes('fitter') || txt.includes('technician') || txt.includes('armourer') || txt.includes('welder') || txt.includes('maint')) caps.push('maintenance');
+  if (txt.includes('engineer') || txt.includes('mason') || txt.includes('plumber') || txt.includes('electrician') || txt.includes('draughtsman') || txt.includes('survey')) caps.push('engineering');
+  if (txt.includes('driver') || txt.includes('motor') || txt.includes('vehicle') || txt.includes('transport')) caps.push('fleet');
+  if (txt.includes('air') || txt.includes('pilot') || txt.includes('aviation') || txt.includes('heli')) caps.push('aviation');
+  if (txt.includes('water') || txt.includes('marine') || txt.includes('boat') || txt.includes('navik') || txt.includes('yantrik') || txt.includes('coast')) caps.push('maritime');
+  if (txt.includes('clerk') || txt.includes('admin') || txt.includes('office') || txt.includes('ministerial') || txt.includes('stenographer') || txt.includes('assistant')) caps.push('administration');
+  if (txt.includes('fire') || txt.includes('safety') || txt.includes('disaster')) caps.push('safety');
+  if (txt.includes('dog') || txt.includes('veterinary') || txt.includes('mount')) caps.push('animals');
+  if (txt.includes('cook') || txt.includes('steward') || txt.includes('masalchi') || txt.includes('hospitality')) caps.push('hospitality');
+  if (txt.includes('intel')) caps.push('intelligence');
+  if (txt.includes('store') || txt.includes('logistic') || txt.includes('supply')) caps.push('logistics');
+  if (caps.length === 0) caps.push('security', 'weapons');
+  return [...new Set(caps)];
+}
+
+function buildCapfServiceTaxonomy() {
+  const out = {};
+  for (const [forceKey, branchesObj] of Object.entries(CAPF_HIERARCHY)) {
+    const trades = [];
+    const seen = new Set();
+    let firstCategory = 'PARAMILITARY / CAPF';
+    for (const [branchName, data] of Object.entries(branchesObj || {})) {
+      if (firstCategory === 'PARAMILITARY / CAPF' && data?.category) {
+        firstCategory = data.category;
+      }
+      for (const t of data?.trades || []) {
+        const label = `${t} — ${branchName}`;
+        if (seen.has(label)) continue;
+        seen.add(label);
+        trades.push({
+          name: label,
+          description: `${forceKey} · ${branchName}`,
+          caps: inferCapfCaps(data?.category, `${branchName} ${t}`),
+        });
+      }
+    }
+    out[forceKey] = {
+      category: firstCategory,
+      trades,
+    };
+  }
+  return out;
+}
 
 export const SERVICE_TAXONOMY = {
   'Indian Army': {
@@ -327,7 +416,8 @@ export const SERVICE_TAXONOMY = {
         { name: 'Airman (Meteorological Observer)', description: 'Weather instruments, synoptic observations, radar.', caps: ['communications', 'quality', 'weather', 'survey'] }
       ]
     }
-  }
+  },
+  'Paramilitary / CAPF': buildCapfServiceTaxonomy(),
 };
 
 // 22 Shared Cross-Service Civilian Work Types
