@@ -278,6 +278,7 @@ const ProfilingResults = () => {
       console.warn('Could not save exam target:', err);
     } finally {
       setPreparingExamId(null);
+      window.scrollTo({ top: 0, behavior: 'instant' });
       if (resolvedLcId) {
         navigate(`/learning-center?exam=${encodeURIComponent(resolvedLcId)}`);
       } else if (rec.exam_name) {

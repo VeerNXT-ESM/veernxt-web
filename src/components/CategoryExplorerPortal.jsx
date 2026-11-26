@@ -1077,6 +1077,9 @@ export default function CategoryExplorerPortal({
 
     if (match) {
       setSelectedExam(match);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'instant' });
     } else {
       let cancelled = false;
       supabase

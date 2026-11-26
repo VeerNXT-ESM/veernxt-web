@@ -1416,6 +1416,14 @@ const LearningCenter = () => {
   }, [paramExam, catalog]);
 
   useEffect(() => {
+    if (paramExam) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      const rail = document.querySelector('.lc-content-rail');
+      if (rail) rail.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [paramExam]);
+
+  useEffect(() => {
     if (targetExamFromUrl) {
       if (targetExamFromUrl.category && !categoryFilter) {
         setCategoryFilter(targetExamFromUrl.category);
