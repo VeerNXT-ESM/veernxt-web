@@ -414,6 +414,41 @@ export default async function handler(req, res) {
             }
           }
         }
+
+        // Fallback: resolve remaining unmapped exams by name (+ state_ut) against lc_exams
+        const unmapped = diversified.filter(r => r.exam.exam_id && !lcExamIdMap[r.exam.exam_id]);
+        if (unmapped.length > 0) {
+          const { data: lcAll } = await supabaseAdmin
+            .from('lc_exams')
+            .select('id, name, region:lc_regions(name, level)')
+            .limit(3000);
+          if (lcAll && lcAll.length > 0) {
+            const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+            const stripParen = (s) => norm(String(s || '').replace(/\([^)]*\)/g, ''));
+            for (const r of unmapped) {
+              const targetNorm = norm(r.exam.exam_name);
+              const targetNoParen = stripParen(r.exam.exam_name);
+              const targetState = norm(r.exam.state_ut);
+              const candidates = lcAll.filter((lc) => {
+                const lcNorm = norm(lc.name);
+                const lcNoParen = stripParen(lc.name);
+                return lcNorm === targetNorm || (targetNoParen && lcNoParen === targetNoParen);
+              });
+              const pool = candidates.length > 0
+                ? candidates
+                : lcAll.filter((lc) => {
+                    const lcNorm = norm(lc.name);
+                    return lcNorm.includes(targetNorm) || targetNorm.includes(lcNorm);
+                  });
+              if (pool.length > 0) {
+                const stateMatch = targetState
+                  ? pool.find((lc) => norm(lc.region?.name) === targetState)
+                  : pool.find((lc) => !lc.region?.level || lc.region.level === 'central');
+                lcExamIdMap[r.exam.exam_id] = (stateMatch || pool[0]).id;
+              }
+            }
+          }
+        }
       } catch (lcErr) {
         console.warn('[recommend] lc_exam_legacy_map lookup failed (non-fatal):', lcErr.message);
       }

@@ -1467,7 +1467,7 @@ const LearningCenter = () => {
       list = list.filter((item) => (item.count || 0) >= 4);
     }
 
-    const q = sidebarSearch.trim().toLowerCase();
+    const q = (categorySearch || sidebarSearch).trim().toLowerCase();
     if (!q) return list;
 
     // Collect category names where any exam name matches q
@@ -1485,7 +1485,7 @@ const LearningCenter = () => {
       const labelLow = item.label.toLowerCase().trim();
       return labelLow.includes(q) || keyLow.includes(q) || examMatchedCats.has(keyLow);
     });
-  }, [explorerCategoryList, sidebarSearch, sidebarFilterTab, levelExams]);
+  }, [explorerCategoryList, sidebarSearch, categorySearch, sidebarFilterTab, levelExams]);
 
   const filteredStatesForAccordion = useMemo(() => {
     const q = stateFilterSearch.trim().toLowerCase();

@@ -1035,7 +1035,7 @@ export default function CategoryExplorerPortal({
     markAsCompleted,
     loading: contentLoading,
     error: contentError,
-  } = useExamContent(selectedExam?.name, selectedExam?.careerTrack, examTargetId);
+  } = useExamContent(selectedExam?.name || selectedExam?.title, selectedExam?.careerTrack, examTargetId);
 
   const guideItems = byCategory?.Guide || [];
   const precisItems = byCategory?.Precis || [];
@@ -1347,6 +1347,7 @@ export default function CategoryExplorerPortal({
   const topExams =
     topExamsPool.length > 0
       ? topExamsPool.slice(0, 5).map((e) => ({
+          ...e,
           title: e.name,
           subtitle: e.conducting_body?.name || e.category || 'Commission',
           examId: e.id,
@@ -1358,6 +1359,7 @@ export default function CategoryExplorerPortal({
   const relatedExams =
     topExamsPool.slice(5, 11).length > 0
       ? topExamsPool.slice(5, 11).map((e) => ({
+          ...e,
           title: e.name,
           badge: e.category || 'Competitive Exam',
           examId: e.id,
@@ -1365,6 +1367,7 @@ export default function CategoryExplorerPortal({
       : !isOverviewFiltered && Array.isArray(profile.related_exams) && profile.related_exams.length > 0
         ? profile.related_exams
         : topExamsPool.slice(0, 6).map((e) => ({
+            ...e,
             title: e.name,
             badge: e.category || 'Competitive Exam',
             examId: e.id,
@@ -1414,9 +1417,25 @@ export default function CategoryExplorerPortal({
   const handleContinuePrep = (exam) => {
     setViewTransitioning(true);
     setTimeout(() => {
-      setSelectedExam(exam);
-      const examId = exam.id || exam.exam_id;
-      updatePortalParams({ exam: examId });
+      const rawId = exam.id || exam.exam_id || exam.examId;
+      const rawTitle = (exam.name || exam.title || '').trim().toLowerCase();
+      const pool = [...allCategoryExams, ...(levelExams || []), ...(allCatalog || []), ...localDbExams];
+      const fullExam =
+        (rawId && pool.find((e) => String(e.id || e.exam_id) === String(rawId))) ||
+        (rawTitle && pool.find((e) => (e.name || e.title || '').trim().toLowerCase() === rawTitle)) ||
+        null;
+
+      const resolvedExam = fullExam || {
+        ...exam,
+        id: rawId,
+        name: exam.name || exam.title,
+      };
+      const examId = resolvedExam.id || resolvedExam.exam_id || resolvedExam.examId;
+
+      setSelectedExam(resolvedExam);
+      if (examId) {
+        updatePortalParams({ exam: examId });
+      }
       setActiveReadingResource(null);
       setActiveResourceTab('intro');
       window.scrollTo({ top: 0, behavior: 'smooth' });

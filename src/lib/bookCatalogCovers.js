@@ -4,7 +4,9 @@
  */
 
 export const BOOK_COVERS_MAP = {
-  // All-India Core Guides
+  // All-India & Central Core Guides
+  'central-gs-complete-guide': '/thumbnails/books/central-gs-complete-guide.webp',
+  'central-gs': '/thumbnails/books/central-gs-complete-guide.webp',
   'gs-gk-complete-guide': '/thumbnails/books/gs-gk-complete-guide.webp',
   'gk-gs': '/thumbnails/books/gs-gk-complete-guide.webp',
   'gs-gk': '/thumbnails/books/gs-gk-complete-guide.webp',
@@ -156,7 +158,14 @@ export function getBookCoverUrl(slugOrTitle, explicitRegion) {
   // 1. Direct key match in BOOK_COVERS_MAP
   if (BOOK_COVERS_MAP[normalized]) return BOOK_COVERS_MAP[normalized];
 
-  // 2. Strict check for All-India General GS & GK books
+  // 2. Central GS & All-India General GS & GK books
+  if (
+    normalized.includes('central') &&
+    (normalized.includes('gs') || normalized.includes('gk') || normalized.includes('general-studies'))
+  ) {
+    return BOOK_COVERS_MAP['central-gs-complete-guide'];
+  }
+
   // These should ALWAYS return the General GS cover, NEVER a state cover.
   const isGeneralGS =
     normalized === 'gs-gk' ||

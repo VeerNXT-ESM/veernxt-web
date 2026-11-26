@@ -482,16 +482,18 @@ export default function StudyMaterialsPage() {
         seenSubjects.add('state-gs');
       }
 
-      // 2. All-India General GS & GK Book
+      // 2. Central / All-India General GS & GK Book
       if (generalGSRow || isStateOrUt || otherRows.some((r) => /(gk|gs)/i.test(r.title))) {
-        const genCover = '/thumbnails/books/gs-gk-complete-guide.webp';
+        const genCover = isStateOrUt
+          ? '/thumbnails/books/gs-gk-complete-guide.webp'
+          : '/thumbnails/books/central-gs-complete-guide.webp';
         items.push({
           id: 'book-general-gs-gk',
-          slug: 'gs-gk',
+          slug: isStateOrUt ? 'gs-gk' : 'central-gs',
           subjectKey: 'gk_general_awareness',
           subjectLabel: 'GK & General Studies',
           titleSuffix: 'General Studies & GK',
-          displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
+          displayTitle: `${isStateOrUt ? 'All-India' : 'Central'} General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
           shortCoverTitle: `General Studies & GK`,
           spineTitle: 'GENERAL STUDIES & GK',
           thumbnail: genCover,
@@ -639,15 +641,15 @@ export default function StudyMaterialsPage() {
     baseList.push(
       {
         id: 'b-gk-gs',
-        slug: 'gs-gk',
+        slug: isState ? 'gs-gk' : 'central-gs',
         subjectKey: 'gk_general_awareness',
         subjectLabel: 'GK & General Studies',
         titleSuffix: 'General Studies & GK',
-        displayTitle: `All-India General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
+        displayTitle: `${isState ? 'All-India' : 'Central'} General Studies & GK ${isGuide ? 'Guidebook' : 'Précis'} 2026`,
         shortCoverTitle: 'General Studies & GK',
-        spineTitle: 'GENERAL STUDIES & GK',
-        thumbnail: '/thumbnails/books/gs-gk-complete-guide.webp',
-        customCover: '/thumbnails/books/gs-gk-complete-guide.webp',
+        spineTitle: isState ? 'GENERAL STUDIES & GK' : 'CENTRAL GS',
+        thumbnail: isState ? '/thumbnails/books/gs-gk-complete-guide.webp' : '/thumbnails/books/central-gs-complete-guide.webp',
+        customCover: isState ? '/thumbnails/books/gs-gk-complete-guide.webp' : '/thumbnails/books/central-gs-complete-guide.webp',
         hasCustomCover: true,
         isBestSeller: true,
         spineColor: '#78350f',

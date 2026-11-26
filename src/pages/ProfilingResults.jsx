@@ -246,23 +246,42 @@ const ProfilingResults = () => {
 
   const handleStartPreparing = async (rec) => {
     const targetId = rec?.lc_exam_id || rec?.exam_id;
-    if (!targetId) return;
+    if (!targetId && !rec?.exam_name) return;
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) {
       navigate('/login');
       return;
     }
-    setPreparingExamId(targetId);
+    setPreparingExamId(targetId || rec.exam_name);
+    let resolvedLcId = rec.lc_exam_id || null;
     try {
-      if (rec.lc_exam_id) {
-        await supabase.rpc('set_primary_exam_target', { p_exam_id: rec.lc_exam_id });
+      if (!resolvedLcId && rec.exam_name) {
+        const cleanName = rec.exam_name.replace(/\([^)]*\)/g, '').trim();
+        const { data: lcMatches } = await supabase
+          .from('lc_exams')
+          .select('id, name, region:lc_regions(name, level)')
+          .ilike('name', `%${cleanName || rec.exam_name}%`)
+          .limit(10);
+        if (lcMatches && lcMatches.length > 0) {
+          const targetState = (rec.state_ut || '').toLowerCase().trim();
+          const exact = lcMatches.find((m) => m.name.toLowerCase() === rec.exam_name.toLowerCase());
+          const stateMatch = targetState
+            ? lcMatches.find((m) => (m.region?.name || '').toLowerCase() === targetState)
+            : null;
+          resolvedLcId = (stateMatch || exact || lcMatches[0]).id;
+        }
+      }
+      if (resolvedLcId) {
+        await supabase.rpc('set_primary_exam_target', { p_exam_id: resolvedLcId });
       }
     } catch (err) {
       console.warn('Could not save exam target:', err);
     } finally {
       setPreparingExamId(null);
-      if (rec.lc_exam_id) {
-        navigate(`/learning-center?exam=${rec.lc_exam_id}`);
+      if (resolvedLcId) {
+        navigate(`/learning-center?exam=${encodeURIComponent(resolvedLcId)}`);
+      } else if (rec.exam_name) {
+        navigate(`/learning-center?exam=${encodeURIComponent(rec.exam_name)}`);
       } else {
         navigate('/learning-center');
       }
